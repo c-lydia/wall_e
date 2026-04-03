@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wall-E &mdash; Wall-E 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fe63c2af" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom_code_style.css?v=12bb80f3" />
+      <link rel="stylesheet" type="text/css" href="_static/custom_code_style.css?v=12bb80f3" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting Started" href="getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Wall-E
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="firmware/esp32_controller.html">ESP32 Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Wall-E</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Wall-E</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="wall-e">
+<h1>Wall-E<a class="headerlink" href="#wall-e" title="Link to this heading"></a></h1>
+<p><strong>A Professional micro-ROS Workspace for ESP32 Robotics Development</strong></p>
+<p>Welcome to Wall-E’s comprehensive documentation. This project provides an integrated development environment combining ESP32 firmware, FreeRTOS, and ROS 2 Humble for advanced embedded robotics applications.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#quick-start-guide">Quick Start Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#initial-setup">Initial Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#building-the-esp32-firmware">Building the ESP32 Firmware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="firmware/esp32_controller.html">ESP32 Controller</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#hardware-configuration">Hardware Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#build-and-flash">Build and Flash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#code-structure">Code Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#ros-publishers">ROS Publishers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#wifi-configuration">WiFi Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#future-enhancements">Future Enhancements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#system-overview">System Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#component-descriptions">Component Descriptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#communication-flow">Communication Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#data-types">Data Types</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#common-issues-and-solutions">Common Issues and Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#using-debug-tools">Using Debug Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#getting-help">Getting Help</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="project-overview">
+<h2>Project Overview<a class="headerlink" href="#project-overview" title="Link to this heading"></a></h2>
+<p>Wall-E is a complete, production-ready workspace for developing intelligent embedded robot systems. It seamlessly integrates:</p>
+<ul class="simple">
+<li><p><strong>Modern Robotics</strong>: Full ROS 2 Humble support on host systems</p></li>
+<li><p><strong>Embedded Systems</strong>: FreeRTOS-based ESP32 controller firmware</p></li>
+<li><p><strong>Containerization</strong>: Docker Compose for reproducible development environments</p></li>
+<li><p><strong>Professional Documentation</strong>: Comprehensive guides covering all aspects of the system</p></li>
+<li><p><strong>Development Tools</strong>: VS Code integration with IntelliSense and debugging</p></li>
+</ul>
+</section>
+<section id="core-capabilities">
+<h2>Core Capabilities<a class="headerlink" href="#core-capabilities" title="Link to this heading"></a></h2>
+<section id="real-time-sensor-integration">
+<h3>Real-time Sensor Integration<a class="headerlink" href="#real-time-sensor-integration" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>IMU Sensor</strong> (MPU6050): 6-axis inertial measurement via I2C</p></li>
+<li><p><strong>Range Sensor</strong> (HC-SR04): Ultrasonic distance measurement with GPIO control</p></li>
+<li><p><strong>Configurable Publishing</strong>: ROS 2 topics with sensor_msgs interface</p></li>
+</ul>
+</section>
+<section id="distributed-architecture">
+<h3>Distributed Architecture<a class="headerlink" href="#distributed-architecture" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Host System</strong>: ROS 2 development environment in Docker</p></li>
+<li><p><strong>Embedded Node</strong>: FreeRTOS-based ESP32 running micro-ROS client</p></li>
+<li><p><strong>Network Communication</strong>: Reliable UDP messaging through micro-ROS agent</p></li>
+<li><p><strong>Extensible Design</strong>: Easy to add new sensors and publishers</p></li>
+</ul>
+</section>
+<section id="development-infrastructure">
+<h3>Development Infrastructure<a class="headerlink" href="#development-infrastructure" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Docker Compose</strong>: Multi-service orchestration (workspace + agent)</p></li>
+<li><p><strong>Build Tools</strong>: colcon for packages, ESP-IDF for firmware</p></li>
+<li><p><strong>Source Control</strong>: Git-based version management</p></li>
+<li><p><strong>Documentation</strong>: Sphinx with professional PDF generation</p></li>
+</ul>
+</section>
+</section>
+<section id="key-features-benefits">
+<h2>Key Features &amp; Benefits<a class="headerlink" href="#key-features-benefits" title="Link to this heading"></a></h2>
+<p>✓ <strong>Production Ready</strong>: Complete Docker setup with tested configurations
+✓ <strong>Well Documented</strong>: Comprehensive guides for setup, development, and troubleshooting
+✓ <strong>Extensible Architecture</strong>: Modular design for adding custom sensors and behaviors
+✓ <strong>Professional Workflow</strong>: Docker containers for reproducible development across machines
+✓ <strong>ROS 2 Integration</strong>: Full compatibility with ROS 2 Humble ecosystem
+✓ <strong>Embedded Security</strong>: FreeRTOS best practices with micro-ROS security features</p>
+</section>
+<section id="quick-start">
+<h2>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h2>
+<p>To get started with Wall-E:</p>
+<ol class="arabic simple">
+<li><p>Clone the repository and navigate to the workspace</p></li>
+<li><p>Start the Docker containers: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">up</span> <span class="pre">--build</span></code></p></li>
+<li><p>Build packages in the workspace container: <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code></p></li>
+<li><p>Build and flash the ESP32 firmware</p></li>
+<li><p>Monitor the micro-ROS agent and ESP32 communication</p></li>
+</ol>
+<p>For detailed instructions, see the <strong>Getting Started</strong> guide.</p>
+</section>
+<section id="system-architecture">
+<h2>System Architecture<a class="headerlink" href="#system-architecture" title="Link to this heading"></a></h2>
+<p>Wall-E’s architecture consists of:</p>
+<ul class="simple">
+<li><p><strong>Host System</strong>: ROS 2 Humble development environment with visualization tools</p></li>
+<li><p><strong>Middleware</strong>: micro-ROS agent for reliable UDP communication</p></li>
+<li><p><strong>Embedded Controller</strong>: FreeRTOS-based ESP32 with sensor interface</p></li>
+<li><p><strong>Documentation</strong>: Complete guides and API references</p></li>
+</ul>
+<p>For a detailed technical overview, see the <strong>Architecture</strong> documentation.</p>
+</section>
+<section id="technical-stack">
+<h2>Technical Stack<a class="headerlink" href="#technical-stack" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 60.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Component</p></th>
+<th class="head"><p>Technology</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Host Robotics Framework</p></td>
+<td><p>ROS 2 Humble (Ubuntu 20.04)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Embedded OS</p></td>
+<td><p>FreeRTOS + micro-ROS</p></td>
+</tr>
+<tr class="row-even"><td><p>Microcontroller</p></td>
+<td><p>ESP32 (Espressif Systems)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Communication</p></td>
+<td><p>UDP via micro-ROS agent</p></td>
+</tr>
+<tr class="row-even"><td><p>Build System</p></td>
+<td><p>colcon, ESP-IDF v5.0+</p></td>
+</tr>
+<tr class="row-odd"><td><p>Documentation</p></td>
+<td><p>Sphinx with RTD theme</p></td>
+</tr>
+<tr class="row-even"><td><p>Containerization</p></td>
+<td><p>Docker &amp; Docker Compose</p></td>
+</tr>
+<tr class="row-odd"><td><p>Version Control</p></td>
+<td><p>Git</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="support-documentation">
+<h2>Support &amp; Documentation<a class="headerlink" href="#support-documentation" title="Link to this heading"></a></h2>
+<p>This documentation provides:</p>
+<ul class="simple">
+<li><p><span class="xref std std-ref">Getting Started Guide</span> - Setup and initial configuration</p></li>
+<li><p><span class="xref std std-ref">ESP32 Controller Documentation</span> - Hardware and firmware details</p></li>
+<li><p><span class="xref std std-ref">System Architecture</span> - Design overview and data flow</p></li>
+<li><p><span class="xref std std-ref">Troubleshooting Guide</span> - Solutions to common issues</p></li>
+</ul>
+<p>For additional information, see the project’s GitHub repository.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Lydia Chheng.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

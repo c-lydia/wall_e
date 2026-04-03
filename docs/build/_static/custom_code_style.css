@@ -1,0 +1,237 @@
+/* Wall-E Documentation - Code Block Styling
+   Light gray rounded code blocks with professional syntax highlighting */
+
+/* Main code block container - ALL highlight divs get the light background */
+.rst-content .highlight,
+.highlight {
+    background-color: #f5f5f5 !important;
+    border: 1px solid #d0d0d0 !important;
+    border-radius: 8px !important;
+    padding: 14px 16px !important;
+    margin: 12px 0 !important;
+    overflow-x: auto !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06) !important;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Courier New', monospace !important;
+}
+
+html body div.rst-content .highlight pre,
+html body div.document div.highlight pre,
+.highlight pre,
+.rst-content .highlight pre,
+div.highlight pre {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    line-height: 1.5 !important;
+    color: #333 !important;
+}
+
+/* Code text styling */
+.highlight code,
+.rst-content .highlight code,
+div.highlight code {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Courier New', monospace !important;
+    font-size: 0.9em !important;
+    line-height: 1.5 !important;
+    color: #333 !important;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+/* RTD theme specific nested overrides */
+.rst-content .highlight {
+    background-color: #f5f5f5 !important;
+    border: 1px solid #d0d0d0 !important;
+    border-radius: 8px !important;
+}
+
+.rst-content pre {
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.rst-content pre.literal-block {
+    background-color: #f5f5f5 !important;
+    border: 1px solid #d0d0d0 !important;
+    border-radius: 8px !important;
+    padding: 14px 16px !important;
+    margin: 12px 0 !important;
+}
+
+/* Inline code (literals) - Light background with rounded corners */
+code.literal,
+code.code,
+tt.xref {
+    background-color: #f0f0f0 !important;
+    color: #c7254e !important;
+    padding: 3px 6px !important;
+    border-radius: 4px !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 0.9em !important;
+    font-weight: 500 !important;
+    border: 0.5px solid #ddd !important;
+}
+
+.rst-content code.literal,
+.rst-content .literal {
+    background-color: #f0f0f0 !important;
+    color: #c7254e !important;
+    padding: 3px 6px !important;
+    border-radius: 4px !important;
+    border: 0.5px solid #ddd !important;
+}
+
+/* Syntax highlighting token colors - Professional light theme */
+/* Keywords - Green */
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt {
+    color: #228B22 !important;
+    font-weight: 500 !important;
+}
+
+/* Strings - Teal/Cyan */
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sr,
+.highlight .ss {
+    color: #0091ad !important;
+}
+
+/* Comments - Gray-blue italic */
+.highlight .c,
+.highlight .cm,
+.highlight .cp,
+.highlight .c1,
+.highlight .ch {
+    color: #808080 !important;
+    font-style: italic !important;
+}
+
+/* Numbers - Dark blue */
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo {
+    color: #0000cd !important;
+}
+
+/* Operators - Dark gray */
+.highlight .o,
+.highlight .ow {
+    color: #333 !important;
+}
+
+/* Names/Identifiers - Dark gray */
+.highlight .n,
+.highlight .na,
+.highlight .nb,
+.highlight .nc,
+.highlight .nf,
+.highlight .nl,
+.highlight .nn,
+.highlight .nx {
+    color: #333 !important;
+}
+
+/* Punctuation - Dark gray */
+.highlight .p,
+.highlight .w {
+    color: #333 !important;
+}
+
+/* Line numbers */
+.highlight .lineno {
+    color: #90a4ae !important;
+    font-size: 0.85em !important;
+    padding-right: 8px !important;
+    border-right: 1px solid #ddd !important;
+    margin-right: 10px !important;
+}
+
+/* RTD-specific code block styling */
+.rst-content pre.literal-block,
+.rst-content div[class*='highlight'] {
+    background-color: #f5f5f5 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 8px !important;
+    padding: 12px 14px !important;
+    margin: 10px 0 !important;
+    overflow-x: auto !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) !important;
+}
+
+.rst-content pre code {
+    color: #2c3e50 !important;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    font-size: 0.9em !important;
+}
+
+/* Code blocks in tables */
+td code.literal,
+tr code.literal {
+    background-color: #f0f0f0 !important;
+    color: #c7254e !important;
+    padding: 2px 4px !important;
+    border-radius: 3px !important;
+    border: 0.5px solid #ddd !important;
+}
+
+/* Block-level code examples */
+dl dt code,
+dt code.literal {
+    background-color: #f0f0f0 !important;
+    color: #c7254e !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    border: 0.5px solid #ddd !important;
+    font-weight: 500 !important;
+}
+
+/* Docutils literal */
+.docutils.literal {
+    white-space: nowrap !important;
+}
+
+/* Additional language-specific blocks */
+.highlight-default,
+.highlight-python,
+.highlight-c {
+    border-radius: 8px !important;
+}
+
+/* Note/warning code blocks */
+.note .highlight,
+.warning .highlight,
+.attention .highlight {
+    background-color: #f9f9f9 !important;
+    border: 1px solid #ddd !important;
+    border-radius: 8px !important;
+}
+
+/* Mobile responsiveness for code blocks */
+@media (max-width: 768px) {
+    .highlight {
+        padding: 10px 12px !important;
+        font-size: 0.85em !important;
+    }
+}

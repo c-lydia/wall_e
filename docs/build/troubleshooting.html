@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshooting &mdash; Wall-E 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fe63c2af" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom_code_style.css?v=12bb80f3" />
+      <link rel="stylesheet" type="text/css" href="_static/custom_code_style.css?v=12bb80f3" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Architecture" href="architecture.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Wall-E
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="firmware/esp32_controller.html">ESP32 Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#common-issues-and-solutions">Common Issues and Solutions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#docker-compose-issues">Docker Compose Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#esp32-firmware-issues">ESP32 Firmware Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#micro-ros-connection-issues">micro-ROS Connection Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros-2-build-issues">ROS 2 Build Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation-build-issues">Documentation Build Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-debug-tools">Using Debug Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#serial-monitor-esp32">Serial Monitor (ESP32)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros-2-message-inspection">ROS 2 Message Inspection</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-help">Getting Help</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Wall-E</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Troubleshooting</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/troubleshooting.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="architecture.html" class="btn btn-neutral float-left" title="Architecture" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="troubleshooting">
+<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h1>
+<section id="common-issues-and-solutions">
+<h2>Common Issues and Solutions<a class="headerlink" href="#common-issues-and-solutions" title="Link to this heading"></a></h2>
+<section id="docker-compose-issues">
+<h3>Docker Compose Issues<a class="headerlink" href="#docker-compose-issues" title="Link to this heading"></a></h3>
+<p><strong>Problem</strong>: Port 9999 already in use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kill any existing micro-ROS processes</span>
+killall<span class="w"> </span>-9<span class="w"> </span>micro_ros_agent<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+
+<span class="c1"># Or change port in docker-compose.yaml</span>
+nano<span class="w"> </span>docker-compose.yaml
+</pre></div>
+</div>
+<p><strong>Problem</strong>: Docker image build fails</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clean and rebuild</span>
+docker<span class="w"> </span>compose<span class="w"> </span>down
+docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-f
+docker<span class="w"> </span>compose<span class="w"> </span>build<span class="w"> </span>--no-cache
+docker<span class="w"> </span>compose<span class="w"> </span>up
+</pre></div>
+</div>
+</section>
+<section id="esp32-firmware-issues">
+<h3>ESP32 Firmware Issues<a class="headerlink" href="#esp32-firmware-issues" title="Link to this heading"></a></h3>
+<p><strong>Problem</strong>: I2C communication fails with MPU6050</p>
+<ul class="simple">
+<li><p>Verify pull-up resistors (4.7kΩ recommended) on SCL/SDA lines</p></li>
+<li><p>Check connections: GPIO 22 (SCL), GPIO 21 (SDA)</p></li>
+<li><p>Confirm I2C address: 0x68 (check with <code class="docutils literal notranslate"><span class="pre">i2cdetect</span></code>)</p></li>
+<li><p>Reduce I2C frequency if needed</p></li>
+</ul>
+<p><strong>Problem</strong>: Ultrasonic sensor readings are incorrect</p>
+<ul class="simple">
+<li><p>Verify GPIO 9 (Trigger) and GPIO 10 (Echo) are connected</p></li>
+<li><p>Check power supply voltage (5V needed for HC-SR04)</p></li>
+<li><p>Ensure no interference from other GPIO operations</p></li>
+<li><p>Test with a simple GPIO toggle program first</p></li>
+</ul>
+<p><strong>Problem</strong>: ESP32 won’t flash</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check USB connection</span>
+ls<span class="w"> </span>-l<span class="w"> </span>/dev/ttyUSB*
+
+<span class="c1"># Erase flash completely</span>
+idf.py<span class="w"> </span>erase-flash
+
+<span class="c1"># Try again</span>
+idf.py<span class="w"> </span>flash
+</pre></div>
+</div>
+</section>
+<section id="micro-ros-connection-issues">
+<h3>micro-ROS Connection Issues<a class="headerlink" href="#micro-ros-connection-issues" title="Link to this heading"></a></h3>
+<p><strong>Problem</strong>: ESP32 can’t connect to WiFi</p>
+<ul class="simple">
+<li><p>Verify SSID and password in <code class="docutils literal notranslate"><span class="pre">app.c</span></code></p></li>
+<li><p>Check WiFi network is accessible from ESP32 location</p></li>
+<li><p>Enable serial monitor to see debug output:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>idf.py<span class="w"> </span>monitor
+</pre></div>
+</div>
+<p><strong>Problem</strong>: micro-ROS topics not appearing on host</p>
+<ul class="simple">
+<li><p>Verify micro-ROS agent is running:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>ps
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Check port 9999 is open:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>netstat<span class="w"> </span>-tuln<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="m">9999</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Monitor agent logs:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>micro_ros_agent
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Verify ESP32 can reach host (test ping from ESP32)</p></li>
+</ul>
+</section>
+<section id="ros-2-build-issues">
+<h3>ROS 2 Build Issues<a class="headerlink" href="#ros-2-build-issues" title="Link to this heading"></a></h3>
+<p><strong>Problem</strong>: Package dependencies not found</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inside workspace container</span>
+rosdep<span class="w"> </span>update
+rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src<span class="w"> </span>-y
+</pre></div>
+</div>
+<p><strong>Problem</strong>: colcon build fails</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clean and rebuild</span>
+rm<span class="w"> </span>-rf<span class="w"> </span>build<span class="w"> </span>install<span class="w"> </span>log
+colcon<span class="w"> </span>build
+</pre></div>
+</div>
+</section>
+<section id="documentation-build-issues">
+<h3>Documentation Build Issues<a class="headerlink" href="#documentation-build-issues" title="Link to this heading"></a></h3>
+<p><strong>Problem</strong>: Sphinx documentation won’t build</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inside workspace container</span>
+<span class="nb">cd</span><span class="w"> </span>docs
+sphinx-build<span class="w"> </span>-W<span class="w"> </span>-b<span class="w"> </span>html<span class="w"> </span><span class="nb">source</span><span class="w"> </span>_build/html
+</pre></div>
+</div>
+</section>
+</section>
+<section id="using-debug-tools">
+<h2>Using Debug Tools<a class="headerlink" href="#using-debug-tools" title="Link to this heading"></a></h2>
+<section id="serial-monitor-esp32">
+<h3>Serial Monitor (ESP32)<a class="headerlink" href="#serial-monitor-esp32" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>idf.py<span class="w"> </span>monitor<span class="w"> </span>-p<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span>-b<span class="w"> </span><span class="m">115200</span>
+</pre></div>
+</div>
+</section>
+<section id="ros-2-message-inspection">
+<h3>ROS 2 Message Inspection<a class="headerlink" href="#ros-2-message-inspection" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># In host ROS 2 environment</span>
+ros2<span class="w"> </span>topic<span class="w"> </span>list
+ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/imu/data
+ros2<span class="w"> </span>topic<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>/range/data
+</pre></div>
+</div>
+</section>
+</section>
+<section id="getting-help">
+<h2>Getting Help<a class="headerlink" href="#getting-help" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Check serial output from ESP32 for error messages</p></li>
+<li><p>Review micro-ROS agent logs</p></li>
+<li><p>Verify hardware connections with multimeter</p></li>
+<li><p>Check ROS 2 node graph: <code class="docutils literal notranslate"><span class="pre">rqt_graph</span></code></p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="architecture.html" class="btn btn-neutral float-left" title="Architecture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Lydia Chheng.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -44,8 +44,6 @@ firmware/dev_ws/sdkconfig
 
 # Sphinx Documentation
 docs/_build/
-docs/build/
-docs/build-pdf/
 docs/build-latex/
 docs/.doctrees/
 
