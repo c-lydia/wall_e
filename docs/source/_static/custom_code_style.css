@@ -1,53 +1,49 @@
 /* Custom code block and syntax highlighting styles for Wall-E documentation */
-/* These styles override the RTD theme with light gray rounded code blocks */
+/* Light gray rounded code blocks with professional syntax highlighting */
 
-/* Nuclear option CSS specificity for RTD theme override */
-
-html body div.rst-content .highlight,
-html body div.document div.highlight,
-html body .section .highlight,
-.sectionbody .highlight,
+/* Main code block styling */
 .highlight,
 .rst-content .highlight,
 div.highlight,
 div.highlight-c,
 div.highlight-bash,
-div.highlight-python {
+div.highlight-python,
+div.highlight-java,
+div.highlight-yaml,
+div.highlight-json {
     background-color: #f5f5f5 !important;
-    border: 1px solid #ccc !important;
+    border: 1px solid #d0d0d0 !important;
     border-radius: 8px !important;
-    padding: 12px 14px !important;
-    margin: 10px 0 !important;
+    padding: 14px 16px !important;
+    margin: 12px 0 !important;
     overflow-x: auto !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06) !important;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Courier New', monospace !important;
 }
 
 html body div.rst-content .highlight pre,
 html body div.document div.highlight pre,
-html body .section .highlight pre,
-.sectionbody .highlight pre,
 .highlight pre,
 .rst-content .highlight pre,
-div.highlight pre,
-div.highlight-c pre,
-div.highlight-bash pre,
-div.highlight-python pre {
+div.highlight pre {
     margin: 0 !important;
     padding: 0 !important;
     background-color: transparent !important;
     border: none !important;
     border-radius: 0 !important;
     box-shadow: none !important;
+    line-height: 1.5 !important;
+    color: #333 !important;
 }
 
 /* Code text styling */
 .highlight code,
 .rst-content .highlight code,
 div.highlight code {
-    font-family: 'Courier New', Courier, monospace !important;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Courier New', monospace !important;
     font-size: 0.9em !important;
-    line-height: 1.4 !important;
-    color: #2c3e50 !important;
+    line-height: 1.5 !important;
+    color: #333 !important;
     background-color: transparent !important;
     border: none !important;
     padding: 0 !important;
@@ -95,24 +91,76 @@ tt.xref {
     border: 0.5px solid #ddd !important;
 }
 
-/* Syntax highlighting tokens - Light theme colors */
-.highlight .k { color: #ff7043 !important; font-weight: bold !important; } /* Keyword - Orange */
-.highlight .kt { color: #ff7043 !important; font-weight: bold !important; } /* Keyword Type - Orange */
-.highlight .n { color: #2c3e50 !important; } /* Name - Dark */
-.highlight .na { color: #0288d1 !important; } /* Attribute - Blue */
-.highlight .nb { color: #0288d1 !important; } /* Built-in - Blue */
-.highlight .s { color: #00897b !important; } /* String - Teal */
-.highlight .se { color: #00897b !important; } /* String Escape - Teal */
-.highlight .nc { color: #0288d1 !important; font-weight: bold !important; } /* Class Name - Blue */
-.highlight .nf { color: #7e57c2 !important; } /* Function Name - Purple */
-.highlight .m { color: #7e57c2 !important; } /* Number - Purple */
-.highlight .mf { color: #7e57c2 !important; } /* Float - Purple */
-.highlight .mi { color: #7e57c2 !important; } /* Integer - Purple */
-.highlight .c { color: #90a4ae !important; font-style: italic !important; } /* Comment - Blue-gray */
-.highlight .cp { color: #90a4ae !important; } /* Comment Preproc - Blue-gray */
-.highlight .o { color: #ff7043 !important; } /* Operator - Orange */
-.highlight .p { color: #2c3e50 !important; } /* Punctuation - Dark */
-.highlight .w { color: #2c3e50 !important; } /* Whitespace - Dark */
+/* Syntax highlighting token colors - Professional light theme */
+/* Keywords - Green */
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt {
+    color: #228B22 !important;
+    font-weight: 500 !important;
+}
+
+/* Strings - Teal/Cyan */
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sr,
+.highlight .ss {
+    color: #0091ad !important;
+}
+
+/* Comments - Gray-blue italic */
+.highlight .c,
+.highlight .cm,
+.highlight .cp,
+.highlight .c1,
+.highlight .ch {
+    color: #808080 !important;
+    font-style: italic !important;
+}
+
+/* Numbers - Dark blue */
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo {
+    color: #0000cd !important;
+}
+
+/* Operators - Dark gray */
+.highlight .o,
+.highlight .ow {
+    color: #333 !important;
+}
+
+/* Names/Identifiers - Dark gray */
+.highlight .n,
+.highlight .na,
+.highlight .nb,
+.highlight .nc,
+.highlight .nf,
+.highlight .nl,
+.highlight .nn,
+.highlight .nx {
+    color: #333 !important;
+}
+
+/* Punctuation - Dark gray */
+.highlight .p,
+.highlight .w {
+    color: #333 !important;
+}
 
 /* Line numbers */
 .highlight .lineno {
