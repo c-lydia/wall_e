@@ -1,0 +1,31 @@
+services:
+  workspace:
+    build: .
+    container_name: micro_ros_workspace
+    volumes:
+      - ./src:/micro_ros_ws/src
+      - ./build:/micro_ros_ws/build
+      - ./install:/micro_ros_ws/install
+      - ./docs:/micro_ros_ws/docs
+    working_dir: /micro_ros_ws
+    command: bash -c "rosdep install --from-paths src --ignore-src -y 2>/dev/null || true && colcon build && bash"
+    stdin_open: true
+    tty: true
+    networks:
+      - micro_ros_net
+
+  micro_ros_agent:
+    image: microros/micro-ros-agent:humble
+    container_name: micro_ros_agent
+    network_mode: host
+    command: udp4 --port 9999
+    networks:
+      - micro_ros_net
+
+networks:
+  micro_ros_net:
+    driver: bridge
+
+volumes:
+  micro_ros_ws_build:
+  micro_ros_ws_install:
