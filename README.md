@@ -1,4 +1,4 @@
-# micro_ros_ws
+# Wall-E
 
 A micro-ROS workspace for ESP32 development with ROS 2 Humble integration, featuring:
 
@@ -40,7 +40,9 @@ The micro-ROS agent listens on UDP port **9999** for ESP32 connections.
 ```bash
 micro_ros_ws/
 ├── src/                  # ROS 2 packages (colcon workspace)
-├── firmware/             # ESP32 firmware and micro-ROS client code
+├── firmware/
+│   ├── custom/          # Custom ESP32 firmware applications
+│   │   └── esp32_controller/    # Main sensor node (IMU + ultrasonic)
 │   ├── dev_ws/          # ESP-IDF development workspace
 │   └── mcu_ws/          # MCU-specific micro-ROS packages
 ├── docs/                # Sphinx documentation
@@ -79,4 +81,8 @@ sphinx-build -b html source _build/html
 - **venv + Docker:** Use venv locally for Python tools, Docker for ROS 2 builds
 - **Documentation tools:** Sphinx, myst-parser, RTD theme pre-installed
 
-For more details, see [Documentation](docs/source/index.md) (TBD).
+For more details, see:
+
+- Restructured Text Documentation: [Documentation](docs/source/index.rst)
+- HTML Documentation: [HTML Documentation](docs/build/index.html)
+- PDF Documentation: [PDF Documentation](docs/build-pdf/wall-e.pdf)

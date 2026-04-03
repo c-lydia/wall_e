@@ -1,8 +1,18 @@
 /* Custom code block and syntax highlighting styles for Wall-E documentation */
 /* These styles override the RTD theme with light gray rounded code blocks */
 
-/* Code block containers - Light gray with rounded corners */
-.highlight {
+/* Nuclear option CSS specificity for RTD theme override */
+
+html body div.rst-content .highlight,
+html body div.document div.highlight,
+html body .section .highlight,
+.sectionbody .highlight,
+.highlight,
+.rst-content .highlight,
+div.highlight,
+div.highlight-c,
+div.highlight-bash,
+div.highlight-python {
     background-color: #f5f5f5 !important;
     border: 1px solid #ccc !important;
     border-radius: 8px !important;
@@ -12,16 +22,28 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) !important;
 }
 
-.highlight pre {
+html body div.rst-content .highlight pre,
+html body div.document div.highlight pre,
+html body .section .highlight pre,
+.sectionbody .highlight pre,
+.highlight pre,
+.rst-content .highlight pre,
+div.highlight pre,
+div.highlight-c pre,
+div.highlight-bash pre,
+div.highlight-python pre {
     margin: 0 !important;
     padding: 0 !important;
     background-color: transparent !important;
     border: none !important;
     border-radius: 0 !important;
+    box-shadow: none !important;
 }
 
 /* Code text styling */
-.highlight code {
+.highlight code,
+.rst-content .highlight code,
+div.highlight code {
     font-family: 'Courier New', Courier, monospace !important;
     font-size: 0.9em !important;
     line-height: 1.4 !important;
@@ -29,6 +51,25 @@
     background-color: transparent !important;
     border: none !important;
     padding: 0 !important;
+}
+
+/* RTD theme specific nested overrides */
+.rst-content .highlight {
+    background-color: #f5f5f5 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 8px !important;
+}
+
+.rst-content pre {
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.rst-content pre.literal-block {
+    background-color: #f5f5f5 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 8px !important;
 }
 
 /* Inline code (literals) - Light background with rounded corners */

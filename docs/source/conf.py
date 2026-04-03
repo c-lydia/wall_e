@@ -22,6 +22,10 @@ html_use_smartquotes = True
 # Add custom CSS for code styling
 html_css_files = ['custom_code_style.css']
 
+# Setup function to inject additional CSS overrides
+def setup(app):
+    app.add_css_file('custom_code_style.css')
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
