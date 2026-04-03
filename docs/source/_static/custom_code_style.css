@@ -1,0 +1,146 @@
+/* Custom code block and syntax highlighting styles for Wall-E documentation */
+
+/* Code block containers */
+.highlight {
+    background-color: #272822 !important;
+    border: 1px solid #1a5490;
+    border-radius: 4px;
+    padding: 12px 14px !important;
+    margin: 10px 0;
+    overflow-x: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.highlight pre {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+/* Code text styling */
+.highlight code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #f8f8f2;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* Inline code (literals) */
+code.literal,
+code.code,
+tt.xref {
+    background-color: #f4f4f4;
+    color: #c7254e;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    font-weight: 500;
+    border: 0.5px solid #ddd;
+}
+
+/* Inline code in dark themes */
+.dark code.literal,
+.dark code.code,
+.dark tt.xref {
+    background-color: #34495e;
+    color: #a1efe4;
+    border: 0.5px solid #555;
+}
+
+/* Syntax highlighting tokens */
+.highlight .k { color: #ff79c6; font-weight: bold; } /* Keyword */
+.highlight .kt { color: #ff79c6; font-weight: bold; } /* Keyword Type */
+.highlight .n { color: #f8f8f2; } /* Name */
+.highlight .s { color: #a1efe4; } /* String */
+.highlight .se { color: #a1efe4; } /* String Escape */
+.highlight .nc { color: #50fa7b; font-weight: bold; } /* Class Name */
+.highlight .nf { color: #50fa7b; } /* Function Name */
+.highlight .m { color: #bd93f9; } /* Number */
+.highlight .mf { color: #bd93f9; } /* Float */
+.highlight .mi { color: #bd93f9; } /* Integer */
+.highlight .c { color: #75715e; font-style: italic; } /* Comment */
+.highlight .cp { color: #75715e; } /* Comment Preproc */
+.highlight .o { color: #ff79c6; } /* Operator */
+.highlight .p { color: #f8f8f2; } /* Punctuation */
+.highlight .w { color: #f8f8f2; } /* Whitespace */
+
+/* Line numbers */
+.highlight .lineno {
+    color: #75715e;
+    font-size: 0.85em;
+    padding-right: 8px;
+    border-right: 1px solid #44475a;
+    margin-right: 10px;
+}
+
+/* Code blocks in note/warning directives */
+.note .highlight,
+.warning .highlight,
+.attention .highlight {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.note a.highlight code,
+.warning .highlight code,
+.attention .highlight code {
+    color: #d73a49;
+    background-color: #f6f8fa;
+}
+
+/* RTD theme specific styling */
+.rst-content code.literal,
+.rst-content .literal {
+    background-color: #f4f4f4;
+    color: #c7254e;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 0.5px solid #e0e0e0;
+}
+
+.rst-content pre.literal-block,
+.rst-content div[class*='highlight'] {
+    background-color: #272822;
+    border: 1px solid #1a5490;
+    border-radius: 4px;
+    padding: 12px 14px;
+    margin: 10px 0;
+    overflow-x: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rst-content pre code {
+    color: #f8f8f2;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-size: 0.9em;
+}
+
+/* Code blocks inside tables */
+td code.literal,
+tr code.literal {
+    background-color: #34495e;
+    color: #a1efe4;
+    padding: 1px 4px;
+    border-radius: 2px;
+}
+
+/* Docstrings and code examples */
+.docutils.literal {
+    white-space: nowrap;
+}
+
+dt code.literal {
+    background-color: #f4f4f4;
+    color: #c7254e;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 0.5px solid #ddd;
+    font-weight: 500;
+}
