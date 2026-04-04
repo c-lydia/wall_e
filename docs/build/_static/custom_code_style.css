@@ -1,6 +1,6 @@
-/* Enhanced syntax highlighting for code blocks */
+/* Enhanced Monokai-inspired syntax highlighting for code blocks */
 
-/* Keywords - Bold blue - HIGH PRIORITY */
+/* Keywords - Magenta/Purple - VERY VISIBLE */
 .rst-content .highlight .k,
 .rst-content .highlight .kc,
 .rst-content .highlight .kd,
@@ -15,11 +15,11 @@
 .highlight .kp,
 .highlight .kr,
 .highlight .kt {
-    color: #0066cc !important;
+    color: #f92672 !important;
     font-weight: 700 !important;
 }
 
-/* Strings - Green - HIGH PRIORITY */
+/* Strings - Green - VERY VISIBLE */
 .rst-content .highlight .s,
 .rst-content .highlight .s1,
 .rst-content .highlight .s2,
@@ -42,11 +42,11 @@
 .highlight .si,
 .highlight .sr,
 .highlight .ss {
-    color: #0a7e00 !important;
+    color: #a6e22e !important;
     font-weight: 500 !important;
 }
 
-/* Comments - Gray italic - HIGH PRIORITY */
+/* Comments - Orange/Yellow - VERY VISIBLE */
 .rst-content .highlight .c,
 .rst-content .highlight .cm,
 .rst-content .highlight .cp,
@@ -57,11 +57,12 @@
 .highlight .cp,
 .highlight .c1,
 .highlight .ch {
-    color: #999999 !important;
+    color: #fd971f !important;
     font-style: italic !important;
+    font-weight: 500 !important;
 }
 
-/* Numbers - Red-orange - HIGH PRIORITY */
+/* Numbers - Cyan/Blue - VERY VISIBLE */
 .rst-content .highlight .m,
 .rst-content .highlight .mf,
 .rst-content .highlight .mh,
@@ -72,80 +73,107 @@
 .highlight .mh,
 .highlight .mi,
 .highlight .mo {
-    color: #d73a49 !important;
-    font-weight: 500 !important;
+    color: #ae81ff !important;
+    font-weight: 600 !important;
 }
 
-/* Function names - Purple - HIGH PRIORITY */
+/* Function names - Light cyan - VERY VISIBLE */
 .rst-content .highlight .nf,
 .rst-content .highlight .fm,
 .highlight .nf,
 .highlight .fm {
-    color: #6f42c1 !important;
+    color: #66d9ef !important;
     font-weight: 600 !important;
 }
 
-/* Class names - Dark blue - HIGH PRIORITY */
+/* Class names - Light cyan - VERY VISIBLE */
 .rst-content .highlight .nc,
 .highlight .nc {
-    color: #0066cc !important;
+    color: #66d9ef !important;
     font-weight: 600 !important;
 }
 
-/* Type annotations - Red - HIGH PRIORITY */
+/* Type annotations - Light magenta */
 .rst-content .highlight .tp,
 .rst-content .highlight .nt,
 .highlight .tp,
 .highlight .nt {
-    color: #d73a49 !important;
-    font-weight: 500 !important;
+    color: #f92672 !important;
+    font-weight: 600 !important;
 }
 
-/* Operators - Dark gray - HIGH PRIORITY */
+/* Operators - Default text */
 .rst-content .highlight .o,
 .rst-content .highlight .ow,
 .highlight .o,
 .highlight .ow {
-    color: #333333 !important;
+    color: #f8f8f2 !important;
 }
 
-/* Code block container - light gray background with rounded corners */
+/* Default text color */
+.rst-content .highlight,
+.highlight {
+    color: #f8f8f2 !important;
+}
+
+.rst-content .highlight .n,
+.rst-content .highlight .na,
+.rst-content .highlight .nb,
+.rst-content .highlight .ne,
+.rst-content .highlight .nl,
+.rst-content .highlight .nn,
+.rst-content .highlight .nx,
+.rst-content .highlight .bp,
+.highlight .n,
+.highlight .na,
+.highlight .nb,
+.highlight .ne,
+.highlight .nl,
+.highlight .nn,
+.highlight .nx,
+.highlight .bp {
+    color: #f8f8f2 !important;
+}
+
+/* Code block container - Dark background for Monokai theme */
 .rst-content .highlight,
 .rst-content div.highlight,
 .highlight {
-    background-color: #f8f8f8 !important;
-    border: 1px solid #e0e0e0 !important;
+    background-color: #272822 !important;
+    border: 1px solid #3e3d32 !important;
     border-radius: 6px !important;
     padding: 14px 16px !important;
     margin: 12px 0 !important;
     overflow-x: auto !important;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5) !important;
 }
 
 .rst-content .highlight pre,
 .highlight pre {
     line-height: 1.6 !important;
     font-size: 0.9em !important;
-    color: #2c3e50 !important;
+    color: #f8f8f2 !important;
     margin: 0 !important;
     padding: 0 !important;
     background: transparent !important;
     border: none !important;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
 }
 
-/* Inline code - light background */
+/* Inline code - Dark background */
 .rst-content code.literal,
 .rst-content code.code,
 code.literal,
 code.code,
 tt.xref {
-    background-color: #f0f0f0 !important;
-    color: #d73a49 !important;
+    background-color: #3e3d32 !important;
+    color: #f92672 !important;
     padding: 2px 6px !important;
     border-radius: 3px !important;
-    border: 0.5px solid #e0e0e0 !important;
+    border: 0.5px solid #6e6d63 !important;
     font-size: 0.9em !important;
     font-weight: 500 !important;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
 }
 
 /* RTD-specific code block styling */
