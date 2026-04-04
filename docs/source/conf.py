@@ -12,20 +12,14 @@ extensions = [
     'sphinx.ext.viewcode',
 ]
 
-# Syntax highlighting configuration - using native for best colors
+# Syntax highlighting configuration
 highlight_language = 'c'
-pygments_style = 'native'  # More colorful syntax highlighting
 
 # Code block customization
 html_use_smartquotes = True
 
-# Add custom CSS for code styling
+# Add custom CSS for minimal code styling (RTD theme compatible)
 html_css_files = ['custom_code_style.css']
-
-# Setup function to ensure CSS loads with maximum priority
-def setup(app):
-    # Add CSS file to ensure it loads last
-    app.add_css_file('custom_code_style.css')
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -37,10 +31,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'sphinx_rtd_theme'
 
 html_theme_options = {
-    'display_version': True,
     'prev_next_buttons_location': 'both',
-    'style_external_links': False,
-    'vcs_pageview_mode': '',
     'style_nav_header_background': '#2980B9',
 }
 
