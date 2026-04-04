@@ -1,26 +1,13 @@
 /* Enhanced syntax highlighting for code blocks */
 
-/* Code block base styling */
-.highlight {
-    background-color: #f8f8f8 !important;
-    border: 1px solid #e0e0e0 !important;
-    border-radius: 6px !important;
-    padding: 14px 16px !important;
-    margin: 12px 0 !important;
-    overflow-x: auto !important;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05) !important;
-}
-
-.highlight pre {
-    line-height: 1.6 !important;
-    font-size: 0.9em !important;
-    color: #2c3e50 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-}
-
-/* Keywords - Bold blue */
+/* Keywords - Bold blue - HIGH PRIORITY */
+.rst-content .highlight .k,
+.rst-content .highlight .kc,
+.rst-content .highlight .kd,
+.rst-content .highlight .kn,
+.rst-content .highlight .kp,
+.rst-content .highlight .kr,
+.rst-content .highlight .kt,
 .highlight .k,
 .highlight .kc,
 .highlight .kd,
@@ -29,10 +16,21 @@
 .highlight .kr,
 .highlight .kt {
     color: #0066cc !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
 }
 
-/* Strings - Teal */
+/* Strings - Green - HIGH PRIORITY */
+.rst-content .highlight .s,
+.rst-content .highlight .s1,
+.rst-content .highlight .s2,
+.rst-content .highlight .sb,
+.rst-content .highlight .sc,
+.rst-content .highlight .sd,
+.rst-content .highlight .se,
+.rst-content .highlight .sh,
+.rst-content .highlight .si,
+.rst-content .highlight .sr,
+.rst-content .highlight .ss,
 .highlight .s,
 .highlight .s1,
 .highlight .s2,
@@ -45,9 +43,15 @@
 .highlight .sr,
 .highlight .ss {
     color: #0a7e00 !important;
+    font-weight: 500 !important;
 }
 
-/* Comments - Gray italic */
+/* Comments - Gray italic - HIGH PRIORITY */
+.rst-content .highlight .c,
+.rst-content .highlight .cm,
+.rst-content .highlight .cp,
+.rst-content .highlight .c1,
+.rst-content .highlight .ch,
 .highlight .c,
 .highlight .cm,
 .highlight .cp,
@@ -57,80 +61,81 @@
     font-style: italic !important;
 }
 
-/* Numbers - Dark orange */
+/* Numbers - Red-orange - HIGH PRIORITY */
+.rst-content .highlight .m,
+.rst-content .highlight .mf,
+.rst-content .highlight .mh,
+.rst-content .highlight .mi,
+.rst-content .highlight .mo,
 .highlight .m,
 .highlight .mf,
 .highlight .mh,
 .highlight .mi,
 .highlight .mo {
     color: #d73a49 !important;
+    font-weight: 500 !important;
 }
 
-/* Function names - Purple */
+/* Function names - Purple - HIGH PRIORITY */
+.rst-content .highlight .nf,
+.rst-content .highlight .fm,
 .highlight .nf,
 .highlight .fm {
     color: #6f42c1 !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
 }
 
-/* Class names - Dark blue */
+/* Class names - Dark blue - HIGH PRIORITY */
+.rst-content .highlight .nc,
 .highlight .nc {
     color: #0066cc !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
 }
 
-/* Decorators - Dark purple */
-.highlight .nd {
-    color: #800080 !important;
-    font-weight: 500 !important;
-}
-
-/* Type annotations - Dark red */
+/* Type annotations - Red - HIGH PRIORITY */
+.rst-content .highlight .tp,
+.rst-content .highlight .nt,
 .highlight .tp,
 .highlight .nt {
     color: #d73a49 !important;
+    font-weight: 500 !important;
 }
 
-/* Operators - Dark gray */
+/* Operators - Dark gray - HIGH PRIORITY */
+.rst-content .highlight .o,
+.rst-content .highlight .ow,
 .highlight .o,
 .highlight .ow {
     color: #333333 !important;
 }
 
-/* Identifiers - Default dark gray */
-.highlight .n,
-.highlight .na,
-.highlight .nb,
-.highlight .ne,
-.highlight .nl,
-.highlight .nn,
-.highlight .nx,
-.highlight .bp {
+/* Code block container - light gray background with rounded corners */
+.rst-content .highlight,
+.rst-content div.highlight,
+.highlight {
+    background-color: #f8f8f8 !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    padding: 14px 16px !important;
+    margin: 12px 0 !important;
+    overflow-x: auto !important;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+.rst-content .highlight pre,
+.highlight pre {
+    line-height: 1.6 !important;
+    font-size: 0.9em !important;
     color: #2c3e50 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
 }
 
-/* Escape sequences - Red */
-.highlight .esc {
-    color: #d73a49 !important;
-}
-
-/* Punctuation - Dark gray */
-.highlight .p,
-.highlight .w {
-    color: #333333 !important;
-}
-
-/* Line numbers - Light gray */
-.highlight .lineno {
-    color: #b0b0b0 !important;
-    font-size: 0.85em !important;
-    padding-right: 12px !important;
-    border-right: 1px solid #e0e0e0 !important;
-    margin-right: 12px !important;
-    user-select: none !important;
-}
-
-/* Basic inline code styling */
+/* Inline code - light background */
+.rst-content code.literal,
+.rst-content code.code,
 code.literal,
 code.code,
 tt.xref {
