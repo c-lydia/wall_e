@@ -1,93 +1,26 @@
-/* Wall-E Documentation - Code Block Styling
-   Light gray rounded code blocks with professional syntax highlighting */
+/* Enhanced syntax highlighting for code blocks */
 
-/* Main code block container - ALL highlight divs get the light background */
-.rst-content .highlight,
+/* Code block base styling */
 .highlight {
-    background-color: #f5f5f5 !important;
-    border: 1px solid #d0d0d0 !important;
-    border-radius: 8px !important;
+    background-color: #f8f8f8 !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 6px !important;
     padding: 14px 16px !important;
     margin: 12px 0 !important;
     overflow-x: auto !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06) !important;
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Courier New', monospace !important;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05) !important;
 }
 
-html body div.rst-content .highlight pre,
-html body div.document div.highlight pre,
-.highlight pre,
-.rst-content .highlight pre,
-div.highlight pre {
+.highlight pre {
+    line-height: 1.6 !important;
+    font-size: 0.9em !important;
+    color: #2c3e50 !important;
     margin: 0 !important;
     padding: 0 !important;
-    background-color: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    line-height: 1.5 !important;
-    color: #333 !important;
+    background: transparent !important;
 }
 
-/* Code text styling */
-.highlight code,
-.rst-content .highlight code,
-div.highlight code {
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Courier New', monospace !important;
-    font-size: 0.9em !important;
-    line-height: 1.5 !important;
-    color: #333 !important;
-    background-color: transparent !important;
-    border: none !important;
-    padding: 0 !important;
-}
-
-/* RTD theme specific nested overrides */
-.rst-content .highlight {
-    background-color: #f5f5f5 !important;
-    border: 1px solid #d0d0d0 !important;
-    border-radius: 8px !important;
-}
-
-.rst-content pre {
-    background-color: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-}
-
-.rst-content pre.literal-block {
-    background-color: #f5f5f5 !important;
-    border: 1px solid #d0d0d0 !important;
-    border-radius: 8px !important;
-    padding: 14px 16px !important;
-    margin: 12px 0 !important;
-}
-
-/* Inline code (literals) - Light background with rounded corners */
-code.literal,
-code.code,
-tt.xref {
-    background-color: #f0f0f0 !important;
-    color: #c7254e !important;
-    padding: 3px 6px !important;
-    border-radius: 4px !important;
-    font-family: 'Courier New', Courier, monospace !important;
-    font-size: 0.9em !important;
-    font-weight: 500 !important;
-    border: 0.5px solid #ddd !important;
-}
-
-.rst-content code.literal,
-.rst-content .literal {
-    background-color: #f0f0f0 !important;
-    color: #c7254e !important;
-    padding: 3px 6px !important;
-    border-radius: 4px !important;
-    border: 0.5px solid #ddd !important;
-}
-
-/* Syntax highlighting token colors - Professional light theme */
-/* Keywords - Green */
+/* Keywords - Bold blue */
 .highlight .k,
 .highlight .kc,
 .highlight .kd,
@@ -95,11 +28,11 @@ tt.xref {
 .highlight .kp,
 .highlight .kr,
 .highlight .kt {
-    color: #228B22 !important;
-    font-weight: 500 !important;
+    color: #0066cc !important;
+    font-weight: 600 !important;
 }
 
-/* Strings - Teal/Cyan */
+/* Strings - Teal */
 .highlight .s,
 .highlight .s1,
 .highlight .s2,
@@ -111,59 +44,103 @@ tt.xref {
 .highlight .si,
 .highlight .sr,
 .highlight .ss {
-    color: #0091ad !important;
+    color: #0a7e00 !important;
 }
 
-/* Comments - Gray-blue italic */
+/* Comments - Gray italic */
 .highlight .c,
 .highlight .cm,
 .highlight .cp,
 .highlight .c1,
 .highlight .ch {
-    color: #808080 !important;
+    color: #999999 !important;
     font-style: italic !important;
 }
 
-/* Numbers - Dark blue */
+/* Numbers - Dark orange */
 .highlight .m,
 .highlight .mf,
 .highlight .mh,
 .highlight .mi,
 .highlight .mo {
-    color: #0000cd !important;
+    color: #d73a49 !important;
+}
+
+/* Function names - Purple */
+.highlight .nf,
+.highlight .fm {
+    color: #6f42c1 !important;
+    font-weight: 500 !important;
+}
+
+/* Class names - Dark blue */
+.highlight .nc {
+    color: #0066cc !important;
+    font-weight: 500 !important;
+}
+
+/* Decorators - Dark purple */
+.highlight .nd {
+    color: #800080 !important;
+    font-weight: 500 !important;
+}
+
+/* Type annotations - Dark red */
+.highlight .tp,
+.highlight .nt {
+    color: #d73a49 !important;
 }
 
 /* Operators - Dark gray */
 .highlight .o,
 .highlight .ow {
-    color: #333 !important;
+    color: #333333 !important;
 }
 
-/* Names/Identifiers - Dark gray */
+/* Identifiers - Default dark gray */
 .highlight .n,
 .highlight .na,
 .highlight .nb,
-.highlight .nc,
-.highlight .nf,
+.highlight .ne,
 .highlight .nl,
 .highlight .nn,
-.highlight .nx {
-    color: #333 !important;
+.highlight .nx,
+.highlight .bp {
+    color: #2c3e50 !important;
+}
+
+/* Escape sequences - Red */
+.highlight .esc {
+    color: #d73a49 !important;
 }
 
 /* Punctuation - Dark gray */
 .highlight .p,
 .highlight .w {
-    color: #333 !important;
+    color: #333333 !important;
 }
 
-/* Line numbers */
+/* Line numbers - Light gray */
 .highlight .lineno {
-    color: #90a4ae !important;
+    color: #b0b0b0 !important;
     font-size: 0.85em !important;
-    padding-right: 8px !important;
-    border-right: 1px solid #ddd !important;
-    margin-right: 10px !important;
+    padding-right: 12px !important;
+    border-right: 1px solid #e0e0e0 !important;
+    margin-right: 12px !important;
+    user-select: none !important;
+}
+
+/* Basic inline code styling */
+code.literal,
+code.code,
+tt.xref {
+    background-color: #f0f0f0 !important;
+    color: #d73a49 !important;
+    padding: 2px 6px !important;
+    border-radius: 3px !important;
+    border: 0.5px solid #e0e0e0 !important;
+    font-size: 0.9em !important;
+    font-weight: 500 !important;
 }
 
 /* RTD-specific code block styling */
