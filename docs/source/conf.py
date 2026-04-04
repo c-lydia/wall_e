@@ -18,9 +18,6 @@ highlight_language = 'c'
 # Code block customization
 html_use_smartquotes = True
 
-# Add custom CSS for minimal code styling (RTD theme compatible)
-html_css_files = ['custom_code_style.css']
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
