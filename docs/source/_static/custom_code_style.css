@@ -102,57 +102,33 @@
     font-weight: 600 !important;
 }
 
-/* Operators - Default text */
+/* Operators - Dark gray */
 .rst-content .highlight .o,
 .rst-content .highlight .ow,
 .highlight .o,
 .highlight .ow {
-    color: #f8f8f2 !important;
+    color: #333 !important;
 }
 
-/* Default text color */
-.rst-content .highlight,
-.highlight {
-    color: #f8f8f2 !important;
-}
 
-.rst-content .highlight .n,
-.rst-content .highlight .na,
-.rst-content .highlight .nb,
-.rst-content .highlight .ne,
-.rst-content .highlight .nl,
-.rst-content .highlight .nn,
-.rst-content .highlight .nx,
-.rst-content .highlight .bp,
-.highlight .n,
-.highlight .na,
-.highlight .nb,
-.highlight .ne,
-.highlight .nl,
-.highlight .nn,
-.highlight .nx,
-.highlight .bp {
-    color: #f8f8f2 !important;
-}
-
-/* Code block container - Dark background for Monokai theme */
+/* Code block container - light background with rounded corners (RTD compatible) */
 .rst-content .highlight,
 .rst-content div.highlight,
 .highlight {
-    background-color: #272822 !important;
-    border: 1px solid #3e3d32 !important;
+    background-color: #f8f8f8 !important;
+    border: 1px solid #ddd !important;
     border-radius: 6px !important;
     padding: 14px 16px !important;
     margin: 12px 0 !important;
     overflow-x: auto !important;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05) !important;
 }
 
 .rst-content .highlight pre,
 .highlight pre {
     line-height: 1.6 !important;
     font-size: 0.9em !important;
-    color: #f8f8f2 !important;
+    color: #1f1f1f !important;
     margin: 0 !important;
     padding: 0 !important;
     background: transparent !important;
@@ -160,21 +136,21 @@
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
 }
 
-/* Inline code - Dark background */
+/* Inline code - light background */
 .rst-content code.literal,
 .rst-content code.code,
 code.literal,
 code.code,
 tt.xref {
-    background-color: #3e3d32 !important;
-    color: #f92672 !important;
+    background-color: #f0f0f0 !important;
+    color: #c7254e !important;
     padding: 2px 6px !important;
     border-radius: 3px !important;
-    border: 0.5px solid #6e6d63 !important;
+    border: 0.5px solid #ddd !important;
     font-size: 0.9em !important;
     font-weight: 500 !important;
-    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
 }
+
 
 /* RTD-specific code block styling */
 .rst-content pre.literal-block,
