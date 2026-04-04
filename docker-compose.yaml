@@ -17,7 +17,6 @@ services:
   micro_ros_agent:
     image: microros/micro-ros-agent:humble
     container_name: micro_ros_agent
-    network_mode: host
     command: udp4 --port 9999
     networks:
       - micro_ros_net
