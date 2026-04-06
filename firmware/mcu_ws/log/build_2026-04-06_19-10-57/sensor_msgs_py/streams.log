@@ -1,0 +1,27 @@
+[6.523s] Invoking command in '/micro_ros_ws/firmware/mcu_ws/ros2/common_interfaces/sensor_msgs_py': AMENT_PREFIX_PATH=/micro_ros_ws/firmware/mcu_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/micro_ros_ws/firmware/mcu_ws/install:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/micro_ros_ws/firmware/mcu_ws/install/lib:${LD_LIBRARY_PATH} PATH=/micro_ros_ws/firmware/mcu_ws/install/bin:${PATH} PYTHONPATH=/micro_ros_ws/firmware/mcu_ws/build/sensor_msgs_py/prefix_override:/micro_ros_ws/firmware/toolchain/espressif/python_env/idf4.1_py3.10_env/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/firmware/mcu_ws/install/lib/python3.10/site-packages:/micro_ros_ws/firmware/mcu_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /micro_ros_ws/firmware/toolchain/espressif/python_env/idf4.1_py3.10_env/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/sensor_msgs_py build --build-base /micro_ros_ws/firmware/mcu_ws/build/sensor_msgs_py/build install --record /micro_ros_ws/firmware/mcu_ws/build/sensor_msgs_py/install.log --single-version-externally-managed install_data
+[7.119s] /micro_ros_ws/firmware/toolchain/espressif/python_env/idf4.1_py3.10_env/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[7.120s]   warnings.warn(msg)
+[7.341s] running egg_info
+[7.381s] writing ../../../build/sensor_msgs_py/sensor_msgs_py.egg-info/PKG-INFO
+[7.383s] writing dependency_links to ../../../build/sensor_msgs_py/sensor_msgs_py.egg-info/dependency_links.txt
+[7.384s] writing requirements to ../../../build/sensor_msgs_py/sensor_msgs_py.egg-info/requires.txt
+[7.384s] writing top-level names to ../../../build/sensor_msgs_py/sensor_msgs_py.egg-info/top_level.txt
+[7.474s] reading manifest file '../../../build/sensor_msgs_py/sensor_msgs_py.egg-info/SOURCES.txt'
+[7.480s] adding license file 'LICENSE'
+[7.483s] writing manifest file '../../../build/sensor_msgs_py/sensor_msgs_py.egg-info/SOURCES.txt'
+[7.483s] running build
+[7.483s] running build_py
+[7.485s] copying sensor_msgs_py/numpy_compat.py -> /micro_ros_ws/firmware/mcu_ws/build/sensor_msgs_py/build/lib/sensor_msgs_py
+[7.487s] copying sensor_msgs_py/point_cloud2.py -> /micro_ros_ws/firmware/mcu_ws/build/sensor_msgs_py/build/lib/sensor_msgs_py
+[7.488s] copying sensor_msgs_py/__init__.py -> /micro_ros_ws/firmware/mcu_ws/build/sensor_msgs_py/build/lib/sensor_msgs_py
+[7.490s] running install
+[7.494s] running install_lib
+[7.533s] running install_data
+[7.534s] copying resource/sensor_msgs_py -> /micro_ros_ws/firmware/mcu_ws/install/share/ament_index/resource_index/packages
+[7.536s] copying package.xml -> /micro_ros_ws/firmware/mcu_ws/install/share/sensor_msgs_py
+[7.537s] running install_egg_info
+[7.584s] removing '/micro_ros_ws/firmware/mcu_ws/install/lib/python3.10/site-packages/sensor_msgs_py-4.9.1-py3.10.egg-info' (and everything under it)
+[7.586s] Copying ../../../build/sensor_msgs_py/sensor_msgs_py.egg-info to /micro_ros_ws/firmware/mcu_ws/install/lib/python3.10/site-packages/sensor_msgs_py-4.9.1-py3.10.egg-info
+[7.596s] running install_scripts
+[7.994s] writing list of installed files to '/micro_ros_ws/firmware/mcu_ws/build/sensor_msgs_py/install.log'
+[8.024s] Invoked command in '/micro_ros_ws/firmware/mcu_ws/ros2/common_interfaces/sensor_msgs_py' returned '0': AMENT_PREFIX_PATH=/micro_ros_ws/firmware/mcu_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/micro_ros_ws/firmware/mcu_ws/install:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/micro_ros_ws/firmware/mcu_ws/install/lib:${LD_LIBRARY_PATH} PATH=/micro_ros_ws/firmware/mcu_ws/install/bin:${PATH} PYTHONPATH=/micro_ros_ws/firmware/mcu_ws/build/sensor_msgs_py/prefix_override:/micro_ros_ws/firmware/toolchain/espressif/python_env/idf4.1_py3.10_env/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/firmware/mcu_ws/install/lib/python3.10/site-packages:/micro_ros_ws/firmware/mcu_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /micro_ros_ws/firmware/toolchain/espressif/python_env/idf4.1_py3.10_env/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/sensor_msgs_py build --build-base /micro_ros_ws/firmware/mcu_ws/build/sensor_msgs_py/build install --record /micro_ros_ws/firmware/mcu_ws/build/sensor_msgs_py/install.log --single-version-externally-managed install_data

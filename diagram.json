@@ -1,0 +1,41 @@
+{
+"version": 1,
+"author": "wall_e",
+"editor": "wokwi",
+"parts": [
+    { "type": "board-esp32-devkit-v1", "id": "esp", "top": -20, "left": -20, "attrs": {} },
+    { "type": "wokwi-mpu6050", "id": "mpu", "top": -170, "left": 220, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultra", "top": 110, "left": 220, "attrs": {} },
+    { "type": "wokwi-tb6612fng", "id": "tb", "top": 150, "left": -250, "attrs": {} },
+    { "type": "wokwi-dc-motor", "id": "m1", "top": 280, "left": -270, "attrs": {} }
+],
+"connections": [
+    [ "esp:3V3", "mpu:VCC", "red", [ "v0" ] ],
+    [ "esp:GND.1", "mpu:GND", "black", [ "v0" ] ],
+    [ "esp:21", "mpu:SDA", "green", [ "v0" ] ],
+    [ "esp:22", "mpu:SCL", "green", [ "v0" ] ],
+    [ "esp:3V3", "ultra:VCC", "red", [ "v0" ] ],
+    [ "esp:GND.2", "ultra:GND", "black", [ "v0" ] ],
+    [ "esp:5", "ultra:TRIG", "blue", [ "v0" ] ],
+    [ "esp:18", "ultra:ECHO", "blue", [ "v0" ] ],
+
+    [ "esp:3V3", "tb:VCC", "red", [ "v0" ] ],
+    [ "esp:5V", "tb:VM", "red", [ "v0" ] ],
+    [ "esp:GND.3", "tb:GND", "black", [ "v0" ] ],
+
+    [ "esp:14", "tb:STBY", "orange", [ "v0" ] ],
+    [ "esp:25", "tb:PWMA", "orange", [ "v0" ] ],
+    [ "esp:26", "tb:AIN1", "orange", [ "v0" ] ],
+    [ "esp:27", "tb:AIN2", "orange", [ "v0" ] ],
+
+    [ "tb:A01", "m1:1", "purple", [ "v0" ] ],
+    [ "tb:A02", "m1:2", "purple", [ "v0" ] ]
+],
+"serialMonitor": {
+  "collapse": false,
+  "convertEol": false,
+  "display": "auto",
+  "newline": "lf"
+}
+}
+

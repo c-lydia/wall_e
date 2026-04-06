@@ -1,0 +1,4 @@
+Invoking command in '/micro_ros_ws/firmware/mcu_ws/build/microcdr': /usr/bin/cmake --build /micro_ros_ws/firmware/mcu_ws/build/microcdr -- -j12 -l12
+Invoked command in '/micro_ros_ws/firmware/mcu_ws/build/microcdr' returned '0': /usr/bin/cmake --build /micro_ros_ws/firmware/mcu_ws/build/microcdr -- -j12 -l12
+Invoking command in '/micro_ros_ws/firmware/mcu_ws/build/microcdr': /usr/bin/cmake --install /micro_ros_ws/firmware/mcu_ws/build/microcdr
+Invoked command in '/micro_ros_ws/firmware/mcu_ws/build/microcdr' returned '0': /usr/bin/cmake --install /micro_ros_ws/firmware/mcu_ws/build/microcdr

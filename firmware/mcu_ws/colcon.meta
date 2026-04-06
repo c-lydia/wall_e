@@ -26,7 +26,7 @@
         "rmw_microxrcedds": {
             "cmake-args": [
                 "-DRMW_UXRCE_TRANSPORT=udp",
-                "-DRMW_UXRCE_DEFAULT_UDP_IP=192.168.1.2",
+                "-DRMW_UXRCE_DEFAULT_UDP_IP=192.168.43.217",
                 "-DRMW_UXRCE_DEFAULT_UDP_PORT=8888"
             ]
         }

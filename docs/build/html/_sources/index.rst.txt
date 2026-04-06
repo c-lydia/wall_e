@@ -54,12 +54,12 @@ Development Infrastructure
 Key Features & Benefits
 =======================
 
-✓ **Production Ready**: Complete Docker setup with tested configurations
-✓ **Well Documented**: Comprehensive guides for setup, development, and troubleshooting
-✓ **Extensible Architecture**: Modular design for adding custom sensors and behaviors
-✓ **Professional Workflow**: Docker containers for reproducible development across machines
-✓ **ROS 2 Integration**: Full compatibility with ROS 2 Humble ecosystem
-✓ **Embedded Security**: FreeRTOS best practices with micro-ROS security features
+- **Production Ready**: Complete Docker setup with tested configurations
+- **Well Documented**: Comprehensive guides for setup, development, and troubleshooting
+- **Extensible Architecture**: Modular design for adding custom sensors and behaviors
+- **Professional Workflow**: Docker containers for reproducible development across machines
+- **ROS 2 Integration**: Full compatibility with ROS 2 Humble ecosystem
+- **Embedded Security**: FreeRTOS best practices with micro-ROS security features
 
 
 Quick Start

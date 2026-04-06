@@ -1,0 +1,131 @@
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/env.c:20:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/errno.h:18:2: warning: #include_next is a GCC extension
+ #include_next "errno.h"
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/filesystem.c:21:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/errno.h:18:2: warning: #include_next is a GCC extension
+ #include_next "errno.h"
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/error_handling.c:22:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/char_array.c:16:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/array_list.c:23:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/process.c:20:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/errno.h:18:2: warning: #include_next is a GCC extension
+ #include_next "errno.h"
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/allocator.c:20:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/env.c:25:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/logging.c:21:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/errno.h:18:2: warning: #include_next is a GCC extension
+ #include_next "errno.h"
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/filesystem.c:50:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/qsort.c:22:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/hash_map.c:24:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/./common.h:23,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/strdup.c:25:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/string_array.c:24:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/process.c:43:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/string_map.c:22:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/types/string_array.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/types.h:26,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/find.h:25,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/find.c:25:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/shared_library.c:57:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/logging.c:47:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/split.c:24:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/types/string_array.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/types.h:26,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/time.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/time.c:20:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/logging.h:25,
+                 from /micro_ros_ws/firmware/mcu_ws/build/rcutils/include/rcutils/logging_macros.h:22,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/time_unix.c:24:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/include/rcutils/error_handling.h:28,
+                 from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/uint8_array.c:15:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/time.c:25:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/time.h:22:2: warning: #include_next is a GCC extension
+ #include_next <time.h>
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/time_unix.c:31:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/errno.h:18:2: warning: #include_next is a GCC extension
+ #include_next "errno.h"
+  ^~~~~~~~~~~~
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcutils/src/time_unix.c:42:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/time.h:22:2: warning: #include_next is a GCC extension
+ #include_next <time.h>
+  ^~~~~~~~~~~~

@@ -1,0 +1,43 @@
+[0.545s] Invoking command in '/micro_ros_ws/firmware/mcu_ws/build/tracetools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/micro_ros_ws/firmware/dev_ws/install/ament_uncrustify:/micro_ros_ws/firmware/dev_ws/install/domain_coordinator:/micro_ros_ws/firmware/dev_ws/install/ament_xmllint:/micro_ros_ws/firmware/dev_ws/install/ament_pyflakes:/micro_ros_ws/firmware/dev_ws/install/ament_pycodestyle:/micro_ros_ws/firmware/dev_ws/install/ament_pep257:/micro_ros_ws/firmware/dev_ws/install/ament_pclint:/micro_ros_ws/firmware/dev_ws/install/ament_package:/micro_ros_ws/firmware/dev_ws/install/ament_mypy:/micro_ros_ws/firmware/dev_ws/install/ament_lint_cmake:/micro_ros_ws/firmware/dev_ws/install/ament_flake8:/micro_ros_ws/firmware/dev_ws/install/ament_copyright:/micro_ros_ws/firmware/dev_ws/install/ament_lint:/micro_ros_ws/firmware/dev_ws/install/ament_index_python:/micro_ros_ws/firmware/dev_ws/install/ament_cpplint:/micro_ros_ws/firmware/dev_ws/install/ament_cppcheck:/micro_ros_ws/firmware/dev_ws/install/ament_clang_tidy:/micro_ros_ws/firmware/dev_ws/install/ament_clang_format /usr/bin/cmake --build /micro_ros_ws/firmware/mcu_ws/build/tracetools -- -j12 -l12
+[2.031s] gmake[4]: Entering directory '/micro_ros_ws/firmware/mcu_ws/build/tracetools'
+[2.033s] /usr/bin/cmake -S/micro_ros_ws/firmware/mcu_ws/uros/tracetools/tracetools -B/micro_ros_ws/firmware/mcu_ws/build/tracetools --check-build-system CMakeFiles/Makefile.cmake 0
+[2.035s] Re-run cmake file: Makefile older than: /micro_ros_ws/firmware/freertos_apps/microros_esp32_extensions/esp32_toolchain.cmake
+[2.036s] -- Found ament_cmake_ros: 0.10.0 (/micro_ros_ws/firmware/dev_ws/install/ament_cmake_ros/share/ament_cmake_ros/cmake)
+[2.037s] -- Configuring done
+[2.038s] -- Generating done
+[2.039s] -- Build files have been written to: /micro_ros_ws/firmware/mcu_ws/build/tracetools
+[2.040s] /usr/bin/cmake -E cmake_progress_start /micro_ros_ws/firmware/mcu_ws/build/tracetools/CMakeFiles /micro_ros_ws/firmware/mcu_ws/build/tracetools//CMakeFiles/progress.marks
+[2.043s] /usr/bin/gmake  -f CMakeFiles/Makefile2 all
+[2.044s] gmake[5]: Entering directory '/micro_ros_ws/firmware/mcu_ws/build/tracetools'
+[2.045s] gmake[5]: Nothing to be done for 'all'.
+[2.045s] gmake[5]: Leaving directory '/micro_ros_ws/firmware/mcu_ws/build/tracetools'
+[2.047s] /usr/bin/cmake -E cmake_progress_start /micro_ros_ws/firmware/mcu_ws/build/tracetools/CMakeFiles 0
+[2.047s] gmake[4]: Leaving directory '/micro_ros_ws/firmware/mcu_ws/build/tracetools'
+[2.073s] Invoked command in '/micro_ros_ws/firmware/mcu_ws/build/tracetools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/micro_ros_ws/firmware/dev_ws/install/ament_uncrustify:/micro_ros_ws/firmware/dev_ws/install/domain_coordinator:/micro_ros_ws/firmware/dev_ws/install/ament_xmllint:/micro_ros_ws/firmware/dev_ws/install/ament_pyflakes:/micro_ros_ws/firmware/dev_ws/install/ament_pycodestyle:/micro_ros_ws/firmware/dev_ws/install/ament_pep257:/micro_ros_ws/firmware/dev_ws/install/ament_pclint:/micro_ros_ws/firmware/dev_ws/install/ament_package:/micro_ros_ws/firmware/dev_ws/install/ament_mypy:/micro_ros_ws/firmware/dev_ws/install/ament_lint_cmake:/micro_ros_ws/firmware/dev_ws/install/ament_flake8:/micro_ros_ws/firmware/dev_ws/install/ament_copyright:/micro_ros_ws/firmware/dev_ws/install/ament_lint:/micro_ros_ws/firmware/dev_ws/install/ament_index_python:/micro_ros_ws/firmware/dev_ws/install/ament_cpplint:/micro_ros_ws/firmware/dev_ws/install/ament_cppcheck:/micro_ros_ws/firmware/dev_ws/install/ament_clang_tidy:/micro_ros_ws/firmware/dev_ws/install/ament_clang_format /usr/bin/cmake --build /micro_ros_ws/firmware/mcu_ws/build/tracetools -- -j12 -l12
+[2.074s] Invoking command in '/micro_ros_ws/firmware/mcu_ws/build/tracetools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/micro_ros_ws/firmware/dev_ws/install/ament_uncrustify:/micro_ros_ws/firmware/dev_ws/install/domain_coordinator:/micro_ros_ws/firmware/dev_ws/install/ament_xmllint:/micro_ros_ws/firmware/dev_ws/install/ament_pyflakes:/micro_ros_ws/firmware/dev_ws/install/ament_pycodestyle:/micro_ros_ws/firmware/dev_ws/install/ament_pep257:/micro_ros_ws/firmware/dev_ws/install/ament_pclint:/micro_ros_ws/firmware/dev_ws/install/ament_package:/micro_ros_ws/firmware/dev_ws/install/ament_mypy:/micro_ros_ws/firmware/dev_ws/install/ament_lint_cmake:/micro_ros_ws/firmware/dev_ws/install/ament_flake8:/micro_ros_ws/firmware/dev_ws/install/ament_copyright:/micro_ros_ws/firmware/dev_ws/install/ament_lint:/micro_ros_ws/firmware/dev_ws/install/ament_index_python:/micro_ros_ws/firmware/dev_ws/install/ament_cpplint:/micro_ros_ws/firmware/dev_ws/install/ament_cppcheck:/micro_ros_ws/firmware/dev_ws/install/ament_clang_tidy:/micro_ros_ws/firmware/dev_ws/install/ament_clang_format /usr/bin/cmake --install /micro_ros_ws/firmware/mcu_ws/build/tracetools
+[2.103s] -- Install configuration: "Debug"
+[2.105s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/tracetools
+[2.109s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/tracetools/tracetools
+[2.112s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/tracetools/tracetools/config.h
+[2.117s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/tracetools/tracetools/tracetools.h
+[2.121s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/tracetools/tracetools/utils.hpp
+[2.124s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/tracetools/tracetools/visibility_control.hpp
+[2.130s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/ament_index/resource_index/package_run_dependencies/tracetools
+[2.141s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/ament_index/resource_index/parent_prefix_path/tracetools
+[2.144s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/tracetools/environment/ament_prefix_path.sh
+[2.146s] -- Installing: /micro_ros_ws/firmware/mcu_ws/install/share/tracetools/environment/ament_prefix_path.dsv
+[2.157s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/tracetools/environment/path.sh
+[2.159s] -- Installing: /micro_ros_ws/firmware/mcu_ws/install/share/tracetools/environment/path.dsv
+[2.164s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/tracetools/local_setup.bash
+[2.165s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/tracetools/local_setup.sh
+[2.168s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/tracetools/local_setup.zsh
+[2.171s] -- Installing: /micro_ros_ws/firmware/mcu_ws/install/share/tracetools/local_setup.dsv
+[2.178s] -- Installing: /micro_ros_ws/firmware/mcu_ws/install/share/tracetools/package.dsv
+[2.194s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/ament_index/resource_index/packages/tracetools
+[2.208s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/tracetools/cmake/tracetools_exportExport.cmake
+[2.215s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/tracetools/cmake/ament_cmake_export_targets-extras.cmake
+[2.221s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/tracetools/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.228s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/tracetools/cmake/tracetoolsConfig.cmake
+[2.234s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/tracetools/cmake/tracetoolsConfig-version.cmake
+[2.242s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/tracetools/package.xml
+[2.821s] Invoked command in '/micro_ros_ws/firmware/mcu_ws/build/tracetools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/micro_ros_ws/firmware/dev_ws/install/ament_uncrustify:/micro_ros_ws/firmware/dev_ws/install/domain_coordinator:/micro_ros_ws/firmware/dev_ws/install/ament_xmllint:/micro_ros_ws/firmware/dev_ws/install/ament_pyflakes:/micro_ros_ws/firmware/dev_ws/install/ament_pycodestyle:/micro_ros_ws/firmware/dev_ws/install/ament_pep257:/micro_ros_ws/firmware/dev_ws/install/ament_pclint:/micro_ros_ws/firmware/dev_ws/install/ament_package:/micro_ros_ws/firmware/dev_ws/install/ament_mypy:/micro_ros_ws/firmware/dev_ws/install/ament_lint_cmake:/micro_ros_ws/firmware/dev_ws/install/ament_flake8:/micro_ros_ws/firmware/dev_ws/install/ament_copyright:/micro_ros_ws/firmware/dev_ws/install/ament_lint:/micro_ros_ws/firmware/dev_ws/install/ament_index_python:/micro_ros_ws/firmware/dev_ws/install/ament_cpplint:/micro_ros_ws/firmware/dev_ws/install/ament_cppcheck:/micro_ros_ws/firmware/dev_ws/install/ament_clang_tidy:/micro_ros_ws/firmware/dev_ws/install/ament_clang_format /usr/bin/cmake --install /micro_ros_ws/firmware/mcu_ws/build/tracetools

@@ -1,0 +1,8 @@
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rclc/rclc/src/rclc/action_client.c:16:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/time.h:22:2: warning: #include_next is a GCC extension
+ #include_next <time.h>
+  ^~~~~~~~~~~~
+/micro_ros_ws/firmware/mcu_ws/uros/rclc/rclc/src/rclc/executor_handle.c: In function 'rclc_executor_handle_print':
+/micro_ros_ws/firmware/mcu_ws/uros/rclc/rclc/src/rclc/executor_handle.c:84:10: warning: variable 'typeName' set but not used [-Wunused-but-set-variable]
+   char * typeName;
+          ^~~~~~~~

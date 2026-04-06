@@ -1,0 +1,4 @@
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcl/rcl_action/src/rcl_action/graph.c:20:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2: warning: #include_next is a GCC extension
+ #include_next <assert.h>
+  ^~~~~~~~~~~~

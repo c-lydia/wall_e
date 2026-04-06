@@ -1,0 +1,4 @@
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rclc/rclc_parameter/src/rclc_parameter/parameter_server.c:20:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/time.h:22:2: warning: #include_next is a GCC extension
+ #include_next <time.h>
+  ^~~~~~~~~~~~

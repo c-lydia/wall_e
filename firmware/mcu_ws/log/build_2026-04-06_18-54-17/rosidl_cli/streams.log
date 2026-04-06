@@ -1,0 +1,38 @@
+[8.545s] Invoking command in '/micro_ros_ws/firmware/mcu_ws/ros2/rosidl/rosidl_cli': PYTHONPATH=/micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/prefix_override:/micro_ros_ws/firmware/toolchain/espressif/python_env/idf4.1_py3.10_env/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/firmware/mcu_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /micro_ros_ws/firmware/toolchain/espressif/python_env/idf4.1_py3.10_env/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/rosidl_cli build --build-base /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/build install --record /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/install.log --single-version-externally-managed install_data
+[9.933s] running egg_info
+[9.988s] writing ../../../build/rosidl_cli/rosidl_cli.egg-info/PKG-INFO
+[9.995s] writing dependency_links to ../../../build/rosidl_cli/rosidl_cli.egg-info/dependency_links.txt
+[10.001s] writing entry points to ../../../build/rosidl_cli/rosidl_cli.egg-info/entry_points.txt
+[10.005s] writing requirements to ../../../build/rosidl_cli/rosidl_cli.egg-info/requires.txt
+[10.007s] writing top-level names to ../../../build/rosidl_cli/rosidl_cli.egg-info/top_level.txt
+[10.365s] reading manifest file '../../../build/rosidl_cli/rosidl_cli.egg-info/SOURCES.txt'
+[10.394s] writing manifest file '../../../build/rosidl_cli/rosidl_cli.egg-info/SOURCES.txt'
+[10.395s] running build
+[10.395s] running build_py
+[10.399s] copying rosidl_cli/cli.py -> /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/build/lib/rosidl_cli
+[10.410s] copying rosidl_cli/common.py -> /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/build/lib/rosidl_cli
+[10.411s] copying rosidl_cli/entry_points.py -> /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/build/lib/rosidl_cli
+[10.414s] copying rosidl_cli/extensions.py -> /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/build/lib/rosidl_cli
+[10.417s] copying rosidl_cli/__init__.py -> /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/build/lib/rosidl_cli
+[10.422s] copying rosidl_cli/command/helpers.py -> /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/build/lib/rosidl_cli/command
+[10.427s] copying rosidl_cli/command/__init__.py -> /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/build/lib/rosidl_cli/command
+[10.434s] copying rosidl_cli/command/generate/api.py -> /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/build/lib/rosidl_cli/command/generate
+[10.440s] copying rosidl_cli/command/generate/extensions.py -> /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/build/lib/rosidl_cli/command/generate
+[10.446s] copying rosidl_cli/command/generate/__init__.py -> /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/build/lib/rosidl_cli/command/generate
+[10.453s] copying rosidl_cli/command/translate/api.py -> /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/build/lib/rosidl_cli/command/translate
+[10.457s] copying rosidl_cli/command/translate/extensions.py -> /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/build/lib/rosidl_cli/command/translate
+[10.462s] copying rosidl_cli/command/translate/__init__.py -> /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/build/lib/rosidl_cli/command/translate
+[10.469s] running install
+[10.472s] running install_lib
+[10.616s] running install_data
+[10.620s] copying resource/rosidl_cli -> /micro_ros_ws/firmware/mcu_ws/install/share/ament_index/resource_index/packages
+[10.623s] copying package.xml -> /micro_ros_ws/firmware/mcu_ws/install/share/rosidl_cli
+[10.627s] copying completion/rosidl-argcomplete.bash -> /micro_ros_ws/firmware/mcu_ws/install/share/rosidl_cli/environment
+[10.630s] copying completion/rosidl-argcomplete.zsh -> /micro_ros_ws/firmware/mcu_ws/install/share/rosidl_cli/environment
+[10.631s] running install_egg_info
+[10.701s] removing '/micro_ros_ws/firmware/mcu_ws/install/lib/python3.10/site-packages/rosidl_cli-3.1.8-py3.10.egg-info' (and everything under it)
+[10.709s] Copying ../../../build/rosidl_cli/rosidl_cli.egg-info to /micro_ros_ws/firmware/mcu_ws/install/lib/python3.10/site-packages/rosidl_cli-3.1.8-py3.10.egg-info
+[10.733s] running install_scripts
+[11.186s] Installing rosidl script to /micro_ros_ws/firmware/mcu_ws/install/bin
+[11.190s] writing list of installed files to '/micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/install.log'
+[11.380s] Invoked command in '/micro_ros_ws/firmware/mcu_ws/ros2/rosidl/rosidl_cli' returned '0': PYTHONPATH=/micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/prefix_override:/micro_ros_ws/firmware/toolchain/espressif/python_env/idf4.1_py3.10_env/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/firmware/mcu_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /micro_ros_ws/firmware/toolchain/espressif/python_env/idf4.1_py3.10_env/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/rosidl_cli build --build-base /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/build install --record /micro_ros_ws/firmware/mcu_ws/build/rosidl_cli/install.log --single-version-externally-managed install_data

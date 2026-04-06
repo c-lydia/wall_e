@@ -1,0 +1,15 @@
+menu "ESP32 Controller WiFi Configuration"
+
+    config ESP_WIFI_SSID
+        string "WiFi SSID"
+        default ""
+        help
+            Set the WiFi network name for the controller.
+
+    config ESP_WIFI_PASSWORD
+        string "WiFi Password"
+        default ""
+        help
+            Set the WiFi password for the controller.
+
+endmenu

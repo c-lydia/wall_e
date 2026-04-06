@@ -1,0 +1,41 @@
+[2.772s] Invoking command in '/micro_ros_ws/firmware/mcu_ws/build/microcdr': /usr/bin/cmake --build /micro_ros_ws/firmware/mcu_ws/build/microcdr -- -j12 -l12
+[8.944s] gmake[4]: Entering directory '/micro_ros_ws/firmware/mcu_ws/build/microcdr'
+[8.945s] /usr/bin/cmake -S/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-CDR -B/micro_ros_ws/firmware/mcu_ws/build/microcdr --check-build-system CMakeFiles/Makefile.cmake 0
+[8.946s] Re-run cmake file: Makefile older than: /micro_ros_ws/firmware/freertos_apps/microros_esp32_extensions/esp32_toolchain.cmake
+[8.947s] -- Configuring done
+[8.948s] -- Generating done
+[8.949s] -- Build files have been written to: /micro_ros_ws/firmware/mcu_ws/build/microcdr
+[8.950s] /usr/bin/cmake -E cmake_progress_start /micro_ros_ws/firmware/mcu_ws/build/microcdr/CMakeFiles /micro_ros_ws/firmware/mcu_ws/build/microcdr//CMakeFiles/progress.marks
+[8.951s] /usr/bin/gmake  -f CMakeFiles/Makefile2 all
+[8.952s] gmake[5]: Entering directory '/micro_ros_ws/firmware/mcu_ws/build/microcdr'
+[8.953s] /usr/bin/gmake  -f CMakeFiles/microcdr.dir/build.make CMakeFiles/microcdr.dir/depend
+[8.955s] gmake[6]: Entering directory '/micro_ros_ws/firmware/mcu_ws/build/microcdr'
+[8.956s] cd /micro_ros_ws/firmware/mcu_ws/build/microcdr && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /micro_ros_ws/firmware/mcu_ws/eProsima/Micro-CDR /micro_ros_ws/firmware/mcu_ws/eProsima/Micro-CDR /micro_ros_ws/firmware/mcu_ws/build/microcdr /micro_ros_ws/firmware/mcu_ws/build/microcdr /micro_ros_ws/firmware/mcu_ws/build/microcdr/CMakeFiles/microcdr.dir/DependInfo.cmake --color=
+[8.957s] Dependencies file "CMakeFiles/microcdr.dir/src/c/common.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microcdr/CMakeFiles/microcdr.dir/compiler_depend.internal".
+[8.958s] Dependencies file "CMakeFiles/microcdr.dir/src/c/types/array.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microcdr/CMakeFiles/microcdr.dir/compiler_depend.internal".
+[8.958s] Dependencies file "CMakeFiles/microcdr.dir/src/c/types/basic.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microcdr/CMakeFiles/microcdr.dir/compiler_depend.internal".
+[8.959s] Dependencies file "CMakeFiles/microcdr.dir/src/c/types/sequence.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microcdr/CMakeFiles/microcdr.dir/compiler_depend.internal".
+[8.960s] Dependencies file "CMakeFiles/microcdr.dir/src/c/types/string.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microcdr/CMakeFiles/microcdr.dir/compiler_depend.internal".
+[8.961s] [35m[1mConsolidate compiler generated dependencies of target microcdr[0m
+[8.961s] gmake[6]: Leaving directory '/micro_ros_ws/firmware/mcu_ws/build/microcdr'
+[8.963s] /usr/bin/gmake  -f CMakeFiles/microcdr.dir/build.make CMakeFiles/microcdr.dir/build
+[8.964s] gmake[6]: Entering directory '/micro_ros_ws/firmware/mcu_ws/build/microcdr'
+[8.965s] gmake[6]: Nothing to be done for 'CMakeFiles/microcdr.dir/build'.
+[8.966s] gmake[6]: Leaving directory '/micro_ros_ws/firmware/mcu_ws/build/microcdr'
+[8.967s] [100%] Built target microcdr
+[8.968s] gmake[5]: Leaving directory '/micro_ros_ws/firmware/mcu_ws/build/microcdr'
+[8.969s] /usr/bin/cmake -E cmake_progress_start /micro_ros_ws/firmware/mcu_ws/build/microcdr/CMakeFiles 0
+[8.970s] gmake[4]: Leaving directory '/micro_ros_ws/firmware/mcu_ws/build/microcdr'
+[9.020s] Invoked command in '/micro_ros_ws/firmware/mcu_ws/build/microcdr' returned '0': /usr/bin/cmake --build /micro_ros_ws/firmware/mcu_ws/build/microcdr -- -j12 -l12
+[9.022s] Invoking command in '/micro_ros_ws/firmware/mcu_ws/build/microcdr': /usr/bin/cmake --install /micro_ros_ws/firmware/mcu_ws/build/microcdr
+[9.057s] -- Install configuration: "Debug"
+[9.059s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/lib/libmicrocdr.a
+[9.060s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/ucdr
+[9.061s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/ucdr/microcdr.h
+[9.062s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/ucdr/visibility.h
+[9.063s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/ucdr/config.h
+[9.077s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/microcdr/cmake/microcdrTargets.cmake
+[9.091s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/microcdr/cmake/microcdrTargets-debug.cmake
+[9.097s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/microcdr/cmake/microcdrConfig.cmake
+[9.103s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/microcdr/cmake/microcdrConfigVersion.cmake
+[9.112s] Invoked command in '/micro_ros_ws/firmware/mcu_ws/build/microcdr' returned '0': /usr/bin/cmake --install /micro_ros_ws/firmware/mcu_ws/build/microcdr

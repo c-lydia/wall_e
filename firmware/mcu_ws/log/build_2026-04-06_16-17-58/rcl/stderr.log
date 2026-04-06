@@ -1,0 +1,14 @@
+In file included from /micro_ros_ws/firmware/mcu_ws/uros/rcl/rcl/src/rcl/domain_id.c:17:
+/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/errno.h:18:2: warning: #include_next is a GCC extension
+ #include_next "errno.h"
+  ^~~~~~~~~~~~
+/micro_ros_ws/firmware/mcu_ws/uros/rcl/rcl/src/rcl/node_resolve_name.c: In function 'rcl_resolve_name':
+/micro_ros_ws/firmware/mcu_ws/uros/rcl/rcl/src/rcl/node_resolve_name.c:33:27: warning: unused parameter 'local_args' [-Wunused-parameter]
+   const rcl_arguments_t * local_args,
+   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/micro_ros_ws/firmware/mcu_ws/uros/rcl/rcl/src/rcl/node_resolve_name.c:34:27: warning: unused parameter 'global_args' [-Wunused-parameter]
+   const rcl_arguments_t * global_args,
+   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/micro_ros_ws/firmware/mcu_ws/uros/rcl/rcl/src/rcl/node_resolve_name.c:40:8: warning: unused parameter 'only_expand' [-Wunused-parameter]
+   bool only_expand,
+        ^
