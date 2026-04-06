@@ -1,5 +1,7 @@
 name: Build & Deploy Documentation
 
+# Touching this file triggers a fresh Pages deployment.
+
 on:
   push:
     branches:
