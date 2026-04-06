@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WiFi Provisioning &mdash; Wall-E 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Architecture" href="architecture.html" />
+    <link rel="prev" title="ESP32 Controller" href="firmware/esp32_controller.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Wall-E
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow_and_commands.html">Workflow and Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="firmware/esp32_controller.html">ESP32 Controller</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">WiFi Provisioning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-overview">System Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-it-works">How It Works</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#boot-detection">Boot Detection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#softap-access-point-mode">SoftAP (Access Point Mode)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#http-provisioning-server">HTTP Provisioning Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nvs-storage">NVS Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fallback-to-kconfig">Fallback to Kconfig</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#for-end-users">For End Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#for-developers">For Developers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#integration-points">Integration Points</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#http-handlers">HTTP Handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customization">Customization</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#testing-provisioning-manually">Testing Provisioning Manually</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#security-considerations">Security Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common-issues">Common Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-reference">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Wall-E</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">WiFi Provisioning</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/wifi_provisioning.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="firmware/esp32_controller.html" class="btn btn-neutral float-left" title="ESP32 Controller" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="architecture.html" class="btn btn-neutral float-right" title="Architecture" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="wifi-provisioning">
+<h1>WiFi Provisioning<a class="headerlink" href="#wifi-provisioning" title="Link to this heading"></a></h1>
+<section id="quick-start">
+<h2>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Power on ESP32 with no stored WiFi credentials</p></li>
+<li><p>Device starts SoftAP called <code class="docutils literal notranslate"><span class="pre">ESP32-Setup</span></code> (open network)</p></li>
+<li><p>Connect your laptop/phone to <code class="docutils literal notranslate"><span class="pre">ESP32-Setup</span></code> WiFi</p></li>
+<li><p>Open browser to <code class="docutils literal notranslate"><span class="pre">http://192.168.4.1/</span></code></p></li>
+<li><p>Enter your WiFi SSID and password</p></li>
+<li><p>Device saves credentials and restarts</p></li>
+<li><p>Next boot: automatically connects to your configured WiFi</p></li>
+</ol>
+</section>
+<section id="system-overview">
+<h2>System Overview<a class="headerlink" href="#system-overview" title="Link to this heading"></a></h2>
+<p>The provisioning system eliminates the need for:</p>
+<ul class="simple">
+<li><p>Hardcoded WiFi credentials in source code</p></li>
+<li><p>Manual menuconfig every build</p></li>
+<li><p>Terminal-based setup procedures</p></li>
+<li><p>Editing code for different WiFi networks</p></li>
+</ul>
+<p>Instead, users provision via a simple web form on first boot.</p>
+</section>
+<section id="how-it-works">
+<h2>How It Works<a class="headerlink" href="#how-it-works" title="Link to this heading"></a></h2>
+<section id="boot-detection">
+<h3>Boot Detection<a class="headerlink" href="#boot-detection" title="Link to this heading"></a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>PowerOn
+  ↓
+NVS Init (read from flash)
+  ↓
+Check SSID/Password in NVS
+  ├─ EMPTY? → Start SoftAP + HTTP server
+  └─ FOUND? → Connect to WiFi (normal operation)
+</pre></div>
+</div>
+<p>The system checks if WiFi credentials exist in the NVS flash partition before attempting to connect. If empty, provisioning mode is activated.</p>
+</section>
+<section id="softap-access-point-mode">
+<h3>SoftAP (Access Point Mode)<a class="headerlink" href="#softap-access-point-mode" title="Link to this heading"></a></h3>
+<p>When credentials are missing, the device becomes a WiFi access point:</p>
+<ul class="simple">
+<li><p><strong>SSID</strong>: <code class="docutils literal notranslate"><span class="pre">ESP32-Setup</span></code></p></li>
+<li><p><strong>Security</strong>: Open (no password required)</p></li>
+<li><p><strong>IP Range</strong>: <code class="docutils literal notranslate"><span class="pre">192.168.4.0/24</span></code></p></li>
+<li><p><strong>Gateway</strong>: <code class="docutils literal notranslate"><span class="pre">192.168.4.1</span></code> (device IP)</p></li>
+</ul>
+<p>Clients automatically receive an IP via DHCP.</p>
+</section>
+<section id="http-provisioning-server">
+<h3>HTTP Provisioning Server<a class="headerlink" href="#http-provisioning-server" title="Link to this heading"></a></h3>
+<p>A lightweight HTTP server hosts a provisioning form:</p>
+<p><strong>GET /</strong> Returns HTML form with two inputs:
+- WiFi SSID (text field, max 32 chars)
+- WiFi Password (password field, max 63 chars)</p>
+<p><strong>POST /provision</strong> Accepts form submission with:
+- <code class="docutils literal notranslate"><span class="pre">ssid</span></code> parameter: Network name
+- <code class="docutils literal notranslate"><span class="pre">password</span></code> parameter: Network password</p>
+<p>Server validates input and saves to NVS if successful.</p>
+</section>
+<section id="nvs-storage">
+<h3>NVS Storage<a class="headerlink" href="#nvs-storage" title="Link to this heading"></a></h3>
+<p>Credentials are stored persistently in the NVS (Non-Volatile Storage) partition:</p>
+<ul class="simple">
+<li><p><strong>Namespace</strong>: <code class="docutils literal notranslate"><span class="pre">&quot;wifi_creds&quot;</span></code></p></li>
+<li><p><strong>SSID Key</strong>: <code class="docutils literal notranslate"><span class="pre">&quot;ssid&quot;</span></code></p></li>
+<li><p><strong>Password Key</strong>: <code class="docutils literal notranslate"><span class="pre">&quot;password&quot;</span></code></p></li>
+<li><p><strong>Persistence</strong>: Survives power cycles, resets, and reboots</p></li>
+</ul>
+<p>Once stored, credentials are automatically loaded on boot and used for normal WiFi station mode.</p>
+</section>
+<section id="fallback-to-kconfig">
+<h3>Fallback to Kconfig<a class="headerlink" href="#fallback-to-kconfig" title="Link to this heading"></a></h3>
+<p>If NVS is empty or doesn’t exist, the system falls back to compile-time defaults:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifdef CONFIG_ESP_WIFI_SSID</span>
+<span class="cp">#define WIFI_SSID CONFIG_ESP_WIFI_SSID</span>
+<span class="cp">#else</span>
+<span class="cp">#define WIFI_SSID &quot;&quot;</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+<p>This allows a default configuration while maintaining the provisioning system.</p>
+</section>
+</section>
+<section id="for-end-users">
+<h2>For End Users<a class="headerlink" href="#for-end-users" title="Link to this heading"></a></h2>
+<p><strong>First Time Setup</strong></p>
+<ol class="arabic simple">
+<li><p>Plug in device (ESP32 board)</p></li>
+<li><p>Wait 10 seconds for boot to complete</p></li>
+<li><p>On your phone/laptop, look for WiFi network <code class="docutils literal notranslate"><span class="pre">ESP32-Setup</span></code></p></li>
+<li><p>Connect to it (no password needed)</p></li>
+<li><p>Open web browser and navigate to <code class="docutils literal notranslate"><span class="pre">http://192.168.4.1/</span></code></p></li>
+<li><p>Fill in your home WiFi name and password</p></li>
+<li><p>Click “Connect”</p></li>
+<li><p>Device will restart and connect to your WiFi</p></li>
+<li><p>Done! Device is now ready to use</p></li>
+</ol>
+<p><strong>Resetting Credentials</strong></p>
+<p>To erase stored credentials and start provisioning again:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># From host with device plugged in:</span>
+<span class="nb">cd</span><span class="w"> </span>/micro_ros_ws/firmware/freertos_apps/microros_esp32_extensions
+<span class="nb">source</span><span class="w"> </span>/micro_ros_ws/firmware/toolchain/esp-idf/export.sh
+idf.py<span class="w"> </span>erase-flash<span class="w">      </span><span class="c1"># Erases entire flash, including NVS</span>
+idf.py<span class="w"> </span>flash<span class="w">            </span><span class="c1"># Re-flashes firmware</span>
+<span class="c1"># Device boots with empty credentials → starts provisioning mode again</span>
+</pre></div>
+</div>
+<p><strong>Changing WiFi Networks</strong></p>
+<p>Method 1 (Easiest): Erase and reflash (see above)</p>
+<p>Method 2 (Advanced): Manually erase NVS partition only:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>idf.py<span class="w"> </span>erase-flash<span class="w"> </span>NVS<span class="w">  </span><span class="c1"># Erases just the NVS partition</span>
+<span class="c1"># Device boots with empty credentials → starts provisioning mode again</span>
+</pre></div>
+</div>
+</section>
+<section id="for-developers">
+<h2>For Developers<a class="headerlink" href="#for-developers" title="Link to this heading"></a></h2>
+<section id="integration-points">
+<h3>Integration Points<a class="headerlink" href="#integration-points" title="Link to this heading"></a></h3>
+<p>The provisioning system is implemented in <code class="docutils literal notranslate"><span class="pre">appMain()</span></code> with these key functions:</p>
+<dl class="simple">
+<dt><strong>nvs_read_wifi_creds()</strong></dt><dd><p>Reads stored SSID and password from NVS</p>
+</dd>
+<dt><strong>nvs_write_wifi_creds()</strong></dt><dd><p>Writes SSID and password to NVS</p>
+</dd>
+<dt><strong>start_softap()</strong></dt><dd><p>Initializes WiFi in AP mode with SSID <code class="docutils literal notranslate"><span class="pre">ESP32-Setup</span></code></p>
+</dd>
+<dt><strong>start_provisioning_server()</strong></dt><dd><p>Launches HTTP server with GET and POST handlers</p>
+</dd>
+<dt><strong>stop_provisioning_server()</strong></dt><dd><p>Cleanly shuts down HTTP server after provisioning</p>
+</dd>
+</dl>
+<section id="http-handlers">
+<h4>HTTP Handlers<a class="headerlink" href="#http-handlers" title="Link to this heading"></a></h4>
+<dl class="simple">
+<dt><strong>get_handler()</strong></dt><dd><p>Serves HTML form for SSID/password input</p>
+</dd>
+<dt><strong>post_handler()</strong></dt><dd><p>Parses form data, validates, writes to NVS, restarts device</p>
+</dd>
+</dl>
+</section>
+<section id="customization">
+<h4>Customization<a class="headerlink" href="#customization" title="Link to this heading"></a></h4>
+<p>Default SoftAP SSID (in <code class="docutils literal notranslate"><span class="pre">start_softap()</span></code>):</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="n">ssid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ESP32-Setup&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>Change this to customize the network name visible to users.</p>
+<p>HTML form styling and layout (in <code class="docutils literal notranslate"><span class="pre">get_handler()</span></code>):</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">html_form</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&lt;!DOCTYPE html&gt;...&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Modify this string to customize the provisioning UI.</p>
+<p>Post-provisioning timeout (in <code class="docutils literal notranslate"><span class="pre">appMain()</span></code>):</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 60 seconds</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">provisioning_server</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vTaskDelay</span><span class="p">(</span><span class="n">pdMS_TO_TICKS</span><span class="p">(</span><span class="mi">1000</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Increase the loop count to allow more time for user input.</p>
+</section>
+</section>
+<section id="testing-provisioning-manually">
+<h3>Testing Provisioning Manually<a class="headerlink" href="#testing-provisioning-manually" title="Link to this heading"></a></h3>
+<p>Simulate the provisioning flow without hardware:</p>
+<ol class="arabic simple">
+<li><p>Erase credentials to start provisioning mode</p></li>
+<li><p>Monitor serial output to see SoftAP startup</p></li>
+<li><p>Connect to <code class="docutils literal notranslate"><span class="pre">ESP32-Setup</span></code> with a mobile device</p></li>
+<li><p>Open HTTP form in browser</p></li>
+<li><p>Supply test credentials and verify POST data in logs</p></li>
+<li><p>Confirm NVS write via <code class="docutils literal notranslate"><span class="pre">nvs_read_wifi_creds()</span></code> on next boot</p></li>
+</ol>
+</section>
+</section>
+<section id="security-considerations">
+<h2>Security Considerations<a class="headerlink" href="#security-considerations" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Open Access Point</strong></dt><dd><p>The SoftAP has no password to simplify first-time setup for non-technical users. Deploy this only in trusted networks (e.g., lab, personal use).</p>
+</dd>
+<dt><strong>Plaintext Credentials Over HTTP</strong></dt><dd><p>Provisioning form is transmitted over plain HTTP (no HTTPS/TLS). For sensitive deployments, consider adding:
+- Basic authentication on GET /
+- HTTPS with self-signed certificate
+- Time-limited provisioning window (already implemented: 60s timeout)</p>
+</dd>
+<dt><strong>NVS Storage</strong></dt><dd><p>Credentials are stored in flash without encryption. Access is controlled by file permissions on the NVS partition. For high-security applications:
+- Use ESP32 secure boot and flash encryption
+- Store encrypted credentials in partition</p>
+</dd>
+<dt><strong>Network Isolation</strong></dt><dd><p>The SoftAP runs in open mode. Isolate the provisioning phase:
+- Keep provisioning timeout short (60 seconds default)
+- Disable SoftAP after credentials are saved
+- Use firewalls to restrict device access post-provisioning</p>
+</dd>
+</dl>
+</section>
+<section id="common-issues">
+<h2>Common Issues<a class="headerlink" href="#common-issues" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>No SoftAP visible on first boot</strong></dt><dd><ul class="simple">
+<li><p>Device only starts SoftAP if credentials are empty or missing</p></li>
+<li><p>Check NVS earlier boot has stored credentials</p></li>
+<li><p>Verify WiFi radio is functional</p></li>
+</ul>
+</dd>
+<dt><strong>Can’t reach http://192.168.4.1/</strong></dt><dd><ul class="simple">
+<li><p>Ensure you’re connected to the correct network: <code class="docutils literal notranslate"><span class="pre">ESP32-Setup</span></code></p></li>
+<li><p>Try <a class="reference external" href="http://192.168.4.1:80/">http://192.168.4.1:80/</a> explicitly</p></li>
+<li><p>Check device IP: some phones assign different IPs (check Settings)</p></li>
+</ul>
+</dd>
+<dt><strong>Credentials saved but device won’t connect</strong></dt><dd><ul class="simple">
+<li><p>Verify WiFi is 2.4 GHz (not 5 GHz)</p></li>
+<li><p>Confirm no extra spaces in SSID or password</p></li>
+<li><p>Check network uses WPA2, not legacy WEP or open</p></li>
+</ul>
+</dd>
+<dt><strong>Form submission hangs or times out</strong></dt><dd><ul class="simple">
+<li><p>Check device logs for POST handler errors</p></li>
+<li><p>Ensure NVS partition has space (not full)</p></li>
+<li><p>Try clearing all NVS and rebooting</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h2>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// Read credentials from NVS</span>
+<span class="n">esp_err_t</span><span class="w"> </span><span class="nf">nvs_read_wifi_creds</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ssid_out</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">pass_out</span><span class="p">);</span>
+<span class="c1">// Parameters:</span>
+<span class="c1">//   ssid_out: pointer to buffer (64 bytes), receives stored SSID</span>
+<span class="c1">//   pass_out: pointer to buffer (64 bytes), receives stored password</span>
+<span class="c1">// Returns: ESP_OK on success, error code otherwise</span>
+</pre></div>
+</div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// Write credentials to NVS</span>
+<span class="n">esp_err_t</span><span class="w"> </span><span class="nf">nvs_write_wifi_creds</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">password</span><span class="p">);</span>
+<span class="c1">// Parameters:</span>
+<span class="c1">//   ssid: SSID to store (max 32 chars)</span>
+<span class="c1">//   password: password to store (max 63 chars)</span>
+<span class="c1">// Returns: ESP_OK on success, error code otherwise</span>
+</pre></div>
+</div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// Start SoftAP for provisioning</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">start_softap</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="c1">// Initializes WiFi in AP mode, starts SSID &quot;ESP32-Setup&quot;</span>
+<span class="c1">// Must be called before start_provisioning_server()</span>
+</pre></div>
+</div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// Start HTTP provisioning server</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">start_provisioning_server</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="c1">// Registers GET / and POST /provision handlers</span>
+<span class="c1">// Requires SoftAP to be running</span>
+</pre></div>
+</div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// Stop HTTP provisioning server</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">stop_provisioning_server</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="c1">// Cleanly shuts down httpd and frees resources</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="firmware/esp32_controller.html" class="btn btn-neutral float-left" title="ESP32 Controller" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="architecture.html" class="btn btn-neutral float-right" title="Architecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Lydia Chheng.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

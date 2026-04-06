@@ -2,8 +2,6 @@
 Wall-E
 ========
 
-**A Professional micro-ROS Workspace for ESP32 Robotics Development**
-
 Welcome to Wall-E's comprehensive documentation. This project provides an integrated development environment combining ESP32 firmware, FreeRTOS, and ROS 2 Humble for advanced embedded robotics applications.
 
 .. toctree::
@@ -11,8 +9,9 @@ Welcome to Wall-E's comprehensive documentation. This project provides an integr
    :caption: Contents
 
    getting_started
-  workflow_and_commands
+   workflow_and_commands
    firmware/esp32_controller
+   wifi_provisioning
    architecture
    troubleshooting
 
@@ -124,7 +123,7 @@ Support & Documentation
 This documentation provides:
 
 - :ref:`Getting Started Guide <getting_started>` - Setup and initial configuration
-- :ref:`ESP32 Controller Documentation <firmware/esp32_controller>` - Hardware and firmware details
+- :ref:`ESP32 Controller Documentation <esp32_controller>` - Hardware and firmware details
 - :ref:`System Architecture <architecture>` - Design overview and data flow
 - :ref:`Troubleshooting Guide <troubleshooting>` - Solutions to common issues
 

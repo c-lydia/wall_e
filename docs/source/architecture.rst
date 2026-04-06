@@ -1,6 +1,9 @@
+.. _architecture:
+
 ============
 Architecture
 ============
+
 
 System Overview
 ===============

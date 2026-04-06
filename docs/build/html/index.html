@@ -19,7 +19,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Workflow and Commands" href="workflow_and_commands.html" /> 
+    <link rel="next" title="Getting Started" href="getting_started.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,8 +41,14 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workflow_and_commands.html">Workflow and Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="firmware/esp32_controller.html">ESP32 Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wifi_provisioning.html">WiFi Provisioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
 </ul>
 
         </div>
@@ -64,7 +70,7 @@
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="workflow_and_commands.html" class="btn btn-neutral float-right" title="Workflow and Commands" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -73,16 +79,63 @@
              
   <section id="wall-e">
 <h1>Wall-E<a class="headerlink" href="#wall-e" title="Link to this heading"></a></h1>
-<p><strong>A Professional micro-ROS Workspace for ESP32 Robotics Development</strong></p>
 <p>Welcome to Wall-E’s comprehensive documentation. This project provides an integrated development environment combining ESP32 firmware, FreeRTOS, and ROS 2 Humble for advanced embedded robotics applications.</p>
 <div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#quick-start-guide">Quick Start Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#initial-setup">Initial Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#building-the-esp32-firmware">Building the ESP32 Firmware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="workflow_and_commands.html">Workflow and Commands</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="workflow_and_commands.html#development-workflow">Development Workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflow_and_commands.html#workspace-commands">Workspace Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflow_and_commands.html#firmware-commands">Firmware Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflow_and_commands.html#useful-checks">Useful Checks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflow_and_commands.html#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="firmware/esp32_controller.html">ESP32 Controller</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#application-variants">Application Variants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#hardware-configuration">Hardware Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#build-and-flash">Build and Flash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#code-structure">Code Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#application-flow">Application Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#ros-topics-subscriptions">ROS Topics &amp; Subscriptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#motor-control-motor-variant">Motor Control (Motor Variant)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#safety-features-all-variants">Safety Features (All Variants)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#wifi-provisioning-system">WiFi Provisioning System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#id3">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firmware/esp32_controller.html#future-enhancements">Future Enhancements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wifi_provisioning.html">WiFi Provisioning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wifi_provisioning.html#quick-start">Quick Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi_provisioning.html#system-overview">System Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi_provisioning.html#how-it-works">How It Works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi_provisioning.html#for-end-users">For End Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi_provisioning.html#for-developers">For Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi_provisioning.html#security-considerations">Security Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi_provisioning.html#common-issues">Common Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi_provisioning.html#api-reference">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#system-overview">System Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#component-descriptions">Component Descriptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#communication-flow">Communication Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#data-types">Data Types</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#common-issues-and-solutions">Common Issues and Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#using-debug-tools">Using Debug Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#getting-help">Getting Help</a></li>
 </ul>
 </li>
 </ul>
@@ -203,10 +256,10 @@
 <h2>Support &amp; Documentation<a class="headerlink" href="#support-documentation" title="Link to this heading"></a></h2>
 <p>This documentation provides:</p>
 <ul class="simple">
-<li><p><span class="xref std std-ref">Getting Started Guide</span> - Setup and initial configuration</p></li>
-<li><p><span class="xref std std-ref">ESP32 Controller Documentation</span> - Hardware and firmware details</p></li>
-<li><p><span class="xref std std-ref">System Architecture</span> - Design overview and data flow</p></li>
-<li><p><span class="xref std std-ref">Troubleshooting Guide</span> - Solutions to common issues</p></li>
+<li><p><a class="reference internal" href="getting_started.html#getting-started"><span class="std std-ref">Getting Started Guide</span></a> - Setup and initial configuration</p></li>
+<li><p><a class="reference internal" href="firmware/esp32_controller.html#esp32-controller"><span class="std std-ref">ESP32 Controller Documentation</span></a> - Hardware and firmware details</p></li>
+<li><p><a class="reference internal" href="architecture.html#architecture"><span class="std std-ref">System Architecture</span></a> - Design overview and data flow</p></li>
+<li><p><a class="reference internal" href="troubleshooting.html#troubleshooting"><span class="std std-ref">Troubleshooting Guide</span></a> - Solutions to common issues</p></li>
 </ul>
 <p>For additional information, see the project’s GitHub repository.</p>
 </section>
@@ -216,7 +269,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="workflow_and_commands.html" class="btn btn-neutral float-right" title="Workflow and Commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

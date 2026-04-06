@@ -1,0 +1,734 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESP32 Controller &mdash; Wall-E 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="WiFi Provisioning" href="../wifi_provisioning.html" />
+    <link rel="prev" title="Workflow and Commands" href="../workflow_and_commands.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Wall-E
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_and_commands.html">Workflow and Commands</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ESP32 Controller</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#application-variants">Application Variants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#motor-controller-full-featured">Motor Controller (Full-Featured)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sensor-only-reference">Sensor-Only Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hardware-configuration">Hardware Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#i2c-sensors">I2C (Sensors)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ultrasonic-sensor">Ultrasonic Sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#motor-control-motor-variant-only">Motor Control (Motor Variant Only)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#build-and-flash">Build and Flash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-structure">Code Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#motor-variant">Motor Variant</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sensor-only-variant">Sensor-Only Variant</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#application-flow">Application Flow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#boot-sequence">Boot Sequence</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ros-topics-subscriptions">ROS Topics &amp; Subscriptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#publishers-both-variants">Publishers (Both Variants)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publishers-motor-variant-only">Publishers (Motor Variant Only)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#subscriptions-motor-variant-only">Subscriptions (Motor Variant Only)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#motor-control-motor-variant">Motor Control (Motor Variant)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#motor-commands">Motor Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#motor-safety-features">Motor Safety Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#safety-features-all-variants">Safety Features (All Variants)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#watchdog-timer">Watchdog Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i2c-sensor-validation">I2C Sensor Validation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#wifi-provisioning-system">WiFi Provisioning System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#boot-flow">Boot Flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nvs-storage">NVS Storage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#provisioning-http-interface">Provisioning HTTP Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fallback-configuration">Fallback Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wifi-provisioning-issues">WiFi Provisioning Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#motor-control-issues-motor-variant">Motor Control Issues (Motor Variant)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sensor-issues">Sensor Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#watchdog-issues">Watchdog Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#firmware-build-issues">Firmware Build Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#i2c-communication-fails">I2C Communication Fails</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ultrasonic-measurements-are-erratic">Ultrasonic Measurements Are Erratic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#micro-ros-connection-issues">micro-ROS Connection Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#future-enhancements">Future Enhancements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wifi_provisioning.html">WiFi Provisioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wall-E</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ESP32 Controller</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/firmware/esp32_controller.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../workflow_and_commands.html" class="btn btn-neutral float-left" title="Workflow and Commands" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../wifi_provisioning.html" class="btn btn-neutral float-right" title="WiFi Provisioning" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="esp32-controller">
+<span id="id1"></span><h1>ESP32 Controller<a class="headerlink" href="#esp32-controller" title="Link to this heading"></a></h1>
+<p>The ESP32 controller runs FreeRTOS with micro-ROS micro-sage communication. Two variants are provided: a full-featured <strong>motor controller</strong> with safety systems, and a lightweight <strong>sensor-only</strong> reference implementation for validation.</p>
+<section id="application-variants">
+<h2>Application Variants<a class="headerlink" href="#application-variants" title="Link to this heading"></a></h2>
+<section id="motor-controller-full-featured">
+<h3>Motor Controller (Full-Featured)<a class="headerlink" href="#motor-controller-full-featured" title="Link to this heading"></a></h3>
+<p><strong>Location</strong>: <code class="docutils literal notranslate"><span class="pre">firmware/custom/esp32_controller/</span></code></p>
+<p>Features:
+- 4x BLDC motor control via PWM + GPIO direction
+- IMU (MPU6050) and ultrasonic range sensing
+- Emergency stop subscription (ROS Bool topic)
+- Motor safety: deadband, soft-start ramping, command timeout
+- Watchdog timer (30 seconds)
+- WiFi credential provisioning via SoftAP + HTTP form
+- Status publisher (/firmware/status)</p>
+</section>
+<section id="sensor-only-reference">
+<h3>Sensor-Only Reference<a class="headerlink" href="#sensor-only-reference" title="Link to this heading"></a></h3>
+<p><strong>Location</strong>: <code class="docutils literal notranslate"><span class="pre">firmware/freertos_apps/apps/esp32_controller/</span></code></p>
+<p>Features:
+- IMU and ultrasonic range sensing only
+- Same WiFi provisioning system as motor variant
+- Lightweight for simulation and validation
+- Publishing: /imu/data, /range/data</p>
+</section>
+</section>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The controller manages:</p>
+<ul class="simple">
+<li><p><strong>IMU (MPU6050)</strong>: 6-axis accelerometer and gyroscope via I2C</p></li>
+<li><p><strong>Ultrasonic Sensor (HC-SR04)</strong>: Distance/range measurements</p></li>
+<li><p><strong>Motor Control</strong> (motor variant): 4 BLDC motors with LEDC PWM + GPIO direction pins</p></li>
+<li><p><strong>Safety Systems</strong>: Watchdog timer, motor timeout, deadband, soft-start ramping</p></li>
+<li><p><strong>Emergency Stop</strong>: ROS subscription for immediate motor cutoff</p></li>
+<li><p><strong>WiFi Provisioning</strong>: SoftAP + HTTP server for credential setup</p></li>
+<li><p><strong>micro-ROS Agent</strong>: UDP communication with host ROS 2 system</p></li>
+</ul>
+</section>
+<section id="hardware-configuration">
+<h2>Hardware Configuration<a class="headerlink" href="#hardware-configuration" title="Link to this heading"></a></h2>
+<section id="i2c-sensors">
+<h3>I2C (Sensors)<a class="headerlink" href="#i2c-sensors" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>SCL (GPIO 22)</strong>: Serial Clock</p></li>
+<li><p><strong>SDA (GPIO 21)</strong>: Serial Data</p></li>
+<li><p><strong>Device Address</strong>: 0x68 (MPU6050)</p></li>
+<li><p><strong>Frequency</strong>: 100 kHz</p></li>
+</ul>
+</section>
+<section id="ultrasonic-sensor">
+<h3>Ultrasonic Sensor<a class="headerlink" href="#ultrasonic-sensor" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Trigger Pin</strong>: GPIO 5 (motor variant) / GPIO 9 (sensor-only variant)</p></li>
+<li><p><strong>Echo Pin</strong>: GPIO 18 (motor variant) / GPIO 10 (sensor-only variant)</p></li>
+</ul>
+</section>
+<section id="motor-control-motor-variant-only">
+<h3>Motor Control (Motor Variant Only)<a class="headerlink" href="#motor-control-motor-variant-only" title="Link to this heading"></a></h3>
+<p>4x BLDC motors with PWM and GPIO direction control:</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Motor</p></th>
+<th class="head"><p>PWM Pin</p></th>
+<th class="head"><p>Direction Pin</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Motor 1 (Front-Right)</p></td>
+<td><p>GPIO 25</p></td>
+<td><p>GPIO 26</p></td>
+</tr>
+<tr class="row-odd"><td><p>Motor 2 (Front-Left)</p></td>
+<td><p>GPIO 27</p></td>
+<td><p>GPIO 14</p></td>
+</tr>
+<tr class="row-even"><td><p>Motor 3 (Back-Right)</p></td>
+<td><p>GPIO 12</p></td>
+<td><p>GPIO 13</p></td>
+</tr>
+<tr class="row-odd"><td><p>Motor 4 (Back-Left)</p></td>
+<td><p>GPIO 33</p></td>
+<td><p>GPIO 32</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>LEDC Timer</strong>: Timer 0</p></li>
+<li><p><strong>Frequency</strong>: 1 kHz</p></li>
+<li><p><strong>Resolution</strong>: 8-bit (0-255 duty cycle)</p></li>
+</ul>
+</section>
+</section>
+<section id="build-and-flash">
+<h2>Build and Flash<a class="headerlink" href="#build-and-flash" title="Link to this heading"></a></h2>
+<p>Both app variants are built and flashed using the same micro_ros_setup commands.</p>
+<p>Inside workspace container:</p>
+<p><strong>Configure for motor controller:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_setup<span class="w"> </span>configure_firmware.sh<span class="w"> </span>esp32_controller<span class="w"> </span>-t<span class="w"> </span>udp<span class="w"> </span>-i<span class="w"> </span><span class="m">192</span>.168.1.2<span class="w"> </span>-p<span class="w"> </span><span class="m">8888</span>
+</pre></div>
+</div>
+<p><strong>Configure for sensor-only variant:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_setup<span class="w"> </span>configure_firmware.sh<span class="w"> </span>esp32_controller_sim<span class="w"> </span>-t<span class="w"> </span>udp<span class="w"> </span>-i<span class="w"> </span><span class="m">192</span>.168.1.2<span class="w"> </span>-p<span class="w"> </span><span class="m">8888</span>
+</pre></div>
+</div>
+<p><strong>Build:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_setup<span class="w"> </span>build_firmware.sh
+</pre></div>
+</div>
+<p><strong>Flash:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>micro_ros_setup<span class="w"> </span>flash_firmware.sh
+</pre></div>
+</div>
+<p><strong>Monitor Serial Output:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/micro_ros_ws/firmware/freertos_apps/microros_esp32_extensions
+<span class="nb">source</span><span class="w"> </span>/micro_ros_ws/firmware/toolchain/esp-idf/export.sh
+idf.py<span class="w"> </span>-p<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span>monitor
+</pre></div>
+</div>
+</section>
+<section id="code-structure">
+<h2>Code Structure<a class="headerlink" href="#code-structure" title="Link to this heading"></a></h2>
+<section id="motor-variant">
+<h3>Motor Variant<a class="headerlink" href="#motor-variant" title="Link to this heading"></a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>firmware/custom/esp32_controller/
+├── app.c                     # Main application with motors + safety + WiFi provisioning
+├── Kconfig.projbuild          # WiFi SSID/password configuration
+└── CMakeLists.txt
+</pre></div>
+</div>
+</section>
+<section id="sensor-only-variant">
+<h3>Sensor-Only Variant<a class="headerlink" href="#sensor-only-variant" title="Link to this heading"></a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>firmware/freertos_apps/apps/esp32_controller/
+├── app.c                     # Sensor-only variant with WiFi provisioning
+├── Kconfig.projbuild          # WiFi SSID/password configuration
+└── CMakeLists.txt
+</pre></div>
+</div>
+</section>
+</section>
+<section id="application-flow">
+<h2>Application Flow<a class="headerlink" href="#application-flow" title="Link to this heading"></a></h2>
+<section id="boot-sequence">
+<h3>Boot Sequence<a class="headerlink" href="#boot-sequence" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Watchdog Initialization</strong> (30 second timeout)
+- Task added to watchdog; reset periodically in executor loop</p></li>
+<li><p><strong>NVS Initialization</strong>
+- Read stored WiFi credentials from flash (namespace: “wifi_creds”)</p></li>
+<li><p><strong>WiFi Provisioning Check</strong>
+- If credentials empty → Start SoftAP (“ESP32-Setup”) + HTTP server
+- User provisions via browser at <a class="reference external" href="http://192.168.4.1/">http://192.168.4.1/</a>
+- Device saves to NVS, restarts with new credentials
+- If credentials found → Proceed to normal operation</p></li>
+<li><p><strong>Hardware Initialization</strong> (Normal Operation)
+- I2C master (sensors)
+- GPIO (ultrasonic trigger, motor direction pins)
+- LEDC PWM (motor control, motor variant only)</p></li>
+<li><p><strong>Sensor Validation</strong>
+- Attempt I2C read from MPU6050 (address 0x68)
+- Log error if sensor not detected; continue anyway</p></li>
+<li><p><strong>Micro-ROS Initialization</strong>
+- RCL allocator and context
+- Node creation
+- Publisher/subscription registration</p></li>
+<li><p><strong>Executor Loop</strong> (10 Hz timer)
+- Publish IMU data
+- Publish range data
+- Check motor timeout and emergency stop
+- Reset watchdog
+- Process ROS subscriptions</p></li>
+</ol>
+</section>
+</section>
+<section id="ros-topics-subscriptions">
+<h2>ROS Topics &amp; Subscriptions<a class="headerlink" href="#ros-topics-subscriptions" title="Link to this heading"></a></h2>
+<section id="publishers-both-variants">
+<h3>Publishers (Both Variants)<a class="headerlink" href="#publishers-both-variants" title="Link to this heading"></a></h3>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Topic</p></th>
+<th class="head"><p>Message Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/imu/data</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sensor_msgs/msg/Imu</span></code></p></td>
+<td><p>6-axis IMU (accel + gyro)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/range/data</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sensor_msgs/msg/Range</span></code></p></td>
+<td><p>Ultrasonic distance (m)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="publishers-motor-variant-only">
+<h3>Publishers (Motor Variant Only)<a class="headerlink" href="#publishers-motor-variant-only" title="Link to this heading"></a></h3>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Topic</p></th>
+<th class="head"><p>Message Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/firmware/status</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">std_msgs/msg/String</span></code></p></td>
+<td><p>Status string with sensor + motor data</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="subscriptions-motor-variant-only">
+<h3>Subscriptions (Motor Variant Only)<a class="headerlink" href="#subscriptions-motor-variant-only" title="Link to this heading"></a></h3>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Topic</p></th>
+<th class="head"><p>Message Type</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/motor-cmd</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">std_msgs/msg/Float32MultiArray</span></code></p></td>
+<td><p>Motor commands [M1-M4] in [-1.0, +1.0]</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/e-stop</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">std_msgs/msg/Bool</span></code></p></td>
+<td><p>Emergency stop: true=cut, false=clear</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="motor-control-motor-variant">
+<h2>Motor Control (Motor Variant)<a class="headerlink" href="#motor-control-motor-variant" title="Link to this heading"></a></h2>
+<section id="motor-commands">
+<h3>Motor Commands<a class="headerlink" href="#motor-commands" title="Link to this heading"></a></h3>
+<p>Motor commands are float arrays in range <code class="docutils literal notranslate"><span class="pre">[-1.0,</span> <span class="pre">1.0]</span></code>:
+- <strong>+1.0</strong>: Full forward (clockwise)
+- <strong>-1.0</strong>: Full reverse (counter-clockwise)
+- <strong>0</strong>: Stop</p>
+<p>Example ROS 2 publish:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>/motor-cmd<span class="w"> </span>std_msgs/msg/Float32MultiArray<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;data: [0.5, 0.5, 0.5, 0.5]&quot;</span>
+</pre></div>
+</div>
+<section id="motor-safety-features">
+<h4>Motor Safety Features<a class="headerlink" href="#motor-safety-features" title="Link to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p><strong>Deadband (0.05)</strong>
+- Commands in range [-0.05, +0.05] treated as zero
+- Prevents motor drift from noisy control signals</p></li>
+<li><p><strong>Soft-Start Ramping (0.1 units/100ms)</strong>
+- Maximum change per timer tick: 0.1
+- Prevents sudden acceleration
+- Protects motor mechanism and power supply</p></li>
+<li><p><strong>Command Timeout (500 ms)</strong>
+- If no command received for 500ms, motors stop automatically
+- Prevents runaway if communication is lost
+- Timestamp updated on each received command</p></li>
+<li><p><strong>Emergency Stop (volatile flag)</strong>
+- Subscribed to <code class="docutils literal notranslate"><span class="pre">/e-stop</span></code> Bool topic
+- <strong>True</strong>: Immediately cuts all motors to zero duty cycle; cancels all commands
+- <strong>False</strong>: Clears emergency stop; normal command processing resumes
+- Volatile flag prevents compiler optimizations</p></li>
+</ol>
+<p>Example emergency stop:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>/e-stop<span class="w"> </span>std_msgs/msg/Bool<span class="w"> </span><span class="s2">&quot;data: true&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="safety-features-all-variants">
+<h2>Safety Features (All Variants)<a class="headerlink" href="#safety-features-all-variants" title="Link to this heading"></a></h2>
+<section id="watchdog-timer">
+<h3>Watchdog Timer<a class="headerlink" href="#watchdog-timer" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Timeout</strong>: 30 seconds</p></li>
+<li><p><strong>Behavior</strong>: Resets ESP32 if watchdog not reset within timeout</p></li>
+<li><p><strong>Reset Location</strong>: Main executor loop (after each ROS spin)</p></li>
+<li><p><strong>Purpose</strong>: Protect against firmware hangs or deadlocks</p></li>
+</ul>
+</section>
+<section id="i2c-sensor-validation">
+<h3>I2C Sensor Validation<a class="headerlink" href="#i2c-sensor-validation" title="Link to this heading"></a></h3>
+<p>On boot, the firmware attempts to detect the MPU6050 sensor:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>I2C initialized, checking sensor presence...
+MPU6050 detected on I2C bus
+</pre></div>
+</div>
+<p>If not detected, error is logged but boot continues, allowing operation without IMU.</p>
+</section>
+</section>
+<section id="wifi-provisioning-system">
+<h2>WiFi Provisioning System<a class="headerlink" href="#wifi-provisioning-system" title="Link to this heading"></a></h2>
+<section id="id2">
+<h3>Overview<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<p>The WiFi provisioning system allows users to configure WiFi credentials via a temporary HTTP server without editing source code or using menuconfig.</p>
+<section id="boot-flow">
+<h4>Boot Flow<a class="headerlink" href="#boot-flow" title="Link to this heading"></a></h4>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Boot
+ ↓
+NVS Init
+ ↓
+Check NVS for stored SSID/password
+ ↓
+[Credentials Empty]          [Credentials Found]
+ ↓                            ↓
+Start SoftAP                Connect to WiFi
+&quot;ESP32-Setup&quot;               (Normal Operation)
+ ↓
+Start HTTP Server
+http://192.168.4.1/
+ ↓
+Wait 60s for user
+provisioning
+ ↓
+User submits form
+ ↓
+Save to NVS
+ ↓
+Restart Device
+</pre></div>
+</div>
+</section>
+<section id="nvs-storage">
+<h4>NVS Storage<a class="headerlink" href="#nvs-storage" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>Namespace</strong>: <code class="docutils literal notranslate"><span class="pre">&quot;wifi_creds&quot;</span></code></p></li>
+<li><p><strong>Keys</strong>:
+- <code class="docutils literal notranslate"><span class="pre">&quot;ssid&quot;</span></code>: WiFi network name (max 32 chars)
+- <code class="docutils literal notranslate"><span class="pre">&quot;password&quot;</span></code>: WiFi password (max 63 chars)</p></li>
+<li><p><strong>Persistence</strong>: Data survives power cycles, factory resets erase NVS</p></li>
+</ul>
+</section>
+<section id="provisioning-http-interface">
+<h4>Provisioning HTTP Interface<a class="headerlink" href="#provisioning-http-interface" title="Link to this heading"></a></h4>
+<p><strong>SoftAP Configuration</strong>:
+- SSID: <code class="docutils literal notranslate"><span class="pre">ESP32-Setup</span></code>
+- Security: Open (no password)
+- IP: 192.168.4.1 (auto-assigned to clients)</p>
+<p><strong>Endpoints</strong>:</p>
+<ol class="arabic">
+<li><p><strong>GET /</strong> - Returns HTML form</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/provision&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;ssid&quot;</span>
+         <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;WiFi SSID&quot;</span> <span class="na">required</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;32&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;password&quot;</span>
+         <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;WiFi Password&quot;</span> <span class="na">required</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;63&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Connect<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>POST /provision</strong> - Accepts form data</p>
+<p>Parameters:
+- <code class="docutils literal notranslate"><span class="pre">ssid</span></code>: Network name
+- <code class="docutils literal notranslate"><span class="pre">password</span></code>: Network password</p>
+<p>Response:
+- <strong>Success (200)</strong>: Credentials saved; device will restart
+- <strong>Error (400)</strong>: Invalid form data; missing SSID or password</p>
+</li>
+</ol>
+</section>
+<section id="fallback-configuration">
+<h4>Fallback Configuration<a class="headerlink" href="#fallback-configuration" title="Link to this heading"></a></h4>
+<p>If NVS is empty or erased, the system falls back to Kconfig symbols:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifdef CONFIG_ESP_WIFI_SSID</span>
+<span class="cp">#define WIFI_SSID CONFIG_ESP_WIFI_SSID</span>
+<span class="cp">#else</span>
+<span class="cp">#define WIFI_SSID &quot;&quot;</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+<p>This allows build-time defaults while preserving easy provisioning setup.</p>
+</section>
+</section>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="wifi-provisioning-issues">
+<h3>WiFi Provisioning Issues<a class="headerlink" href="#wifi-provisioning-issues" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt><strong>Device doesn’t start SoftAP on first boot</strong></dt><dd><ul class="simple">
+<li><p>Ensure NVS is erased or contains empty SSID/password</p></li>
+<li><p>Device will start SoftAP only if credentials are missing</p></li>
+<li><p>Check serial logs: “No WiFi credentials stored. Starting provisioning mode…”</p></li>
+</ul>
+</dd>
+<dt><strong>Can’t connect to ESP32-Setup network</strong></dt><dd><ul class="simple">
+<li><p>Verify device has powered on and completed boot sequence</p></li>
+<li><p>Check if WiFi radio is functional (inspect hardware)</p></li>
+<li><p>Wait 5-10 seconds after power-on for SoftAP to start</p></li>
+</ul>
+</dd>
+<dt><strong>HTTP provisioning form not loading (http://192.168.4.1/)</strong></dt><dd><ul class="simple">
+<li><p>Verify you’re on the ESP32-Setup network (not your home WiFi)</p></li>
+<li><p>Try <a class="reference external" href="http://192.168.4.1">http://192.168.4.1</a> or 192.168.4.1 in address bar</p></li>
+<li><p>Check device is still in provisioning mode (not yet restarted)</p></li>
+</ul>
+</dd>
+<dt><strong>Credentials are saved but device won’t connect to WiFi</strong></dt><dd><ul class="simple">
+<li><p>Verify SSID and password are correct (no extra spaces or typos)</p></li>
+<li><p>Check WiFi network is 2.4 GHz (ESP32 does not support 5 GHz)</p></li>
+<li><p>Verify network uses WPA2 or WPA3 (no legacy WEP)</p></li>
+<li><p>Check WiFi signal strength near device</p></li>
+</ul>
+</dd>
+<dt><strong>Device restarts repeatedly in provisioning mode</strong></dt><dd><ul class="simple">
+<li><p>NVS might be corrupted; try factory reset: <code class="docutils literal notranslate"><span class="pre">idf.py</span> <span class="pre">erase-flash</span></code></p></li>
+<li><p>Check HTTP server logs in serial output for errors</p></li>
+<li><p>Ensure device is powered steadily (not brownout)</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="motor-control-issues-motor-variant">
+<h3>Motor Control Issues (Motor Variant)<a class="headerlink" href="#motor-control-issues-motor-variant" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt><strong>Motors don’t respond to commands</strong></dt><dd><ul class="simple">
+<li><p>Verify motor topic name is correct: <code class="docutils literal notranslate"><span class="pre">/motor-cmd</span></code></p></li>
+<li><p>Check message type is <code class="docutils literal notranslate"><span class="pre">Float32MultiArray</span></code></p></li>
+<li><p>Verify array has 4 elements [M1, M2, M3, M4]</p></li>
+<li><p>Check watchdog is not rebooting device</p></li>
+</ul>
+</dd>
+<dt><strong>Motors move but are jerky or unresponsive</strong></dt><dd><ul class="simple">
+<li><p>Check PWM pins are functioning (GPIO 25, 27, 12, 33)</p></li>
+<li><p>Verify LEDC timer is properly initialized in logs</p></li>
+<li><p>Check power supply voltage (motors need stable 5V+)</p></li>
+<li><p>Try increasing soft-start ramp time if mechanical vibration occurs</p></li>
+</ul>
+</dd>
+<dt><strong>Motor emergency stop not working</strong></dt><dd><ul class="simple">
+<li><p>Verify topic name: <code class="docutils literal notranslate"><span class="pre">/e-stop</span></code></p></li>
+<li><p>Check message type: <code class="docutils literal notranslate"><span class="pre">std_msgs/msg/Bool</span></code></p></li>
+<li><p>Motor should stop immediately when <code class="docutils literal notranslate"><span class="pre">data:</span> <span class="pre">true</span></code></p></li>
+<li><p>Clear emergency stop with <code class="docutils literal notranslate"><span class="pre">data:</span> <span class="pre">false</span></code></p></li>
+</ul>
+</dd>
+<dt><strong>Motor timeout stopping motors unexpectedly</strong></dt><dd><ul class="simple">
+<li><p>Default timeout is 500ms without receiving a motor command</p></li>
+<li><p>Publish regular commands (e.g., 10 Hz) to prevent timeout</p></li>
+<li><p>Check <code class="docutils literal notranslate"><span class="pre">/firmware/status</span></code> topic for timeout messages in logs</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="sensor-issues">
+<h3>Sensor Issues<a class="headerlink" href="#sensor-issues" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt><strong>IMU data looks wrong (all zeros or constant)</strong></dt><dd><ul class="simple">
+<li><p>Check I2C connections (GPIO 21 SDA, GPIO 22 SCL)</p></li>
+<li><p>Verify MPU6050 device address (0x68) with <code class="docutils literal notranslate"><span class="pre">i2cdetect</span></code></p></li>
+<li><p>Look for error in logs: “MPU6050 not detected on I2C bus”</p></li>
+<li><p>Confirm pull-up resistors on I2C lines (typically 4.7 kΩ)</p></li>
+</ul>
+</dd>
+<dt><strong>Ultrasonic sensor returns invalid distance (-1.0)</strong></dt><dd><ul class="simple">
+<li><p>Check trigger and echo GPIO pins (see Hardware Configuration)</p></li>
+<li><p>Verify sensor power supply (typically 5V)</p></li>
+<li><p>Ensure sensor is at least 2 cm from object (minimum range)</p></li>
+<li><p>Check for noisy echo signal if range fluctuates wildly</p></li>
+</ul>
+</dd>
+<dt><strong>ROS topics not publishing</strong></dt><dd><ul class="simple">
+<li><p>Verify micro-ROS agent is running: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">logs</span> <span class="pre">-f</span> <span class="pre">micro_ros_agent</span></code></p></li>
+<li><p>Check UDP connection is working (correct IP and port)</p></li>
+<li><p>Look for ROS initialization errors in serial logs</p></li>
+<li><p>Try <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">list</span></code> to see available topics</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="watchdog-issues">
+<h3>Watchdog Issues<a class="headerlink" href="#watchdog-issues" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt><strong>Device spontaneously restarts every 30 seconds</strong></dt><dd><ul class="simple">
+<li><p>Watchdog timeout is 30 seconds; device must reset within this window</p></li>
+<li><p>Check executor loop is running and resetting watchdog</p></li>
+<li><p>Look for blocking I/O or infinite loops in custom code</p></li>
+<li><p>Verify ROS subscriptions don’t block (use ON_NEW_DATA mode)</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="firmware-build-issues">
+<h3>Firmware Build Issues<a class="headerlink" href="#firmware-build-issues" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt><strong>Build fails: “app.c: No such file or directory”</strong></dt><dd><ul class="simple">
+<li><p>Ensure you configured the correct app variant</p></li>
+<li><p>Motor variant: <code class="docutils literal notranslate"><span class="pre">configure_firmware.sh</span> <span class="pre">esp32_controller</span></code></p></li>
+<li><p>Sensor-only: <code class="docutils literal notranslate"><span class="pre">configure_firmware.sh</span> <span class="pre">esp32_controller_sim</span></code></p></li>
+</ul>
+</dd>
+<dt><strong>Build fails: missing NVS or HTTP server headers</strong></dt><dd><ul class="simple">
+<li><p>Ensure headers are in app.c: <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&quot;nvs_flash.h&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&quot;esp_http_server.h&quot;</span></code></p></li>
+<li><p>Rebuild with <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span> <span class="pre">--packages-select</span> <span class="pre">esp32_controller</span></code> or similar</p></li>
+</ul>
+</dd>
+<dt><strong>Compilation errors in motor/I2C code</strong></dt><dd><ul class="simple">
+<li><p>Verify all GPIO pins are defined (check #define statements)</p></li>
+<li><p>Ensure LEDC and GPIO driver headers are included</p></li>
+<li><p>Check for undefined MOTOR_COUNT constant</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+<section id="id3">
+<h2>Troubleshooting<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<section id="i2c-communication-fails">
+<h3>I2C Communication Fails<a class="headerlink" href="#i2c-communication-fails" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Check pull-up resistors on SCL/SDA</p></li>
+<li><p>Verify I2C frequency (100 kHz default)</p></li>
+<li><p>Confirm MPU6050 address matches (0x68)</p></li>
+</ul>
+</section>
+<section id="ultrasonic-measurements-are-erratic">
+<h3>Ultrasonic Measurements Are Erratic<a class="headerlink" href="#ultrasonic-measurements-are-erratic" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Ensure GPIO 9/10 are not used elsewhere</p></li>
+<li><p>Check sensor power supply (5V recommended)</p></li>
+<li><p>Verify echo pin is connected to an ADC-capable GPIO</p></li>
+</ul>
+</section>
+<section id="micro-ros-connection-issues">
+<h3>micro-ROS Connection Issues<a class="headerlink" href="#micro-ros-connection-issues" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Confirm WiFi SSID/password are correct</p></li>
+<li><p>Check micro-ROS agent is running (<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">up</span></code>)</p></li>
+<li><p>Verify UDP port 9999 is accessible</p></li>
+<li><p>Ensure ESP32 can reach the host machine on the network</p></li>
+</ul>
+</section>
+</section>
+<section id="future-enhancements">
+<h2>Future Enhancements<a class="headerlink" href="#future-enhancements" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>[ ] Add magnetometer (compass) support</p></li>
+<li><p>[ ] Implement sensor fusion (Kalman filter)</p></li>
+<li><p>[ ] Add servo/motor control</p></li>
+<li><p>[ ] SD card logging for offline recording</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../workflow_and_commands.html" class="btn btn-neutral float-left" title="Workflow and Commands" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../wifi_provisioning.html" class="btn btn-neutral float-right" title="WiFi Provisioning" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Lydia Chheng.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

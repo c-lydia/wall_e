@@ -1,6 +1,9 @@
+.. _troubleshooting:
+
 ===============
 Troubleshooting
 ===============
+
 
 Common Issues and Solutions
 ============================
