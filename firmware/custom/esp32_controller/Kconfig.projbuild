@@ -13,3 +13,105 @@ menu "ESP32 Controller WiFi Configuration"
             Set the WiFi password for the controller.
 
 endmenu
+
+menu "ESP32 Controller Motor and Servo Configuration"
+
+    config ESP_MOTOR_MAX_SLEW_PER_S_X100
+        int "Motor max slew per second (x100)"
+        range 1 1000
+        default 200
+        help
+            Max motor command change per second in normalized units [-1, 1].
+            Example: 200 = 2.00 per second.
+
+    config ESP_MOTOR1_PWM_GPIO
+        int "Motor 1 PWM GPIO"
+        range 0 39
+        default 25
+        help
+            GPIO pin used for motor 1 PWM output.
+
+    config ESP_MOTOR1_DIR_GPIO
+        int "Motor 1 direction GPIO"
+        range 0 39
+        default 26
+        help
+            GPIO pin used for motor 1 direction output.
+
+    config ESP_MOTOR2_PWM_GPIO
+        int "Motor 2 PWM GPIO"
+        range 0 39
+        default 27
+        help
+            GPIO pin used for motor 2 PWM output.
+
+    config ESP_MOTOR2_DIR_GPIO
+        int "Motor 2 direction GPIO"
+        range 0 39
+        default 14
+        help
+            GPIO pin used for motor 2 direction output.
+
+    config ESP_MOTOR3_PWM_GPIO
+        int "Motor 3 PWM GPIO"
+        range 0 39
+        default 12
+        help
+            GPIO pin used for motor 3 PWM output.
+
+    config ESP_MOTOR3_DIR_GPIO
+        int "Motor 3 direction GPIO"
+        range 0 39
+        default 13
+        help
+            GPIO pin used for motor 3 direction output.
+
+    config ESP_MOTOR4_PWM_GPIO
+        int "Motor 4 PWM GPIO"
+        range 0 39
+        default 33
+        help
+            GPIO pin used for motor 4 PWM output.
+
+    config ESP_MOTOR4_DIR_GPIO
+        int "Motor 4 direction GPIO"
+        range 0 39
+        default 32
+        help
+            GPIO pin used for motor 4 direction output.
+
+    config ESP_SERVO_PWM_GPIO
+        int "Servo PWM GPIO"
+        default 19
+        help
+            GPIO pin used to generate servo PWM at 50Hz.
+
+    config ESP_SERVO_MIN_ANGLE_DEG
+        int "Servo minimum angle (deg)"
+        range 0 180
+        default 0
+        help
+            Minimum allowed servo command angle.
+
+    config ESP_SERVO_MAX_ANGLE_DEG
+        int "Servo maximum angle (deg)"
+        range 1 180
+        default 180
+        help
+            Maximum allowed servo command angle.
+
+    config ESP_SERVO_DEFAULT_ANGLE_DEG
+        int "Servo default angle (deg)"
+        range 0 180
+        default 90
+        help
+            Default startup angle and estop fallback angle.
+
+    config ESP_SERVO_MAX_RATE_DEG_S
+        int "Servo max rate (deg/s)"
+        range 1 1000
+        default 120
+        help
+            Maximum servo motion speed in degrees per second.
+
+endmenu

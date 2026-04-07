@@ -20,6 +20,7 @@
 #include <sensor_msgs/msg/imu.h>
 #include <sensor_msgs/msg/range.h>
 #include <std_msgs/msg/float32_multi_array.h>
+#include <std_msgs/msg/float32.h>
 #include <std_msgs/msg/string.h>
 #include <std_msgs/msg/bool.h>
 
@@ -28,6 +29,7 @@
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
 #include "freertos/portmacro.h"
+#include "freertos/FreeRTOSConfig.h"
 #include "driver/i2c.h"
 #include "driver/gpio.h"
 #include "driver/ledc.h"
@@ -90,17 +92,100 @@ static int wifi_initialized = 0;
 
 #define MOTOR_COUNT 4
 
-#define MOTOR1_PWM  25
-#define MOTOR1_DIR  26
-#define MOTOR2_PWM  27
-#define MOTOR2_DIR  14
-#define MOTOR3_PWM  12
-#define MOTOR3_DIR  13
-#define MOTOR4_PWM  33
-#define MOTOR4_DIR  32
+#ifdef CONFIG_ESP_MOTOR1_PWM_GPIO
+#define MOTOR1_PWM CONFIG_ESP_MOTOR1_PWM_GPIO
+#else
+#define MOTOR1_PWM 25
+#endif
+
+#ifdef CONFIG_ESP_MOTOR1_DIR_GPIO
+#define MOTOR1_DIR CONFIG_ESP_MOTOR1_DIR_GPIO
+#else
+#define MOTOR1_DIR 26
+#endif
+
+#ifdef CONFIG_ESP_MOTOR2_PWM_GPIO
+#define MOTOR2_PWM CONFIG_ESP_MOTOR2_PWM_GPIO
+#else
+#define MOTOR2_PWM 27
+#endif
+
+#ifdef CONFIG_ESP_MOTOR2_DIR_GPIO
+#define MOTOR2_DIR CONFIG_ESP_MOTOR2_DIR_GPIO
+#else
+#define MOTOR2_DIR 14
+#endif
+
+#ifdef CONFIG_ESP_MOTOR3_PWM_GPIO
+#define MOTOR3_PWM CONFIG_ESP_MOTOR3_PWM_GPIO
+#else
+#define MOTOR3_PWM 12
+#endif
+
+#ifdef CONFIG_ESP_MOTOR3_DIR_GPIO
+#define MOTOR3_DIR CONFIG_ESP_MOTOR3_DIR_GPIO
+#else
+#define MOTOR3_DIR 13
+#endif
+
+#ifdef CONFIG_ESP_MOTOR4_PWM_GPIO
+#define MOTOR4_PWM CONFIG_ESP_MOTOR4_PWM_GPIO
+#else
+#define MOTOR4_PWM 33
+#endif
+
+#ifdef CONFIG_ESP_MOTOR4_DIR_GPIO
+#define MOTOR4_DIR CONFIG_ESP_MOTOR4_DIR_GPIO
+#else
+#define MOTOR4_DIR 32
+#endif
 
 #define LEDC_TIMER LEDC_TIMER_0
 #define LEDC_FREQ 1000
+
+#ifdef CONFIG_ESP_MOTOR_MAX_SLEW_PER_S_X100
+#define MOTOR_MAX_SLEW_PER_S (((float)CONFIG_ESP_MOTOR_MAX_SLEW_PER_S_X100) / 100.0f)
+#else
+#define MOTOR_MAX_SLEW_PER_S 2.0f
+#endif
+
+#ifdef CONFIG_ESP_SERVO_PWM_GPIO
+#define SERVO_PWM_PIN CONFIG_ESP_SERVO_PWM_GPIO
+#else
+#define SERVO_PWM_PIN 19
+#endif
+
+#ifdef CONFIG_ESP_SERVO_MIN_ANGLE_DEG
+#define SERVO_MIN_ANGLE_DEG ((float)CONFIG_ESP_SERVO_MIN_ANGLE_DEG)
+#else
+#define SERVO_MIN_ANGLE_DEG 0.0f
+#endif
+
+#ifdef CONFIG_ESP_SERVO_MAX_ANGLE_DEG
+#define SERVO_MAX_ANGLE_DEG ((float)CONFIG_ESP_SERVO_MAX_ANGLE_DEG)
+#else
+#define SERVO_MAX_ANGLE_DEG 180.0f
+#endif
+
+#ifdef CONFIG_ESP_SERVO_DEFAULT_ANGLE_DEG
+#define SERVO_DEFAULT_ANGLE_DEG ((float)CONFIG_ESP_SERVO_DEFAULT_ANGLE_DEG)
+#else
+#define SERVO_DEFAULT_ANGLE_DEG 90.0f
+#endif
+
+#define SERVO_LEDC_TIMER LEDC_TIMER_1
+#define SERVO_LEDC_CHANNEL LEDC_CHANNEL_4
+#define SERVO_FREQ_HZ 50
+#define SERVO_DUTY_RESOLUTION LEDC_TIMER_16_BIT
+#define SERVO_MIN_PULSE_US 500.0f
+#define SERVO_MAX_PULSE_US 2500.0f
+#define SERVO_PERIOD_US 20000.0f
+
+#ifdef CONFIG_ESP_SERVO_MAX_RATE_DEG_S
+#define SERVO_MAX_RATE_DEG_S ((float)CONFIG_ESP_SERVO_MAX_RATE_DEG_S)
+#else
+#define SERVO_MAX_RATE_DEG_S 120.0f
+#endif
 
 static const int MOTOR_PWM_PIN[MOTOR_COUNT] = {
     MOTOR1_PWM,
@@ -121,15 +206,21 @@ rcl_publisher_t range_pub;
 rcl_publisher_t status_pub;
 rcl_subscription_t motor_sub;
 rcl_subscription_t estop_sub;
+rcl_subscription_t servo_sub;
 
 static int64_t last_motor_cmd_time = 0;
 #define MOTOR_TIMEOUT_MS 500
+static int64_t last_control_update_time_ms = 0;
 static float motor_targets[MOTOR_COUNT] = {0.0f};
+static float motor_outputs[MOTOR_COUNT] = {0.0f};
 static volatile int emergency_stop = 0;
+static float servo_angle_deg = SERVO_DEFAULT_ANGLE_DEG;
+static float servo_target_deg = SERVO_DEFAULT_ANGLE_DEG;
 
 sensor_msgs__msg__Imu imu_msg;
 sensor_msgs__msg__Range range_msg;
 std_msgs__msg__Float32MultiArray motor_msg;
+std_msgs__msg__Float32 servo_cmd_msg;
 std_msgs__msg__String status_msg;
 std_msgs__msg__Bool estop_msg;
 
@@ -571,57 +662,139 @@ void motor_init(void) {
         .clk_cfg = LEDC_AUTO_CLK
     };
     ledc_timer_config(&timer);
+
+    for (int i = 0; i < MOTOR_COUNT; i++) {
+        motor_targets[i] = 0.0f;
+        motor_outputs[i] = 0.0f;
+    }
     
     printf("Motors initialized (4x BLDC with PWM + GPIO direction)\n");
+}
+
+static float clampf(float value, float min_value, float max_value) {
+    if (value < min_value) {
+        return min_value;
+    }
+    if (value > max_value) {
+        return max_value;
+    }
+    return value;
+}
+
+static void apply_motor_output(int id, float value) {
+    float out = clampf(value, -1.0f, 1.0f);
+    if (fabsf(out) < 0.05f) {
+        out = 0.0f;
+    }
+
+    int dir = (out > 0.0f) ? 1 : 0;
+    int pwm = (int)(fabsf(out) * 255.0f);
+
+    gpio_set_level(MOTOR_DIR_PIN[id], dir);
+    ledc_set_duty(0, (ledc_channel_t) id, pwm);
+    ledc_update_duty(0, (ledc_channel_t) id);
+    motor_outputs[id] = out;
+}
+
+static void update_motor_outputs(float dt_s) {
+    if (dt_s <= 0.0f) {
+        return;
+    }
+
+    float max_step = MOTOR_MAX_SLEW_PER_S * dt_s;
+    if (max_step <= 0.0f) {
+        return;
+    }
+
+    for (int i = 0; i < MOTOR_COUNT; i++) {
+        float target = emergency_stop ? 0.0f : motor_targets[i];
+        float delta = target - motor_outputs[i];
+        delta = clampf(delta, -max_step, max_step);
+        apply_motor_output(i, motor_outputs[i] + delta);
+    }
+}
+
+static float servo_clamp_angle(float angle_deg) {
+    if (angle_deg < SERVO_MIN_ANGLE_DEG) {
+        return SERVO_MIN_ANGLE_DEG;
+    }
+    if (angle_deg > SERVO_MAX_ANGLE_DEG) {
+        return SERVO_MAX_ANGLE_DEG;
+    }
+    return angle_deg;
+}
+
+static uint32_t servo_angle_to_duty(float angle_deg) {
+    float clamped = servo_clamp_angle(angle_deg);
+    float angle_span = SERVO_MAX_ANGLE_DEG - SERVO_MIN_ANGLE_DEG;
+    if (angle_span <= 0.0f) {
+        angle_span = 1.0f;
+    }
+    float pulse_us = SERVO_MIN_PULSE_US +
+        ((SERVO_MAX_PULSE_US - SERVO_MIN_PULSE_US) * ((clamped - SERVO_MIN_ANGLE_DEG) / angle_span));
+    float duty_max = (float)((1U << 16) - 1);
+    return (uint32_t)((pulse_us / SERVO_PERIOD_US) * duty_max);
+}
+
+static void apply_servo_output(float angle_deg) {
+    float clamped = servo_clamp_angle(angle_deg);
+    uint32_t duty = servo_angle_to_duty(clamped);
+    ledc_set_duty(LEDC_LOW_SPEED_MODE, SERVO_LEDC_CHANNEL, duty);
+    ledc_update_duty(LEDC_LOW_SPEED_MODE, SERVO_LEDC_CHANNEL);
+    servo_angle_deg = clamped;
+}
+
+static void update_servo_output(float dt_s) {
+    if (dt_s <= 0.0f) {
+        return;
+    }
+
+    float target = emergency_stop ? SERVO_DEFAULT_ANGLE_DEG : servo_target_deg;
+    float max_step = SERVO_MAX_RATE_DEG_S * dt_s;
+    float delta = clampf(target - servo_angle_deg, -max_step, max_step);
+
+    apply_servo_output(servo_angle_deg + delta);
+}
+
+void set_servo_angle(float angle_deg) {
+    float target = emergency_stop ? SERVO_DEFAULT_ANGLE_DEG : angle_deg;
+    servo_target_deg = servo_clamp_angle(target);
+}
+
+void servo_init(void) {
+    ledc_timer_config_t timer = {
+        .speed_mode = LEDC_LOW_SPEED_MODE,
+        .duty_resolution = SERVO_DUTY_RESOLUTION,
+        .timer_num = SERVO_LEDC_TIMER,
+        .freq_hz = SERVO_FREQ_HZ,
+        .clk_cfg = LEDC_AUTO_CLK
+    };
+    ledc_timer_config(&timer);
+
+    ledc_channel_config_t ch = {
+        .gpio_num = SERVO_PWM_PIN,
+        .speed_mode = LEDC_LOW_SPEED_MODE,
+        .channel = SERVO_LEDC_CHANNEL,
+        .intr_type = LEDC_INTR_DISABLE,
+        .timer_sel = SERVO_LEDC_TIMER,
+        .duty = 0,
+        .hpoint = 0
+    };
+    ledc_channel_config(&ch);
+
+    servo_target_deg = servo_clamp_angle(SERVO_DEFAULT_ANGLE_DEG);
+    apply_servo_output(servo_target_deg);
+    printf("Servo initialized on GPIO %d (default %.1f deg)\n", SERVO_PWM_PIN, SERVO_DEFAULT_ANGLE_DEG);
 }
 
 void set_motor(int id, float value) {
     if (id < 0 || id >= MOTOR_COUNT) {
         printf("Invalid motor ID: %d\n", id);
-    
-            if (emergency_stop) {
-                value = 0.0f;
-            }
         return;
     }
 
-    if (fabsf(value) < 0.05f) {
-        value = 0.0f;
-    }
-
-    if (value > 1.0f) {
-        value = 1.0f;
-    }
-
-    if (value < -1.0f) {
-        value = -1.0f;
-    }
-
-    float max_change = 0.1f;
-    
-    if (fabsf(value - motor_targets[id]) > max_change) {
-        if (value > motor_targets[id]) {
-            value = motor_targets[id] + max_change;
-        } else {
-            value = motor_targets[id] - max_change;
-        }
-    }
-    
-    motor_targets[id] = value;
-
-    int dir;
-
-    if (value > 0) {
-        dir = 1;
-    } else {
-        dir = 0;
-    }
-
-    int pwm = (int)(fabsf(value) * 255.0f);
-    
-    gpio_set_level(MOTOR_DIR_PIN[id], dir);
-    ledc_set_duty(0, (ledc_channel_t) id, pwm);
-    ledc_update_duty(0, (ledc_channel_t) id);
+    float target = emergency_stop ? 0.0f : value;
+    motor_targets[id] = clampf(target, -1.0f, 1.0f);
 }
 
 void motor_callback(const void *msgin) {
@@ -636,6 +809,11 @@ void motor_callback(const void *msgin) {
     printf("Motor command received\n");
 }
 
+void servo_callback(const void *msgin) {
+    const std_msgs__msg__Float32 *cmd = (const std_msgs__msg__Float32*) msgin;
+    set_servo_angle(cmd->data);
+}
+
 void estop_callback(const void *msgin) {
     const std_msgs__msg__Bool *estop_cmd = (const std_msgs__msg__Bool*) msgin;
     
@@ -645,10 +823,11 @@ void estop_callback(const void *msgin) {
         
         for (int i = 0; i < MOTOR_COUNT; i++) {
             motor_targets[i] = 0.0f;
-            gpio_set_level(MOTOR_DIR_PIN[i], 0);
-            ledc_set_duty(0, (ledc_channel_t) i, 0);
-            ledc_update_duty(0, (ledc_channel_t) i);
+            apply_motor_output(i, 0.0f);
         }
+
+        set_servo_angle(SERVO_DEFAULT_ANGLE_DEG);
+        apply_servo_output(SERVO_DEFAULT_ANGLE_DEG);
     } else {
         emergency_stop = 0;
         printf("Emergency stop cleared\n");
@@ -660,6 +839,15 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time) {
     
     if (timer != NULL) {
         int64_t current_time = esp_timer_get_time() / 1000;
+
+        if (last_control_update_time_ms == 0) {
+            last_control_update_time_ms = current_time;
+        }
+        float dt_s = (float)(current_time - last_control_update_time_ms) / 1000.0f;
+        last_control_update_time_ms = current_time;
+        update_motor_outputs(dt_s);
+        update_servo_output(dt_s);
+
         if (last_motor_cmd_time > 0 && (current_time - last_motor_cmd_time) > MOTOR_TIMEOUT_MS) {
             printf("Motor timeout! Stopping motors (no command for %lld ms)\n", 
                    current_time - last_motor_cmd_time);
@@ -779,6 +967,7 @@ void appMain(void *arg) {
     mpu6050_init();
     ultrasonic_init();
     motor_init();
+    servo_init();
     
     rcl_allocator_t allocator = rcl_get_default_allocator();
     rclc_support_t support;
@@ -825,9 +1014,17 @@ void appMain(void *arg) {
         "e-stop"
     ));
 
+    RCCHECK(rclc_subscription_init_default(
+        &servo_sub,
+        &node,
+        ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Float32),
+        "servo-cmd"
+    ));
+
     sensor_msgs__msg__Imu__init(&imu_msg);
     sensor_msgs__msg__Range__init(&range_msg);
     std_msgs__msg__Float32MultiArray__init(&motor_msg);
+    std_msgs__msg__Float32__init(&servo_cmd_msg);
     std_msgs__msg__String__init(&status_msg);
  
     imu_msg.header.frame_id.data = "imu_link";
@@ -853,10 +1050,11 @@ void appMain(void *arg) {
         timer_callback));
 
     rclc_executor_t executor;
-    RCCHECK(rclc_executor_init(&executor, &support.context, 3, &allocator));
+    RCCHECK(rclc_executor_init(&executor, &support.context, 4, &allocator));
     RCCHECK(rclc_executor_add_timer(&executor, &timer));
     RCCHECK(rclc_executor_add_subscription(&executor, &estop_sub, &estop_msg, estop_callback, ON_NEW_DATA));
     RCCHECK(rclc_executor_add_subscription(&executor, &motor_sub, &motor_msg, motor_callback, ON_NEW_DATA));
+    RCCHECK(rclc_executor_add_subscription(&executor, &servo_sub, &servo_cmd_msg, servo_callback, ON_NEW_DATA));
 
     printf("Sensor node started!\n");
 

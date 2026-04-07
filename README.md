@@ -2,6 +2,8 @@
 
 micro-ROS workspace for ESP32 (FreeRTOS + ESP-IDF) with ROS 2 Humble.
 
+For a user-focused setup and operation guide, see [user_manual.md](user_manual.md).
+
 This repository includes:
 
 - ESP32 firmware app: `firmware/custom/esp32_controller`
