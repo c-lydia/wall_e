@@ -1,0 +1,707 @@
+[1.046s] Invoking command in '/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client': CMAKE_PREFIX_PATH=/micro_ros_ws/firmware/mcu_ws/install:${CMAKE_PREFIX_PATH} PATH=/micro_ros_ws/firmware/mcu_ws/install/bin:${PATH} PYTHONPATH=/micro_ros_ws/firmware/mcu_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client -- -j12 -l12
+[1.108s] gmake[4]: Entering directory '/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client'
+[1.109s] /usr/bin/cmake -S/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client -B/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client --check-build-system CMakeFiles/Makefile.cmake 0
+[1.149s] Re-run cmake file: Makefile older than: /micro_ros_ws/firmware/freertos_apps/microros_esp32_extensions/esp32_toolchain.cmake
+[1.223s] -- Configuring done
+[1.422s] -- Generating done
+[1.479s] -- Build files have been written to: /micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client
+[1.480s] /usr/bin/cmake -E cmake_progress_start /micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles /micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client//CMakeFiles/progress.marks
+[1.510s] /usr/bin/gmake  -f CMakeFiles/Makefile2 all
+[1.517s] gmake[5]: Entering directory '/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client'
+[1.518s] /usr/bin/gmake  -f CMakeFiles/microxrcedds_client.dir/build.make CMakeFiles/microxrcedds_client.dir/depend
+[1.535s] gmake[6]: Entering directory '/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client'
+[1.536s] cd /micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client /micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client /micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client /micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client /micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/DependInfo.cmake --color=
+[1.575s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/serialization/xrce_header.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.577s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/serialization/xrce_subheader.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.579s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/serialization/xrce_types.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.581s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/common_create_entities.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.583s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/create_entities_bin.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.585s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/create_entities_ref.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.587s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/create_entities_xml.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.589s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/object_id.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.591s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/read_access.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.593s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/session.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.596s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/session_info.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.597s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/stream/input_best_effort_stream.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.599s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/stream/input_reliable_stream.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.602s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/stream/output_best_effort_stream.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.604s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/stream/output_reliable_stream.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.606s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/stream/seq_num.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.608s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/stream/stream_id.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.610s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/stream/stream_storage.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.612s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/submessage.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.614s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/core/session/write_access.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.616s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/custom/custom_transport.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.619s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/ip/ip_posix.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.621s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/ip/udp/udp_transport.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.624s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.627s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/stream_framing/stream_framing_protocol.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.629s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/util/ping.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.631s] Dependencies file "CMakeFiles/microxrcedds_client.dir/src/c/util/time.c.obj.d" is newer than depends file "/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles/microxrcedds_client.dir/compiler_depend.internal".
+[1.634s] [35m[1mConsolidate compiler generated dependencies of target microxrcedds_client[0m
+[1.873s] gmake[6]: Leaving directory '/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client'
+[1.873s] /usr/bin/gmake  -f CMakeFiles/microxrcedds_client.dir/build.make CMakeFiles/microxrcedds_client.dir/build
+[2.070s] gmake[6]: Entering directory '/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client'
+[2.109s] [  3%] [32mBuilding C object CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c.obj[0m
+[2.110s] /micro_ros_ws/firmware/toolchain/espressif/tools/xtensa-esp32-elf/esp-2020r2-8.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc -DLWIP_IPV4 -DLWIP_IPV6 -I/micro_ros_ws/firmware/freertos_apps/microros_esp32_extensions/build/config -I/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/protocomm/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_rom/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/driver/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/wear_levelling/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/vfs/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/log/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/wifi_provisioning/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/pthread/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/libsodium/libsodium/src/libsodium/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/coap/port/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/coap/libcoap/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/tcp_transport/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/unity/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/esp32/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/asio/port/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/asio/asio/asio/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/app_update/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_ringbuf/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/soc/esp32/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/soc/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/efuse/test/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/efuse/esp32/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/efuse/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/mbedtls/port/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/mbedtls/mbedtls/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/xtensa/esp32/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/xtensa/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/app_trace/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/nvs_flash/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/jsmn/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_eth/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/spiffs/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/ulp/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/mdns/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/freemodbus/modbus/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/freemodbus/common/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_event/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/expat/port/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/bootloader_support/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/heap/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/wpa_supplicant/port/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/wpa_supplicant/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/tcpip_adapter/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/openssl/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/sdmmc/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_local_ctrl/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_common/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps -I/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix -I/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include -I/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/include -I/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/include -I/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c -isystem /micro_ros_ws/firmware/mcu_ws/install/include -mlongcalls -Wno-frame-address -mlongcalls -Wno-frame-address -g -Wall -Wextra -Wshadow -pedantic -Wcast-align -Wunused -Wconversion -Wnull-dereference -Wduplicated-branches -Wduplicated-cond -Wrestrict -Wdouble-promotion -Wsign-conversion -fdata-sections -ffunction-sections -std=gnu99 -MD -MT CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c.obj -MF CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c.obj.d -o CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c.obj -c /micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c
+[2.113s] [  7%] [32mBuilding C object CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/ip/ip_posix.c.obj[0m
+[2.114s] /micro_ros_ws/firmware/toolchain/espressif/tools/xtensa-esp32-elf/esp-2020r2-8.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc -DLWIP_IPV4 -DLWIP_IPV6 -I/micro_ros_ws/firmware/freertos_apps/microros_esp32_extensions/build/config -I/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/protocomm/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_rom/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/driver/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/wear_levelling/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/vfs/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/log/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/wifi_provisioning/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/pthread/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/libsodium/libsodium/src/libsodium/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/coap/port/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/coap/libcoap/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/tcp_transport/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/unity/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/esp32/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/asio/port/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/asio/asio/asio/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/app_update/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_ringbuf/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/soc/esp32/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/soc/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/efuse/test/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/efuse/esp32/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/efuse/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/mbedtls/port/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/mbedtls/mbedtls/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/xtensa/esp32/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/xtensa/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/app_trace/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/nvs_flash/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/jsmn/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_eth/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/spiffs/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/ulp/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/mdns/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/freemodbus/modbus/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/freemodbus/common/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_event/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/expat/port/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/bootloader_support/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/heap/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/wpa_supplicant/port/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/wpa_supplicant/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/tcpip_adapter/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/openssl/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/sdmmc/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_local_ctrl/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_common/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps -I/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix -I/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include -I/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include -I/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/include -I/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/include -I/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c -isystem /micro_ros_ws/firmware/mcu_ws/install/include -mlongcalls -Wno-frame-address -mlongcalls -Wno-frame-address -g -Wall -Wextra -Wshadow -pedantic -Wcast-align -Wunused -Wconversion -Wnull-dereference -Wduplicated-branches -Wduplicated-cond -Wrestrict -Wdouble-promotion -Wsign-conversion -fdata-sections -ffunction-sections -std=gnu99 -MD -MT CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/ip/ip_posix.c.obj -MF CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/ip/ip_posix.c.obj.d -o CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/ip/ip_posix.c.obj -c /micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c
+[3.159s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:36[m[K,
+[3.159s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[3.160s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[3.160s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[3.161s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[3.161s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/time.h:22:2:[m[K [01;35m[Kwarning: [m[K#include_next is a GCC extension
+[3.162s]  #[01;35m[Kinclude_next[m[K <time.h>
+[3.162s]   [01;35m[K^~~~~~~~~~~~[m[K
+[3.586s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:36[m[K,
+[3.586s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[3.587s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[3.587s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[3.587s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[3.588s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/time.h:22:2:[m[K [01;35m[Kwarning: [m[K#include_next is a GCC extension
+[3.588s]  #[01;35m[Kinclude_next[m[K <time.h>
+[3.588s]   [01;35m[K^~~~~~~~~~~~[m[K
+[3.672s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:38[m[K,
+[3.672s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[3.672s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[3.673s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[3.673s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[3.673s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/sys/time.h:16:2:[m[K [01;35m[Kwarning: [m[K#include_next is a GCC extension
+[3.673s]  #[01;35m[Kinclude_next[m[K <sys/time.h>
+[3.674s]   [01;35m[K^~~~~~~~~~~~[m[K
+[3.737s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:38[m[K,
+[3.737s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[3.737s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[3.738s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[3.738s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[3.739s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/sys/time.h:16:2:[m[K [01;35m[Kwarning: [m[K#include_next is a GCC extension
+[3.739s]  #[01;35m[Kinclude_next[m[K <sys/time.h>
+[3.744s]   [01;35m[K^~~~~~~~~~~~[m[K
+[3.864s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_common/include/esp_err.h:18[m[K,
+[3.865s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_common/include/esp_system.h:20[m[K,
+[3.865s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:44[m[K,
+[3.865s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[3.866s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[3.866s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[3.866s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[3.866s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2:[m[K [01;35m[Kwarning: [m[K#include_next is a GCC extension
+[3.867s]  #[01;35m[Kinclude_next[m[K <assert.h>
+[3.867s]   [01;35m[K^~~~~~~~~~~~[m[K
+[3.920s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_common/include/esp_err.h:18[m[K,
+[3.921s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/esp_common/include/esp_system.h:20[m[K,
+[3.921s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:44[m[K,
+[3.921s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[3.921s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[3.921s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[3.922s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[3.922s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/assert.h:24:2:[m[K [01;35m[Kwarning: [m[K#include_next is a GCC extension
+[3.922s]  #[01;35m[Kinclude_next[m[K <assert.h>
+[3.922s]   [01;35m[K^~~~~~~~~~~~[m[K
+[3.935s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:38[m[K,
+[3.935s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[3.935s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[3.936s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[3.936s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[3.936s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[3.937s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[3.937s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[3.937s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[3.939s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[3.939s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/errno.h:18:2:[m[K [01;35m[Kwarning: [m[K#include_next is a GCC extension
+[3.940s]  #[01;35m[Kinclude_next[m[K "errno.h"
+[3.941s]   [01;35m[K^~~~~~~~~~~~[m[K
+[4.000s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/portable.h:89[m[K,
+[4.000s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/FreeRTOS.h:107[m[K,
+[4.000s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h:36[m[K,
+[4.001s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:42[m[K,
+[4.001s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.001s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.001s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.002s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.002s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.003s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.003s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.004s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.004s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.004s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/soc/esp32/include/soc/cpu.h:[m[K In function '[01m[Kcpu_configure_region_protection[m[K':
+[4.004s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/soc/esp32/include/soc/cpu.h:77:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: '[01m[Kint[m[K' and '[01m[Kunsigned int[m[K' [[01;35m[K-Wsign-compare[m[K]
+[4.005s]      for (int i = 0; i [01;35m[K<[m[K sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+[4.005s]                        [01;35m[K^[m[K
+[4.019s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:38[m[K,
+[4.020s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.020s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.021s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.021s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.022s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.022s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.022s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.023s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.023s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.023s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/newlib/platform_include/errno.h:18:2:[m[K [01;35m[Kwarning: [m[K#include_next is a GCC extension
+[4.024s]  #[01;35m[Kinclude_next[m[K "errno.h"
+[4.024s]   [01;35m[K^~~~~~~~~~~~[m[K
+[4.025s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/portmacro.h:82[m[K,
+[4.025s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/portable.h:96[m[K,
+[4.025s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/FreeRTOS.h:107[m[K,
+[4.026s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h:36[m[K,
+[4.026s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:42[m[K,
+[4.026s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.027s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.027s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.028s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.028s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.028s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.028s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.029s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.029s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.029s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/xtensa/include/xtensa/xtruntime.h:[m[K In function '[01m[K_xtos_interrupt_enable[m[K':
+[4.030s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/xtensa/include/xtensa/xtruntime.h:161:21:[m[K [01;35m[Kwarning: [m[Kconversion to '[01m[Kunsigned int[m[K' from '[01m[Kint[m[K' may change the sign of the result [[01;35m[K-Wsign-conversion[m[K]
+[4.030s]      _xtos_ints_on([01;35m[K1 << intnum[m[K);
+[4.030s]                    [01;35m[K~~^~~~~~~~~[m[K
+[4.030s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/xtensa/include/xtensa/xtruntime.h:[m[K In function '[01m[K_xtos_interrupt_disable[m[K':
+[4.031s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/xtensa/include/xtensa/xtruntime.h:166:22:[m[K [01;35m[Kwarning: [m[Kconversion to '[01m[Kunsigned int[m[K' from '[01m[Kint[m[K' may change the sign of the result [[01;35m[K-Wsign-conversion[m[K]
+[4.031s]      _xtos_ints_off([01;35m[K1 << intnum[m[K);
+[4.031s]                     [01;35m[K~~^~~~~~~~~[m[K
+[4.090s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/task.h:80[m[K,
+[4.090s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h:37[m[K,
+[4.090s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:42[m[K,
+[4.090s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.091s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.091s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.091s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.091s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.091s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.092s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.092s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.092s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.092s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/list.h:[m[K At top level:
+[4.092s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/list.h:194:1:[m[K [01;35m[Kwarning: [m[KISO C99 does not support '[01m[K_Static_assert[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.093s]  [01;35m[K_Static_assert[m[K(sizeof(StaticListItem_t) == sizeof(ListItem_t), "StaticListItem_t != ListItem_t");
+[4.093s]  [01;35m[K^~~~~~~~~~~~~~[m[K
+[4.093s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/list.h:207:1:[m[K [01;35m[Kwarning: [m[KISO C99 does not support '[01m[K_Static_assert[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.094s]  [01;35m[K_Static_assert[m[K(sizeof(StaticMiniListItem_t) == sizeof(MiniListItem_t), "StaticMiniListItem_t != MiniListItem_t");
+[4.094s]  [01;35m[K^~~~~~~~~~~~~~[m[K
+[4.094s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/list.h:224:1:[m[K [01;35m[Kwarning: [m[KISO C99 does not support '[01m[K_Static_assert[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.094s]  [01;35m[K_Static_assert[m[K(sizeof(StaticList_t) == sizeof(List_t), "StaticList_t != List_t");
+[4.094s]  [01;35m[K^~~~~~~~~~~~~~[m[K
+[4.095s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/portable.h:89[m[K,
+[4.095s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/FreeRTOS.h:107[m[K,
+[4.095s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h:36[m[K,
+[4.095s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:42[m[K,
+[4.096s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.096s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.096s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.096s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.096s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.097s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.097s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.097s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.097s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.098s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/soc/esp32/include/soc/cpu.h:[m[K In function '[01m[Kcpu_configure_region_protection[m[K':
+[4.098s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/soc/esp32/include/soc/cpu.h:77:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: '[01m[Kint[m[K' and '[01m[Kunsigned int[m[K' [[01;35m[K-Wsign-compare[m[K]
+[4.098s]      for (int i = 0; i [01;35m[K<[m[K sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+[4.098s]                        [01;35m[K^[m[K
+[4.105s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.105s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.105s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.106s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.106s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.106s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.106s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.107s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.107s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:125:19:[m[K [01;35m[Kwarning: [m[Kredefinition of typedef '[01m[Ku8_t[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.107s]  typedef uint8_t   [01;35m[Ku8_t[m[K;
+[4.108s]                    [01;35m[K^~~~[m[K
+[4.108s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.108s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.108s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.109s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.109s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.109s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.109s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.110s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.110s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.110s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:48:18:[m[K [01;36m[Knote: [m[Kprevious declaration of '[01m[Ku8_t[m[K' was here
+[4.110s]  typedef uint8_t  [01;36m[Ku8_t[m[K;
+[4.111s]                   [01;36m[K^~~~[m[K
+[4.111s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.111s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.112s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.112s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.112s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.112s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.113s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.113s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.113s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:126:19:[m[K [01;35m[Kwarning: [m[Kredefinition of typedef '[01m[Ks8_t[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.114s]  typedef int8_t    [01;35m[Ks8_t[m[K;
+[4.114s]                    [01;35m[K^~~~[m[K
+[4.114s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.114s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.115s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.115s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.115s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.116s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.116s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.116s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.116s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.117s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:49:18:[m[K [01;36m[Knote: [m[Kprevious declaration of '[01m[Ks8_t[m[K' was here
+[4.117s]  typedef int8_t   [01;36m[Ks8_t[m[K;
+[4.117s]                   [01;36m[K^~~~[m[K
+[4.117s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.117s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.118s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.118s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.118s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.118s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.119s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.119s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.119s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:127:19:[m[K [01;35m[Kwarning: [m[Kredefinition of typedef '[01m[Ku16_t[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.120s]  typedef uint16_t  [01;35m[Ku16_t[m[K;
+[4.120s]                    [01;35m[K^~~~~[m[K
+[4.120s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.120s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.121s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.121s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.121s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.122s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.122s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.123s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.123s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.123s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:50:18:[m[K [01;36m[Knote: [m[Kprevious declaration of '[01m[Ku16_t[m[K' was here
+[4.124s]  typedef uint16_t [01;36m[Ku16_t[m[K;
+[4.124s]                   [01;36m[K^~~~~[m[K
+[4.124s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.125s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.125s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.126s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.126s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.127s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.127s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.127s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.128s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:128:19:[m[K [01;35m[Kwarning: [m[Kredefinition of typedef '[01m[Ks16_t[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.128s]  typedef int16_t   [01;35m[Ks16_t[m[K;
+[4.129s]                    [01;35m[K^~~~~[m[K
+[4.129s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.130s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.131s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.131s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.132s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.132s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.133s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.133s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.134s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.135s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:51:18:[m[K [01;36m[Knote: [m[Kprevious declaration of '[01m[Ks16_t[m[K' was here
+[4.136s]  typedef int16_t  [01;36m[Ks16_t[m[K;
+[4.137s]                   [01;36m[K^~~~~[m[K
+[4.138s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.139s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.143s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.144s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.145s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.145s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.146s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.146s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.146s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:129:19:[m[K [01;35m[Kwarning: [m[Kredefinition of typedef '[01m[Ku32_t[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.147s]  typedef uint32_t  [01;35m[Ku32_t[m[K;
+[4.147s]                    [01;35m[K^~~~~[m[K
+[4.147s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.147s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.148s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.148s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.148s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.148s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.149s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.149s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.149s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.150s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:52:18:[m[K [01;36m[Knote: [m[Kprevious declaration of '[01m[Ku32_t[m[K' was here
+[4.150s]  typedef uint32_t [01;36m[Ku32_t[m[K;
+[4.150s]                   [01;36m[K^~~~~[m[K
+[4.151s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.151s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.151s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.151s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.152s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.152s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.152s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.153s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.153s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:130:19:[m[K [01;35m[Kwarning: [m[Kredefinition of typedef '[01m[Ks32_t[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.153s]  typedef int32_t   [01;35m[Ks32_t[m[K;
+[4.153s]                    [01;35m[K^~~~~[m[K
+[4.154s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.154s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.154s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.155s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.155s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.155s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.156s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.156s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.157s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.158s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:53:18:[m[K [01;36m[Knote: [m[Kprevious declaration of '[01m[Ks32_t[m[K' was here
+[4.158s]  typedef int32_t  [01;36m[Ks32_t[m[K;
+[4.158s]                   [01;36m[K^~~~~[m[K
+[4.158s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/portmacro.h:82[m[K,
+[4.159s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/portable.h:96[m[K,
+[4.159s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/FreeRTOS.h:107[m[K,
+[4.159s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h:36[m[K,
+[4.160s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:42[m[K,
+[4.160s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.160s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.160s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.161s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.161s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.161s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.161s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.161s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.162s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.162s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/xtensa/include/xtensa/xtruntime.h:[m[K In function '[01m[K_xtos_interrupt_enable[m[K':
+[4.162s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/xtensa/include/xtensa/xtruntime.h:161:21:[m[K [01;35m[Kwarning: [m[Kconversion to '[01m[Kunsigned int[m[K' from '[01m[Kint[m[K' may change the sign of the result [[01;35m[K-Wsign-conversion[m[K]
+[4.162s]      _xtos_ints_on([01;35m[K1 << intnum[m[K);
+[4.163s]                    [01;35m[K~~^~~~~~~~~[m[K
+[4.163s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/xtensa/include/xtensa/xtruntime.h:[m[K In function '[01m[K_xtos_interrupt_disable[m[K':
+[4.163s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/xtensa/include/xtensa/xtruntime.h:166:22:[m[K [01;35m[Kwarning: [m[Kconversion to '[01m[Kunsigned int[m[K' from '[01m[Kint[m[K' may change the sign of the result [[01;35m[K-Wsign-conversion[m[K]
+[4.163s]      _xtos_ints_off([01;35m[K1 << intnum[m[K);
+[4.164s]                     [01;35m[K~~^~~~~~~~~[m[K
+[4.173s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/task.h:80[m[K,
+[4.173s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h:37[m[K,
+[4.174s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:42[m[K,
+[4.174s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.174s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.174s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.175s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.175s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.175s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.175s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.175s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.176s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.176s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/list.h:[m[K At top level:
+[4.177s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/list.h:194:1:[m[K [01;35m[Kwarning: [m[KISO C99 does not support '[01m[K_Static_assert[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.177s]  [01;35m[K_Static_assert[m[K(sizeof(StaticListItem_t) == sizeof(ListItem_t), "StaticListItem_t != ListItem_t");
+[4.177s]  [01;35m[K^~~~~~~~~~~~~~[m[K
+[4.177s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/list.h:207:1:[m[K [01;35m[Kwarning: [m[KISO C99 does not support '[01m[K_Static_assert[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.178s]  [01;35m[K_Static_assert[m[K(sizeof(StaticMiniListItem_t) == sizeof(MiniListItem_t), "StaticMiniListItem_t != MiniListItem_t");
+[4.178s]  [01;35m[K^~~~~~~~~~~~~~[m[K
+[4.178s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/freertos/include/freertos/list.h:224:1:[m[K [01;35m[Kwarning: [m[KISO C99 does not support '[01m[K_Static_assert[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.178s]  [01;35m[K_Static_assert[m[K(sizeof(StaticList_t) == sizeof(List_t), "StaticList_t != List_t");
+[4.179s]  [01;35m[K^~~~~~~~~~~~~~[m[K
+[4.188s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.188s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.189s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.189s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.189s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:866:[m[K [01;35m[Kwarning: [m[K"SNTP_SERVER_DNS" redefined
+[4.189s]  #define SNTP_SERVER_DNS            1
+[4.190s]  
+[4.190s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:40[m[K,
+[4.190s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.191s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.191s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.191s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.192s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.192s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp_opts.h:81:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+[4.192s]  #define SNTP_SERVER_DNS            0
+[4.193s]  
+[4.193s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.193s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.193s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.194s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.194s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:871:[m[K [01;35m[Kwarning: [m[K"SNTP_UPDATE_DELAY" redefined
+[4.194s]  #define SNTP_UPDATE_DELAY              (sntp_get_sync_interval())
+[4.195s]  
+[4.195s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:40[m[K,
+[4.195s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.195s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.196s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.196s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.196s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.196s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp_opts.h:171:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+[4.197s]  #define SNTP_UPDATE_DELAY           3600000
+[4.197s]  
+[4.197s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.198s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.198s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.198s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.198s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:879:[m[K [01;35m[Kwarning: [m[K"SNTP_GET_SYSTEM_TIME" redefined
+[4.199s]  #define SNTP_GET_SYSTEM_TIME(sec, us) \
+[4.199s]  
+[4.200s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:40[m[K,
+[4.200s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.201s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.201s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.201s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/arpa/inet.h:33[m[K,
+[4.202s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/ip_posix.c:18[m[K:
+[4.202s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp_opts.h:181:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+[4.202s]  #define SNTP_GET_SYSTEM_TIME(sec, us)     do { (sec) = 0; (us) = 0; } while(0)
+[4.203s]  
+[4.203s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.203s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.203s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.204s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.204s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.204s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.204s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.205s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.205s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:125:19:[m[K [01;35m[Kwarning: [m[Kredefinition of typedef '[01m[Ku8_t[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.205s]  typedef uint8_t   [01;35m[Ku8_t[m[K;
+[4.206s]                    [01;35m[K^~~~[m[K
+[4.206s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.206s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.206s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.207s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.207s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.207s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.207s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.208s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.208s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.208s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:48:18:[m[K [01;36m[Knote: [m[Kprevious declaration of '[01m[Ku8_t[m[K' was here
+[4.208s]  typedef uint8_t  [01;36m[Ku8_t[m[K;
+[4.209s]                   [01;36m[K^~~~[m[K
+[4.209s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.209s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.209s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.210s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.210s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.210s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.210s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.210s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.211s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:126:19:[m[K [01;35m[Kwarning: [m[Kredefinition of typedef '[01m[Ks8_t[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.211s]  typedef int8_t    [01;35m[Ks8_t[m[K;
+[4.212s]                    [01;35m[K^~~~[m[K
+[4.212s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.212s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.212s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.213s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.213s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.213s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.213s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.213s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.214s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.214s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:49:18:[m[K [01;36m[Knote: [m[Kprevious declaration of '[01m[Ks8_t[m[K' was here
+[4.214s]  typedef int8_t   [01;36m[Ks8_t[m[K;
+[4.214s]                   [01;36m[K^~~~[m[K
+[4.215s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.215s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.215s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.215s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.216s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.216s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.216s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.216s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.217s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:127:19:[m[K [01;35m[Kwarning: [m[Kredefinition of typedef '[01m[Ku16_t[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.217s]  typedef uint16_t  [01;35m[Ku16_t[m[K;
+[4.217s]                    [01;35m[K^~~~~[m[K
+[4.217s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.218s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.218s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.218s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.218s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.219s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.219s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.219s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.219s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.219s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:50:18:[m[K [01;36m[Knote: [m[Kprevious declaration of '[01m[Ku16_t[m[K' was here
+[4.220s]  typedef uint16_t [01;36m[Ku16_t[m[K;
+[4.220s]                   [01;36m[K^~~~~[m[K
+[4.220s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.220s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.221s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.221s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.221s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.222s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.222s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.222s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.223s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:128:19:[m[K [01;35m[Kwarning: [m[Kredefinition of typedef '[01m[Ks16_t[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.223s]  typedef int16_t   [01;35m[Ks16_t[m[K;
+[4.223s]                    [01;35m[K^~~~~[m[K
+[4.223s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.223s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.224s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.224s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.224s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.225s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.225s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.225s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.225s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.226s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:51:18:[m[K [01;36m[Knote: [m[Kprevious declaration of '[01m[Ks16_t[m[K' was here
+[4.226s]  typedef int16_t  [01;36m[Ks16_t[m[K;
+[4.226s]                   [01;36m[K^~~~~[m[K
+[4.226s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.227s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.227s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.227s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.227s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.228s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.228s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.228s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.228s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:129:19:[m[K [01;35m[Kwarning: [m[Kredefinition of typedef '[01m[Ku32_t[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.229s]  typedef uint32_t  [01;35m[Ku32_t[m[K;
+[4.229s]                    [01;35m[K^~~~~[m[K
+[4.229s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.229s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.230s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.230s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.230s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.230s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.231s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.231s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.231s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.231s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:52:18:[m[K [01;36m[Knote: [m[Kprevious declaration of '[01m[Ku32_t[m[K' was here
+[4.232s]  typedef uint32_t [01;36m[Ku32_t[m[K;
+[4.232s]                   [01;36m[K^~~~~[m[K
+[4.232s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.233s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.233s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.234s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.234s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.234s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.234s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.235s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.235s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:130:19:[m[K [01;35m[Kwarning: [m[Kredefinition of typedef '[01m[Ks32_t[m[K' [[01;35m[K-Wpedantic[m[K]
+[4.237s]  typedef int32_t   [01;35m[Ks32_t[m[K;
+[4.238s]                    [01;35m[K^~~~~[m[K
+[4.239s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:48[m[K,
+[4.240s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/def.h:52[m[K,
+[4.241s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:41[m[K,
+[4.242s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:41[m[K,
+[4.244s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.245s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.246s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.247s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.249s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.249s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/arch/cc.h:53:18:[m[K [01;36m[Knote: [m[Kprevious declaration of '[01m[Ks32_t[m[K' was here
+[4.250s]  typedef int32_t  [01;36m[Ks32_t[m[K;
+[4.250s]                   [01;36m[K^~~~~[m[K
+[4.265s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.266s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.266s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.266s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.266s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:866:[m[K [01;35m[Kwarning: [m[K"SNTP_SERVER_DNS" redefined
+[4.267s]  #define SNTP_SERVER_DNS            1
+[4.267s]  
+[4.267s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:40[m[K,
+[4.267s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.268s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.268s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.268s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.268s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.269s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp_opts.h:81:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+[4.269s]  #define SNTP_SERVER_DNS            0
+[4.269s]  
+[4.269s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.270s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.270s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.270s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.270s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:871:[m[K [01;35m[Kwarning: [m[K"SNTP_UPDATE_DELAY" redefined
+[4.271s]  #define SNTP_UPDATE_DELAY              (sntp_get_sync_interval())
+[4.271s]  
+[4.271s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:40[m[K,
+[4.271s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.272s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.272s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.272s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.272s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.272s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp_opts.h:171:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+[4.273s]  #define SNTP_UPDATE_DELAY           3600000
+[4.273s]  
+[4.273s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.273s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.274s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.274s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.274s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:879:[m[K [01;35m[Kwarning: [m[K"SNTP_GET_SYSTEM_TIME" redefined
+[4.274s]  #define SNTP_GET_SYSTEM_TIME(sec, us) \
+[4.275s]  
+[4.275s] In file included from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp.h:40[m[K,
+[4.275s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/port/esp32/include/lwipopts.h:46[m[K,
+[4.275s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:51[m[K,
+[4.275s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:42[m[K,
+[4.276s]                  from [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/compat/posix/sys/socket.h:33[m[K,
+[4.276s]                  from [01m[K/micro_ros_ws/firmware/mcu_ws/eProsima/Micro-XRCE-DDS-Client/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c:5[m[K:
+[4.276s] [01m[K/micro_ros_ws/firmware/toolchain/esp-idf/components/lwip/lwip/src/include/lwip/apps/sntp_opts.h:181:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+[4.276s]  #define SNTP_GET_SYSTEM_TIME(sec, us)     do { (sec) = 0; (us) = 0; } while(0)
+[4.276s]  
+[4.498s] [ 10%] [32m[1mLinking C static library libmicroxrcedds_client.a[0m
+[4.499s] /usr/bin/cmake -P CMakeFiles/microxrcedds_client.dir/cmake_clean_target.cmake
+[4.511s] /usr/bin/cmake -E cmake_link_script CMakeFiles/microxrcedds_client.dir/link.txt --verbose=1
+[4.522s] /micro_ros_ws/firmware/toolchain/espressif/tools/xtensa-esp32-elf/esp-2020r2-8.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-ar qc libmicroxrcedds_client.a CMakeFiles/microxrcedds_client.dir/src/c/core/session/stream/input_best_effort_stream.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/stream/input_reliable_stream.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/stream/output_best_effort_stream.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/stream/output_reliable_stream.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/stream/stream_storage.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/stream/stream_id.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/stream/seq_num.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/session.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/session_info.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/submessage.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/object_id.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/serialization/xrce_types.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/serialization/xrce_header.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/serialization/xrce_subheader.c.obj CMakeFiles/microxrcedds_client.dir/src/c/util/time.c.obj CMakeFiles/microxrcedds_client.dir/src/c/util/ping.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/common_create_entities.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/create_entities_ref.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/create_entities_xml.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/create_entities_bin.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/read_access.c.obj CMakeFiles/microxrcedds_client.dir/src/c/core/session/write_access.c.obj CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/stream_framing/stream_framing_protocol.c.obj CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/ip/udp/udp_transport.c.obj CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/ip/udp/udp_transport_posix_nopoll.c.obj CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/ip/ip_posix.c.obj CMakeFiles/microxrcedds_client.dir/src/c/profile/transport/custom/custom_transport.c.obj
+[4.615s] /micro_ros_ws/firmware/toolchain/espressif/tools/xtensa-esp32-elf/esp-2020r2-8.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-ranlib libmicroxrcedds_client.a
+[4.666s] gmake[6]: Leaving directory '/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client'
+[4.688s] [100%] Built target microxrcedds_client
+[4.689s] gmake[5]: Leaving directory '/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client'
+[4.690s] /usr/bin/cmake -E cmake_progress_start /micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client/CMakeFiles 0
+[4.708s] gmake[4]: Leaving directory '/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client'
+[4.847s] Invoked command in '/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client' returned '0': CMAKE_PREFIX_PATH=/micro_ros_ws/firmware/mcu_ws/install:${CMAKE_PREFIX_PATH} PATH=/micro_ros_ws/firmware/mcu_ws/install/bin:${PATH} PYTHONPATH=/micro_ros_ws/firmware/mcu_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client -- -j12 -l12
+[4.848s] Invoking command in '/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client': CMAKE_PREFIX_PATH=/micro_ros_ws/firmware/mcu_ws/install:${CMAKE_PREFIX_PATH} PATH=/micro_ros_ws/firmware/mcu_ws/install/bin:${PATH} PYTHONPATH=/micro_ros_ws/firmware/mcu_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client
+[4.857s] -- Install configuration: "Debug"
+[4.858s] -- Installing: /micro_ros_ws/firmware/mcu_ws/install/lib/libmicroxrcedds_client.a
+[4.873s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client
+[4.877s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/client.h
+[4.877s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core
+[4.879s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/communication
+[4.883s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/communication/communication.h
+[4.885s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session
+[4.887s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/common_create_entities.h
+[4.889s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/create_entities_bin.h
+[4.890s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/create_entities_ref.h
+[4.892s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/create_entities_xml.h
+[4.893s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/object_id.h
+[4.896s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/read_access.h
+[4.898s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/session.h
+[4.900s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/session_info.h
+[4.901s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/stream
+[4.904s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/stream/input_best_effort_stream.h
+[4.905s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/stream/input_reliable_stream.h
+[4.907s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/stream/output_best_effort_stream.h
+[4.909s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/stream/output_reliable_stream.h
+[4.912s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/stream/reliable_stream.h
+[4.914s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/stream/seq_num.h
+[4.917s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/stream/stream_id.h
+[4.919s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/stream/stream_storage.h
+[4.921s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/time_sync.h
+[4.923s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/session/write_access.h
+[4.924s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/type
+[4.928s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/core/type/xrce_types.h
+[4.931s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/defines.h
+[4.931s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile
+[4.935s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/discovery
+[4.942s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/discovery/discovery.h
+[4.944s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/multithread
+[4.949s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/multithread/multithread.h
+[4.950s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport
+[4.954s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/can
+[4.958s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/can/can_transport.h
+[4.961s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/can/can_transport_posix.h
+[4.963s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/custom
+[4.967s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/custom/custom_transport.h
+[4.969s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip
+[4.973s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip/ip.h
+[4.976s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip/tcp
+[4.980s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip/tcp/tcp_transport.h
+[4.984s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip/tcp/tcp_transport_freertos_plus_tcp.h
+[4.986s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip/tcp/tcp_transport_posix.h
+[4.987s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip/tcp/tcp_transport_posix_nopoll.h
+[4.990s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip/tcp/tcp_transport_rtems_bsd_net.h
+[4.993s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip/tcp/tcp_transport_windows.h
+[4.995s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip/udp
+[4.998s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip/udp/udp_transport.h
+[5.000s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip/udp/udp_transport_freertos_plus_tcp.h
+[5.002s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip/udp/udp_transport_posix.h
+[5.004s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip/udp/udp_transport_posix_nopoll.h
+[5.006s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip/udp/udp_transport_rtems_bsd_net.h
+[5.008s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/ip/udp/udp_transport_windows.h
+[5.009s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/serial
+[5.012s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/serial/serial_transport.h
+[5.014s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/serial/serial_transport_platform.h
+[5.015s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/serial/serial_transport_posix.h
+[5.018s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/serial/serial_transport_rtems_bsd_net.h
+[5.019s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/stream_framing
+[5.022s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/profile/transport/stream_framing/stream_framing_protocol.h
+[5.023s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/transport.h
+[5.024s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/util
+[5.026s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/util/ping.h
+[5.027s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/util/time.h
+[5.029s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/visibility.h
+[5.032s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/include/uxr/client/config.h
+[5.044s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/microxrcedds_client/cmake/microxrcedds_clientTargets.cmake
+[5.048s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/microxrcedds_client/cmake/microxrcedds_clientTargets-debug.cmake
+[5.051s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/microxrcedds_client/cmake/microxrcedds_clientConfig.cmake
+[5.054s] -- Up-to-date: /micro_ros_ws/firmware/mcu_ws/install/share/microxrcedds_client/cmake/microxrcedds_clientConfigVersion.cmake
+[5.057s] Invoked command in '/micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client' returned '0': CMAKE_PREFIX_PATH=/micro_ros_ws/firmware/mcu_ws/install:${CMAKE_PREFIX_PATH} PATH=/micro_ros_ws/firmware/mcu_ws/install/bin:${PATH} PYTHONPATH=/micro_ros_ws/firmware/mcu_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /micro_ros_ws/firmware/mcu_ws/build/microxrcedds_client

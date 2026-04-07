@@ -8,22 +8,24 @@ Architecture
 System Overview
 ===============
 
-The micro_ros_ws system consists of multiple interconnected components:
+The micro_ros_ws system consists of firmware and host ROS 2 components with explicit feedback, localization, and control stages:
 
 .. code-block:: text
 
-   ┌─────────────────────────────────────────┐
-   │         ROS 2 Humble (Host)             │
-   │  - micro-ROS Agent (Port 9999 UDP)      │
-   │  - Sensor subscribers                   │
-   └────────────────▲─────────────────────────┘
-                    │ UDP
-   ┌────────────────▼─────────────────────────┐
-   │          ESP32 + FreeRTOS                │
-   │  - IMU (MPU6050) via I2C                 │
-   │  - Ultrasonic Sensor (HC-SR04)           │
-   │  - micro-ROS Client                      │
-   └──────────────────────────────────────────┘
+   ROS 2
+   ├─ control
+   │  ├─ Gamepad
+   │  └─ robot_control
+   ├─ feedback
+   │  ├─ imu_filter
+   │  ├─ ultrasonic_filter
+   │  └─ sensor_fusion
+   └─ localization
+      ├─ inverse_kinematic
+      └─ odometry
+
+   firmware
+   └─ esp32_controller
 
 Component Descriptions
 ======================
@@ -43,15 +45,24 @@ ESP32 Firmware
 - **Sensor drivers**: I2C for IMU, GPIO for ultrasonic sensor
 
 Communication Flow
-===================
+==================
 
-1. ESP32 publishes sensor data to micro-ROS agent (UDP port 9999)
-2. micro-ROS agent translates to ROS 2 topics
-3. ROS 2 subscribers receive sensor messages
-4. (Optionally) ROS 2 commands published back to ESP32
+1. ``esp32_controller`` publishes raw IMU and range data via micro-ROS over UDP.
+2. Host feedback nodes (``imu_filter`` and ``ultrasonic_filter``) clean raw streams.
+3. ``sensor_fusion`` combines filtered streams into more stable state outputs.
+4. Localization and control consume fused data and generate actuation commands.
+5. Commands are transformed by kinematics and sent back to firmware.
 
 Data Types
 ==========
 
 - ``sensor_msgs/msg/Imu``: 6-axis IMU data
 - ``sensor_msgs/msg/Range``: Ultrasonic distance measurements
+
+Primary Topic Paths
+===================
+
+- ``/imu/data`` -> ``/imu/filter``
+- ``/range/data`` -> ``/range/filter``
+- ``/imu/filter`` + ``/range/filter`` -> ``/fusion/height``
+- ``/imu/filter`` + ``/range/filter`` -> ``/fusion/vertical_velocity``

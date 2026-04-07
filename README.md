@@ -11,6 +11,14 @@ This repository includes:
 - Host ROS 2 workspace: `src`, `build`, `install`
 - micro-ROS agent container (UDP 9999)
 
+## Documentation Map
+
+- User guide: [user_manual.md](user_manual.md)
+- Concepts guide: [concepts.md](concepts.md)
+- Sphinx docs index: `docs/source/index.rst`
+
+The Sphinx site includes the same high-level concepts and firmware details in a published format.
+
 ## Prerequisites
 
 - Docker
@@ -27,20 +35,20 @@ From the repository root:
 docker compose up -d
 ```
 
-2. Enter workspace container
+1. Enter workspace container
 
 ``` bash
 docker exec -it micro_ros_workspace bash
 ```
 
-3. Build host ROS 2 workspace (if needed)
+1. Build host ROS 2 workspace (if needed)
 
 ``` bash
 cd /micro_ros_ws
 colcon build
 ```
 
-4. Source the environment
+1. Source the environment
 
 ``` bash
 source /opt/ros/humble/setup.bash
@@ -57,13 +65,13 @@ Inside the workspace container:
 ros2 run micro_ros_setup configure_firmware.sh esp32_controller -t udp -i 192.168.1.2 -p 8888
 ```
 
-2. Build firmware
+1. Build firmware
 
 ``` bash
 ros2 run micro_ros_setup build_firmware.sh
 ```
 
-3. Firmware output files
+1. Firmware output files
 
 ``` bash
 firmware/freertos_apps/microros_esp32_extensions/build/esp32_controller.bin
@@ -112,15 +120,15 @@ firmware = "firmware/freertos_apps/microros_esp32_extensions/build/esp32_control
 elf = "firmware/freertos_apps/microros_esp32_extensions/build/esp32_controller.elf"
 ```
 
-2. Build firmware before starting simulator:
+1. Build firmware before starting simulator:
 
 ``` bash
 docker exec micro_ros_workspace bash -lc "cd /micro_ros_ws/firmware/freertos_apps/microros_esp32_extensions && source /micro_ros_ws/firmware/toolchain/esp-idf/export.sh && idf.py build"
 ```
 
-3. Start Wokwi from VS Code command palette: `Wokwi: Start Simulator`.
+1. Start Wokwi from VS Code command palette: `Wokwi: Start Simulator`.
 
-4. Read logs in VS Code `Output` panel, `Wokwi` channel (or `Wokwi Terminal`, depending on extension version).
+1. Read logs in VS Code `Output` panel, `Wokwi` channel (or `Wokwi Terminal`, depending on extension version).
 
 If logs still do not appear, stop simulation, reload VS Code window, and start simulator again.
 
@@ -179,6 +187,38 @@ You can check logs with:
 ``` bash
 docker logs -f micro_ros_agent
 ```
+
+## Sensor Processing Pipeline (Host)
+
+The firmware publishes raw sensor topics:
+
+- `/imu/data` (`sensor_msgs/msg/Imu`)
+- `/range/data` (`sensor_msgs/msg/Range`)
+
+Host-side ROS 2 nodes can process these into cleaner and fused signals:
+
+- `wall_e_ws/src/feedback/feedback/imu_filter.py`
+  - Input: `/imu/data`
+  - Output: `/imu/filter`
+- `wall_e_ws/src/feedback/feedback/ultrasonic_filter.py`
+  - Input: `/range/data`
+  - Output: `/range/filter`
+- `wall_e_ws/src/feedback/feedback/sensor_fusion.py`
+  - Inputs: `/imu/filter`, `/range/filter`
+  - Outputs: `/fusion/height`, `/fusion/vertical_velocity`, `/fusion/debug`
+
+This keeps firmware responsibilities focused on sensor I/O and control while allowing filter tuning on the host.
+
+## System Architecture Diagram
+
+![Wall-E system architecture](docs/source/_static/wall_e_arch-dark.png)
+
+Flow summary:
+
+- `esp32_controller` publishes raw IMU and range data to ROS 2.
+- `imu_filter` and `ultrasonic_filter` produce cleaner feedback streams.
+- `sensor_fusion` combines filtered streams for downstream state estimation.
+- `odometry` and `inverse_kinematic` close the loop back into control outputs.
 
 ## Useful Commands
 

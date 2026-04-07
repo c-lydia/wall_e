@@ -14,7 +14,24 @@ The main firmware in `firmware/custom/esp32_controller` provides:
 - Emergency stop handling on `e-stop`
 - Firmware status publishing on `firmware/status`
 
+The host feedback stack in `wall_e_ws/src/feedback/feedback` can additionally provide:
+
+- IMU filtered topic on `/imu/filter`
+- Ultrasonic filtered topic on `/range/filter`
+- Fused state outputs on `/fusion/height` and `/fusion/vertical_velocity`
+
 If no WiFi credentials are stored, the device starts a provisioning access point so you can enter credentials from a browser.
+
+## System Diagram
+
+![Wall-E system architecture](docs/source/_static/wall_e_arch-dark.png)
+
+Use this as the mental model for where each node belongs:
+
+- Firmware node handles physical I/O and low-level actuator control.
+- Feedback nodes perform filtering and fusion.
+- Localization nodes estimate platform motion state.
+- Control nodes compute and publish actuation commands.
 
 ## Requirements
 
@@ -31,13 +48,13 @@ If no WiFi credentials are stored, the device starts a provisioning access point
 docker compose up -d
 ```
 
-2. Open a shell in the workspace container.
+1. Open a shell in the workspace container.
 
 ``` bash
 docker exec -it micro_ros_workspace bash
 ```
 
-3. Source the ROS environment if you are working with the host workspace.
+1. Source the ROS environment if you are working with the host workspace.
 
 ``` bash
 source /opt/ros/humble/setup.bash

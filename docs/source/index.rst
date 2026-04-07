@@ -11,6 +11,7 @@ The published site is built automatically from this source tree on pushes to `ma
    :caption: Contents
 
    getting_started
+  concepts
    workflow_and_commands
    firmware/esp32_controller
    wifi_provisioning

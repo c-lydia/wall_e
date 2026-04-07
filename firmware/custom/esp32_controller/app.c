@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <math.h>
 #include <string.h>
+#include <ctype.h>
 
 #include "sdkconfig.h"
 
@@ -10,7 +11,7 @@
 #include "esp_netif.h"
 #include "esp_err.h"
 #include "esp_timer.h"
-#include "rom/ets_sys.h"
+#include "esp32/rom/ets_sys.h"
 #include "nvs_flash.h"
 
 #include <rcl/rcl.h>
@@ -54,13 +55,16 @@
 #define WIFI_CREDS_MAX_LEN 64
 
 static httpd_handle_t provisioning_server = NULL;
+static volatile int provisioning_complete = 0;
 static char stored_ssid[64] = {0};
 static char stored_pass[64] = {0};
 
 static EventGroupHandle_t wifi_event_group;
 #define WIFI_CONNECTED_BIT BIT0
 static esp_netif_t *wifi_sta_netif = NULL;
+static esp_netif_t *wifi_ap_netif = NULL;
 static int wifi_initialized = 0;
+static int wifi_handlers_registered = 0;
 
 #define RCCHECK(fn) do { \
     rcl_ret_t temp_rc = (fn); \
@@ -85,6 +89,8 @@ static int wifi_initialized = 0;
 
 #define ULTRASONIC_TRIG_PIN 5
 #define ULTRASONIC_ECHO_PIN 18
+#define RANGE_FILTER_ALPHA 0.35f
+#define RANGE_VARIANCE_M2 0.0004f
 
 #define MPU6050_PWR_MGMT_1 0x6B
 #define MPU6050_ACCEL_XOUT_H 0x3B
@@ -216,6 +222,7 @@ static float motor_outputs[MOTOR_COUNT] = {0.0f};
 static volatile int emergency_stop = 0;
 static float servo_angle_deg = SERVO_DEFAULT_ANGLE_DEG;
 static float servo_target_deg = SERVO_DEFAULT_ANGLE_DEG;
+static float filtered_range_m = -1.0f;
 
 sensor_msgs__msg__Imu imu_msg;
 sensor_msgs__msg__Range range_msg;
@@ -225,6 +232,42 @@ std_msgs__msg__String status_msg;
 std_msgs__msg__Bool estop_msg;
 
 rclc_executor_t executor;
+static void url_decode(char *dst, const char *src);
+
+static void log_softap_url(void) {
+    esp_netif_ip_info_t ip_info;
+    if (wifi_ap_netif != NULL && esp_netif_get_ip_info(wifi_ap_netif, &ip_info) == ESP_OK) {
+        printf("Provisioning URL: http://" IPSTR "/\n", IP2STR(&ip_info.ip));
+    } else {
+        printf("Provisioning URL: http://192.168.4.1/ (fallback)\n");
+    }
+}
+
+static esp_netif_t *get_or_create_wifi_sta_netif(void) {
+    if (wifi_sta_netif != NULL) {
+        return wifi_sta_netif;
+    }
+
+    wifi_sta_netif = esp_netif_get_handle_from_ifkey("WIFI_STA_DEF");
+    if (wifi_sta_netif == NULL) {
+        wifi_sta_netif = esp_netif_create_default_wifi_sta();
+    }
+
+    return wifi_sta_netif;
+}
+
+static esp_netif_t *get_or_create_wifi_ap_netif(void) {
+    if (wifi_ap_netif != NULL) {
+        return wifi_ap_netif;
+    }
+
+    wifi_ap_netif = esp_netif_get_handle_from_ifkey("WIFI_AP_DEF");
+    if (wifi_ap_netif == NULL) {
+        wifi_ap_netif = esp_netif_create_default_wifi_ap();
+    }
+
+    return wifi_ap_netif;
+}
 
 esp_err_t nvs_read_wifi_creds(char *ssid_out, char *pass_out) {
     nvs_handle_t handle;
@@ -335,28 +378,35 @@ static esp_err_t post_handler(httpd_req_t *req) {
         password[i] = '\0';
     }
     
-    if (strlen(ssid) > 0 && strlen(password) > 0) {
-        printf("Provisioning WiFi: SSID='%s', Password='%s'\n", ssid, password);
+    char decoded_ssid[64] = {0};
+    char decoded_password[64] = {0};
+    url_decode(decoded_ssid, ssid);
+    url_decode(decoded_password, password);
 
-        esp_err_t err = nvs_write_wifi_creds(ssid, password);
+    if (strlen(decoded_ssid) > 0) {
+        printf("Provisioning WiFi: SSID='%s', Password='%s'\n", decoded_ssid, decoded_password);
+
+        esp_err_t err = nvs_write_wifi_creds(decoded_ssid, decoded_password);
         if (err != ESP_OK) {
             const char* resp = "<html><body><h1>Error saving credentials</h1><p>NVS write failed. System will restart.</p></body></html>";
             httpd_resp_send(req, resp, strlen(resp));
             return ESP_FAIL;
         }
 
-        strncpy(stored_ssid, ssid, sizeof(stored_ssid) - 1);
-        strncpy(stored_pass, password, sizeof(stored_pass) - 1);
+        strncpy(stored_ssid, decoded_ssid, sizeof(stored_ssid) - 1);
+        stored_ssid[sizeof(stored_ssid) - 1] = '\0';
+        strncpy(stored_pass, decoded_password, sizeof(stored_pass) - 1);
+        stored_pass[sizeof(stored_pass) - 1] = '\0';
 
         const char* success = "<html><body><h1>WiFi Configured!</h1><p>Device will restart shortly. Reconnect to your WiFi network.</p></body></html>";
         httpd_resp_send(req, success, strlen(success));
         
         printf("Credentials saved to NVS. Shutting down provisioning server...\n");
- 
-        provisioning_server = NULL;
+
+        provisioning_complete = 1;
         return ESP_OK;
     } else {
-        httpd_resp_send_err(req, HTTPD_400_BAD_REQUEST, "Missing SSID or password");
+        httpd_resp_send_err(req, HTTPD_400_BAD_REQUEST, "Missing SSID");
         return ESP_FAIL;
     }
 }
@@ -366,6 +416,8 @@ static void start_provisioning_server(void) {
         printf("Provisioning server already running\n");
         return;
     }
+
+    provisioning_complete = 0;
     
     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
     config.max_uri_handlers = 2;
@@ -373,7 +425,11 @@ static void start_provisioning_server(void) {
     esp_err_t ret = httpd_start(&provisioning_server, &config);
     if (ret != ESP_OK) {
         printf("Failed to start provisioning server: 0x%02x\n", ret);
-        provisioning_server = NULL;
+        
+        if (provisioning_server != NULL) {
+            httpd_stop(provisioning_server);
+            provisioning_server = NULL;
+}
         return;
     }
     
@@ -394,7 +450,8 @@ static void start_provisioning_server(void) {
     httpd_register_uri_handler(provisioning_server, &get_uri);
     httpd_register_uri_handler(provisioning_server, &post_uri);
     
-    printf("Provisioning server started on http://192.168.4.1/\n");
+    printf("Provisioning server started\n");
+    log_softap_url();
 }
 
 static void stop_provisioning_server(void) {
@@ -408,19 +465,29 @@ static void stop_provisioning_server(void) {
 static void start_softap(void) {
     printf("Starting SoftAP for WiFi provisioning...\n");
 
-    esp_err_t err = esp_event_loop_create_default();
+    esp_err_t err = esp_netif_init();
     if (err != ESP_OK && err != ESP_ERR_INVALID_STATE) {
-        printf("Event loop creation failed: 0x%02x\n", err);
+        printf("esp_netif_init failed: 0x%02x\n", err);
+        return;
     }
 
-    esp_netif_t *ap_netif = esp_netif_create_default_wifi_ap();
-    if (ap_netif == NULL) {
-        printf("Failed to create WiFi AP netif\n");
+    err = esp_event_loop_create_default();
+    if (err != ESP_OK && err != ESP_ERR_INVALID_STATE) {
+        printf("Event loop creation failed: 0x%02x\n", err);
+        return;
+    }
+
+    if (get_or_create_wifi_ap_netif() == NULL) {
+        printf("Failed to create or reuse WiFi AP netif\n");
         return;
     }
 
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
-    esp_wifi_init(&cfg);
+    err = esp_wifi_init(&cfg);
+    if (err != ESP_OK && err != ESP_ERR_WIFI_INIT_STATE) {
+        printf("esp_wifi_init failed: 0x%02x\n", err);
+        return;
+    }
 
     wifi_config_t wifi_config = {
         .ap = {
@@ -432,12 +499,32 @@ static void start_softap(void) {
         },
     };
     
-    esp_wifi_set_mode(WIFI_MODE_AP);
-    esp_wifi_set_config(WIFI_IF_AP, &wifi_config);
-    esp_wifi_start();
+    wifi_mode_t mode = WIFI_MODE_AP;
+    if (wifi_initialized) {
+        mode = WIFI_MODE_APSTA;
+    }
+
+    err = esp_wifi_set_mode(mode);
+    if (err != ESP_OK) {
+        printf("esp_wifi_set_mode failed: 0x%02x\n", err);
+        return;
+    }
+
+    err = esp_wifi_set_config(WIFI_IF_AP, &wifi_config);
+    if (err != ESP_OK) {
+        printf("esp_wifi_set_config(AP) failed: 0x%02x\n", err);
+        return;
+    }
+
+    err = esp_wifi_start();
+    if (err != ESP_OK && err != ESP_ERR_WIFI_CONN) {
+        printf("esp_wifi_start failed: 0x%02x\n", err);
+        return;
+    }
     
     printf("SoftAP started: SSID='ESP32-Setup' (open)\n");
-    printf("Users can connect and navigate to http://192.168.4.1/\n");
+    vTaskDelay(pdMS_TO_TICKS(200));
+    log_softap_url();
 }
 
 static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data) {
@@ -450,6 +537,33 @@ static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t e
         xEventGroupSetBits(wifi_event_group, WIFI_CONNECTED_BIT);
         printf("WiFi Connected! Got IP\n");
     }
+}
+
+static void url_decode(char *dst, const char *src) {
+    char a, b;
+    while (*src) {
+        if ((*src == '%') &&
+            ((a = src[1]) && (b = src[2])) &&
+            (isxdigit(a) && isxdigit(b))) {
+
+            if (a >= 'a') a -= 'a'-'A';
+            if (a >= 'A') a -= ('A' - 10);
+            else a -= '0';
+
+            if (b >= 'a') b -= 'a'-'A';
+            if (b >= 'A') b -= ('A' - 10);
+            else b -= '0';
+
+            *dst++ = 16*a+b;
+            src += 3;
+        } else if (*src == '+') {
+            *dst++ = ' ';
+            src++;
+        } else {
+            *dst++ = *src++;
+        }
+    }
+    *dst = '\0';
 }
 
 void wifi_init(void) {
@@ -477,20 +591,23 @@ void wifi_init(void) {
         ESP_ERROR_CHECK(err);
     }
 
-    if (wifi_sta_netif == NULL) {
-        wifi_sta_netif = esp_netif_create_default_wifi_sta();
-        if (wifi_sta_netif == NULL) {
-            printf("Failed to create default WiFi STA netif\n");
-            vTaskDelete(NULL);
-            return;
-        }
+    if (get_or_create_wifi_sta_netif() == NULL) {
+        printf("Failed to create or reuse default WiFi STA netif\n");
+        vTaskDelete(NULL);
+        return;
     }
     
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
-    esp_wifi_init(&cfg);
-    
-    esp_event_handler_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &wifi_event_handler, NULL);
-    esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &wifi_event_handler, NULL);
+    err = esp_wifi_init(&cfg);
+    if (err != ESP_OK && err != ESP_ERR_WIFI_INIT_STATE) {
+        ESP_ERROR_CHECK(err);
+    }
+
+    if (!wifi_handlers_registered) {
+        esp_event_handler_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &wifi_event_handler, NULL);
+        esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &wifi_event_handler, NULL);
+        wifi_handlers_registered = 1;
+    }
     
     wifi_config_t wifi_config = {
         .sta = {
@@ -687,7 +804,10 @@ static void apply_motor_output(int id, float value) {
         out = 0.0f;
     }
 
-    int dir = (out > 0.0f) ? 1 : 0;
+    int dir = 0;
+    if (out > 0.0f) {
+        dir = 1;
+    }
     int pwm = (int)(fabsf(out) * 255.0f);
 
     gpio_set_level(MOTOR_DIR_PIN[id], dir);
@@ -707,7 +827,10 @@ static void update_motor_outputs(float dt_s) {
     }
 
     for (int i = 0; i < MOTOR_COUNT; i++) {
-        float target = emergency_stop ? 0.0f : motor_targets[i];
+        float target = motor_targets[i];
+        if (emergency_stop) {
+            target = 0.0f;
+        }
         float delta = target - motor_outputs[i];
         delta = clampf(delta, -max_step, max_step);
         apply_motor_output(i, motor_outputs[i] + delta);
@@ -749,7 +872,10 @@ static void update_servo_output(float dt_s) {
         return;
     }
 
-    float target = emergency_stop ? SERVO_DEFAULT_ANGLE_DEG : servo_target_deg;
+    float target = servo_target_deg;
+    if (emergency_stop) {
+        target = SERVO_DEFAULT_ANGLE_DEG;
+    }
     float max_step = SERVO_MAX_RATE_DEG_S * dt_s;
     float delta = clampf(target - servo_angle_deg, -max_step, max_step);
 
@@ -757,7 +883,10 @@ static void update_servo_output(float dt_s) {
 }
 
 void set_servo_angle(float angle_deg) {
-    float target = emergency_stop ? SERVO_DEFAULT_ANGLE_DEG : angle_deg;
+    float target = angle_deg;
+    if (emergency_stop) {
+        target = SERVO_DEFAULT_ANGLE_DEG;
+    }
     servo_target_deg = servo_clamp_angle(target);
 }
 
@@ -793,7 +922,10 @@ void set_motor(int id, float value) {
         return;
     }
 
-    float target = emergency_stop ? 0.0f : value;
+    float target = value;
+    if (emergency_stop) {
+        target = 0.0f;
+    }
     motor_targets[id] = clampf(target, -1.0f, 1.0f);
 }
 
@@ -838,7 +970,8 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time) {
     RCLC_UNUSED(last_call_time);
     
     if (timer != NULL) {
-        int64_t current_time = esp_timer_get_time() / 1000;
+        int64_t now_us = esp_timer_get_time();
+        int64_t current_time = now_us / 1000;
 
         if (last_control_update_time_ms == 0) {
             last_control_update_time_ms = current_time;
@@ -867,18 +1000,43 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time) {
         imu_msg.angular_velocity.x = (gyro[0] / 131.0f) * (M_PI / 180.0f);
         imu_msg.angular_velocity.y = (gyro[1] / 131.0f) * (M_PI / 180.0f);
         imu_msg.angular_velocity.z = (gyro[2] / 131.0f) * (M_PI / 180.0f);
+        imu_msg.header.stamp.sec = (int32_t)(now_us / 1000000LL);
+        imu_msg.header.stamp.nanosec = (uint32_t)((now_us % 1000000LL) * 1000LL);
 
         RCSOFTCHECK(rcl_publish(&imu_pub, &imu_msg, NULL));
 
-        float distance = ultrasonic_read_distance();
+        float raw_distance = ultrasonic_read_distance();
+        float reported_distance = -1.0f;
+        range_msg.header.stamp.sec = (int32_t)(now_us / 1000000LL);
+        range_msg.header.stamp.nanosec = (uint32_t)((now_us % 1000000LL) * 1000LL);
 
-        if (distance > 0) {
-            range_msg.range = distance;
-            RCSOFTCHECK(rcl_publish(&range_pub, &range_msg, NULL));
+        if (raw_distance >= range_msg.min_range && raw_distance <= range_msg.max_range) {
+            if (filtered_range_m < 0.0f) {
+                filtered_range_m = raw_distance;
+            } else {
+                filtered_range_m = (RANGE_FILTER_ALPHA * raw_distance) +
+                    ((1.0f - RANGE_FILTER_ALPHA) * filtered_range_m);
+            }
+            reported_distance = filtered_range_m;
+            range_msg.range = reported_distance;
+        } else {
+            filtered_range_m = -1.0f;
+            range_msg.range = INFINITY;
         }
+        RCSOFTCHECK(rcl_publish(&range_pub, &range_msg, NULL));
         
-        char status_buf[64];
+        static char status_buf[128]; 
         
+        int64_t motor_timeout_ms = -1LL;
+        if (last_motor_cmd_time > 0) {
+            motor_timeout_ms = current_time - last_motor_cmd_time;
+        }
+
+        double status_range_value = -1.0;
+        if (reported_distance > 0) {
+            status_range_value = (double)reported_distance;
+        }
+
         int status_len = snprintf(status_buf, sizeof(status_buf),
             "Accel:%.2f,%.2f,%.2f|Gyro:%.2f,%.2f,%.2f|Range:%.2f|MotorTimeout:%lld",
             imu_msg.linear_acceleration.x,
@@ -887,14 +1045,26 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time) {
             imu_msg.angular_velocity.x,
             imu_msg.angular_velocity.y,
             imu_msg.angular_velocity.z,
-            distance > 0 ? (long long)distance : -1LL);
+            status_range_value,
+            (long long)motor_timeout_ms);
+
+        if (status_len < 0) {
+            status_len = 0;
+        } else if (status_len >= (int)sizeof(status_buf)) {
+            status_len = (int)sizeof(status_buf) - 1;
+        }
         
-        status_msg.data.data = (uint8_t*) status_buf;
-        status_msg.data.size = status_len;
-        status_msg.data.capacity = status_len + 1;
+        status_msg.data.data = status_buf;
+        status_msg.data.size = (size_t)status_len;
+        status_msg.data.capacity = (size_t)status_len + 1;
         
         RCSOFTCHECK(rcl_publish(&status_pub, &status_msg, NULL));
         
+        float print_range_value = -1.0f;
+        if (reported_distance > 0) {
+            print_range_value = reported_distance;
+        }
+
         printf("IMU - Accel: %.2f, %.2f, %.2f | Gyro: %.2f, %.2f, %.2f | Range: %.2f\n",
                imu_msg.linear_acceleration.x,
                imu_msg.linear_acceleration.y,
@@ -902,7 +1072,7 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time) {
                imu_msg.angular_velocity.x,
                imu_msg.angular_velocity.y,
                imu_msg.angular_velocity.z,
-               distance > 0 ? distance : -1.0f);
+               print_range_value);
     }
 }
 
@@ -910,9 +1080,10 @@ void appMain(void *arg) {
     (void)arg;
     printf("appMain start\n");
 
-    esp_task_wdt_init(30, true);
+    esp_task_wdt_init(90, true);
     esp_task_wdt_add(NULL);
-    printf("Watchdog timer initialized (30s timeout)\n");
+    printf("Watchdog timer initialized (90s timeout)\n");
+    esp_task_wdt_reset();
 
     esp_err_t err = nvs_flash_init();
     if (err == ESP_ERR_NVS_NO_FREE_PAGES || err == ESP_ERR_NVS_NEW_VERSION_FOUND) {
@@ -924,22 +1095,27 @@ void appMain(void *arg) {
     }
     
     nvs_read_wifi_creds(stored_ssid, stored_pass);
-    
-    if (strlen(stored_ssid) == 0 || strlen(stored_pass) == 0) {
-        printf("No WiFi credentials stored. Starting provisioning mode...\n");
+    esp_task_wdt_reset();
 
-        ESP_ERROR_CHECK(esp_netif_init());
-        ESP_ERROR_CHECK(esp_event_loop_create_default());
+    wifi_ap_record_t ap_info;
+    int sta_already_connected = (esp_wifi_sta_get_ap_info(&ap_info) == ESP_OK);
+
+    int has_stored_creds = (strlen(stored_ssid) > 0 && strlen(stored_pass) > 0);
+    int has_menuconfig_ssid = (strlen(WIFI_SSID) > 0);
+    
+    if (!has_stored_creds && !has_menuconfig_ssid && !sta_already_connected) {
+        printf("No WiFi credentials stored. Starting provisioning mode...\n");
 
         start_softap();
         start_provisioning_server();
 
         printf("Waiting for WiFi provisioning (60s timeout)...\n");
         for (int i = 0; i < 60; i++) {
-            if (provisioning_server == NULL) {
+            if (provisioning_complete) {
                 printf("Credentials provisioned successfully!\n");
                 break;
             }
+            esp_task_wdt_reset();
             vTaskDelay(pdMS_TO_TICKS(1000));
         }
         
@@ -950,7 +1126,9 @@ void appMain(void *arg) {
         esp_restart();
     }
     
+    esp_task_wdt_reset();
     wifi_init();
+    esp_task_wdt_reset();
 
     i2c_master_init();
     printf("I2C initialized, checking sensor presence...\n");
@@ -968,57 +1146,62 @@ void appMain(void *arg) {
     ultrasonic_init();
     motor_init();
     servo_init();
+    esp_task_wdt_reset();
     
     rcl_allocator_t allocator = rcl_get_default_allocator();
     rclc_support_t support;
 
     rcl_init_options_t init_options = rcl_get_zero_initialized_init_options();
+    esp_task_wdt_reset();
     RCCHECK(rcl_init_options_init(&init_options, allocator));
+    esp_task_wdt_reset();
     RCCHECK(rclc_support_init_with_options(&support, 0, NULL, &init_options, &allocator));
+    esp_task_wdt_reset();
 
     rcl_node_t node;
     RCCHECK(rclc_node_init_default(&node, "sensor_node", "", &support));
+    esp_task_wdt_reset();
 
     RCCHECK(rclc_publisher_init_default(
         &imu_pub,
         &node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Imu),
-        "imu/data"
+        "/imu/data"
     ));
 
     RCCHECK(rclc_publisher_init_default(
         &range_pub,
         &node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Range),
-        "range/data"
+        "/range/data"
     ));
 
     RCCHECK(rclc_subscription_init_default(
         &motor_sub, 
         &node, 
         ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Float32MultiArray),
-        "motor-cmd"
+        "/motor_cmd"
     ));
     
     RCCHECK(rclc_publisher_init_default(
         &status_pub,
         &node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
-        "firmware/status"
+        "/firmware/status"
     ));
 
     RCCHECK(rclc_subscription_init_default(
         &estop_sub,
         &node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Bool),
-        "e-stop"
+        "/e_stop"
     ));
 
     RCCHECK(rclc_subscription_init_default(
         &servo_sub,
         &node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Float32),
-        "servo-cmd"
+        "/servo_cmd"
     ));
 
     sensor_msgs__msg__Imu__init(&imu_msg);
@@ -1055,6 +1238,7 @@ void appMain(void *arg) {
     RCCHECK(rclc_executor_add_subscription(&executor, &estop_sub, &estop_msg, estop_callback, ON_NEW_DATA));
     RCCHECK(rclc_executor_add_subscription(&executor, &motor_sub, &motor_msg, motor_callback, ON_NEW_DATA));
     RCCHECK(rclc_executor_add_subscription(&executor, &servo_sub, &servo_cmd_msg, servo_callback, ON_NEW_DATA));
+    esp_task_wdt_reset();
 
     printf("Sensor node started!\n");
 
@@ -1062,7 +1246,7 @@ void appMain(void *arg) {
         esp_task_wdt_reset();
         
         rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));
-        usleep(10000);
+        vTaskDelay(pdMS_TO_TICKS(10));
     }
 
     RCCHECK(rcl_publisher_fini(&imu_pub, &node));
