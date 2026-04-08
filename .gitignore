@@ -50,3 +50,9 @@ docs/.doctrees/
 # ROS / DDS
 .DDS_SecurityLog.txt
 .rmw_dds_client/
+
+# PDF
+README.pdf 
+notes.pdf 
+concepts.pdf 
+user_manual.pdf 

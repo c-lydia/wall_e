@@ -15,6 +15,7 @@ This repository includes:
 
 - User guide: [user_manual.md](user_manual.md)
 - Concepts guide: [concepts.md](concepts.md)
+- Theoretical calculation summary: [notes.md](notes.md)
 - Sphinx docs index: `docs/source/index.rst`
 
 The Sphinx site includes the same high-level concepts and firmware details in a published format.
