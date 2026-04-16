@@ -13,7 +13,7 @@ jobs:
 
       - name: Check if secret is present
         run: |
-         if [ -n "${{ secrets.DOCKER }}" ]; then
+         if [ -n "${{ secrets.DOCKER_HUB_USERNAME }}" ]; then
            echo "Secret is set."
          else
            echo "Secret is NOT set."
