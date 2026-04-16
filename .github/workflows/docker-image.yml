@@ -28,5 +28,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
+          context: .  # Build from the local files checked out in the runner
           push: true
-          tags: your-docker-username/your-repo-name:latest
+          tags: your-username/wall-e:latest
