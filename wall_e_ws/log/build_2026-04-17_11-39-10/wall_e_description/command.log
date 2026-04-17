@@ -1,0 +1,4 @@
+Invoking command in '/micro_ros_ws/wall_e_ws/build/wall_e_description': /usr/bin/cmake --build /micro_ros_ws/wall_e_ws/build/wall_e_description -- -j12 -l12
+Invoked command in '/micro_ros_ws/wall_e_ws/build/wall_e_description' returned '0': /usr/bin/cmake --build /micro_ros_ws/wall_e_ws/build/wall_e_description -- -j12 -l12
+Invoking command in '/micro_ros_ws/wall_e_ws/build/wall_e_description': /usr/bin/cmake --install /micro_ros_ws/wall_e_ws/build/wall_e_description
+Invoked command in '/micro_ros_ws/wall_e_ws/build/wall_e_description' returned '0': /usr/bin/cmake --install /micro_ros_ws/wall_e_ws/build/wall_e_description

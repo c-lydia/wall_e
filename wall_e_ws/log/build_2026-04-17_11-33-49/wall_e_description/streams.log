@@ -1,0 +1,28 @@
+[0.642s] Invoking command in '/micro_ros_ws/wall_e_ws/build/wall_e_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/micro_ros_ws/wall_e_ws/install/localization:/micro_ros_ws/wall_e_ws/install/feedback:/micro_ros_ws/wall_e_ws/install/control:/opt/ros/humble /usr/bin/cmake --build /micro_ros_ws/wall_e_ws/build/wall_e_description -- -j12 -l12
+[0.711s] Invoked command in '/micro_ros_ws/wall_e_ws/build/wall_e_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/micro_ros_ws/wall_e_ws/install/localization:/micro_ros_ws/wall_e_ws/install/feedback:/micro_ros_ws/wall_e_ws/install/control:/opt/ros/humble /usr/bin/cmake --build /micro_ros_ws/wall_e_ws/build/wall_e_description -- -j12 -l12
+[0.713s] Invoking command in '/micro_ros_ws/wall_e_ws/build/wall_e_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/micro_ros_ws/wall_e_ws/install/localization:/micro_ros_ws/wall_e_ws/install/feedback:/micro_ros_ws/wall_e_ws/install/control:/opt/ros/humble /usr/bin/cmake --install /micro_ros_ws/wall_e_ws/build/wall_e_description
+[0.731s] -- Install configuration: ""
+[0.731s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/launch
+[0.732s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/launch/wall_e.launch.py
+[0.733s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/rviz
+[0.734s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/rviz/robot.rviz
+[0.736s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/worlds
+[0.737s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/worlds/indoor_room.world
+[0.738s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/description
+[0.740s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/description/robot.urdf.xacro
+[0.742s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/ament_index/resource_index/package_run_dependencies/wall_e_description
+[0.744s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/ament_index/resource_index/parent_prefix_path/wall_e_description
+[0.745s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/ament_prefix_path.sh
+[0.746s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/ament_prefix_path.dsv
+[0.747s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/path.sh
+[0.748s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/path.dsv
+[0.750s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.bash
+[0.751s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.sh
+[0.752s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.zsh
+[0.753s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.dsv
+[0.754s] -- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.dsv
+[0.758s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/ament_index/resource_index/packages/wall_e_description
+[0.759s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/cmake/wall_e_descriptionConfig.cmake
+[0.760s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/cmake/wall_e_descriptionConfig-version.cmake
+[0.761s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.xml
+[0.764s] Invoked command in '/micro_ros_ws/wall_e_ws/build/wall_e_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/micro_ros_ws/wall_e_ws/install/localization:/micro_ros_ws/wall_e_ws/install/feedback:/micro_ros_ws/wall_e_ws/install/control:/opt/ros/humble /usr/bin/cmake --install /micro_ros_ws/wall_e_ws/build/wall_e_description

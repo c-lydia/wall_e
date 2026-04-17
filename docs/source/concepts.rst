@@ -104,31 +104,41 @@ Odometry Model
 
 Current odometry combines command inputs and available sensors:
 
-- translational integration from ``/cmd_vel``
-- heading from IMU yaw when available
-- fallback heading integration if IMU yaw is unavailable
-
 This is intentionally lightweight and suitable for short-horizon control.
+
+Launch Dependency Strategy
+==========================
+
+The launch path is designed to be resilient in containerized setups:
+
+- robot description generation is performed through Python xacro processing
+- Gazebo integration is optional when ``gazebo_ros`` is not installed
+- runtime GUI/model packages are expected from image provisioning
+
+This reduces failures due to PATH differences and minimal base images.
 
 Safety Model
 ============
 
 Safety remains firmware-local and independent from host nodes:
 
-- watchdog supervision
-- motor command timeout
-- emergency stop topic handling
-- WiFi provisioning + reconnect behavior
-
 If host nodes are restarted, firmware safety constraints still apply.
 
 Tuning Guidance
-===============
-
-Tune each layer separately for faster iteration:
-
 - firmware layer: motor/servo limits, GPIO mapping, timing
 - feedback layer: filter alpha, window size, jump gate, fusion gains
+
+TF Completeness for Visualization
+=================================
+
+Rear wheels are modeled as continuous joints. In minimal launch modes, only the driven front joints may receive live joint states.
+
+To avoid incomplete TF trees in RViz:
+
+- launch publishes rear-wheel static transforms when ``joint_state_publisher`` is disabled
+- those static publishers are disabled automatically when ``joint_state_publisher`` is enabled
+
+This keeps RobotModel visualization complete without introducing duplicate transform sources.
 - localization/control layer: kinematic assumptions and controller gains
 
 Related Reading

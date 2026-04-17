@@ -1,0 +1,6 @@
+Invoking command in '/micro_ros_ws/wall_e_ws/build/wall_e_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /micro_ros_ws/wall_e_ws/src/wall_e_description -DCMAKE_INSTALL_PREFIX=/micro_ros_ws/wall_e_ws/install/wall_e_description
+Invoked command in '/micro_ros_ws/wall_e_ws/build/wall_e_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /micro_ros_ws/wall_e_ws/src/wall_e_description -DCMAKE_INSTALL_PREFIX=/micro_ros_ws/wall_e_ws/install/wall_e_description
+Invoking command in '/micro_ros_ws/wall_e_ws/build/wall_e_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /micro_ros_ws/wall_e_ws/build/wall_e_description -- -j12 -l12
+Invoked command in '/micro_ros_ws/wall_e_ws/build/wall_e_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /micro_ros_ws/wall_e_ws/build/wall_e_description -- -j12 -l12
+Invoking command in '/micro_ros_ws/wall_e_ws/build/wall_e_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /micro_ros_ws/wall_e_ws/build/wall_e_description
+Invoked command in '/micro_ros_ws/wall_e_ws/build/wall_e_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /micro_ros_ws/wall_e_ws/build/wall_e_description

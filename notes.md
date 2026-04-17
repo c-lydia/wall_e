@@ -196,3 +196,32 @@ $$t_{pulse} = 500 + (2500 - 500) \cdot \frac{\theta}{180}$$
 16-bit register value at 20 ms period:
 $$\text{Duty} = \frac{t_{pulse}}{T_{period}}$$
 $$\text{Register} = \left(\frac{t_{pulse}}{20000}\right) \cdot (2^{16} - 1)$$
+
+## Robot Model Generation and TF Notes
+
+### Xacro generation at launch
+
+Host launch now builds URDF XML directly with Python xacro processing:
+
+$$\text{robot\_description} = \text{xacro.process\_file}(\text{urdf\_file}).\text{toxml}()$$
+
+This avoids dependence on a shell-resolved `xacro` executable path.
+
+### Rear wheel RViz transform fallback
+
+When `joint_state_publisher` is disabled, rear wheel continuous joints may have no joint-state source.
+To keep RViz RobotModel complete, launch publishes rear wheel static transforms from `base_link`.
+
+For `rear_left_wheel`:
+
+$$\mathbf{t}_{rl} = [-0.07,\; 0.085,\; -0.01]^T$$
+
+For `rear_right_wheel`:
+
+$$\mathbf{t}_{rr} = [-0.07,\; -0.085,\; -0.01]^T$$
+
+Wheel visual orientation uses a fixed $\frac{\pi}{2}$ roll, with quaternion:
+
+$$q = [x, y, z, w] = [\sin(\pi/4),\; 0,\; 0,\; \cos(\pi/4)] \approx [0.7071,\; 0,\; 0,\; 0.7071]$$
+
+These static publishers are conditionally disabled when `joint_state_publisher` is enabled.

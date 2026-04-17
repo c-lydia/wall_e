@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/feedback/feedback.egg-info/PKG-INFO
+writing dependency_links to ../../build/feedback/feedback.egg-info/dependency_links.txt
+writing entry points to ../../build/feedback/feedback.egg-info/entry_points.txt
+writing requirements to ../../build/feedback/feedback.egg-info/requires.txt
+writing top-level names to ../../build/feedback/feedback.egg-info/top_level.txt
+reading manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/feedback/feedback.egg-info to /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback-0.0.0-py3.10.egg-info
+running install_scripts
+Installing imu_filter_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback
+Installing range_filter_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback
+Installing sensor_fusion_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback
+writing list of installed files to '/micro_ros_ws/wall_e_ws/build/feedback/install.log'

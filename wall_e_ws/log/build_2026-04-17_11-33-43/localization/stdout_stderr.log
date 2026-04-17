@@ -1,0 +1,27 @@
+running egg_info
+writing ../../build/localization/localization.egg-info/PKG-INFO
+writing dependency_links to ../../build/localization/localization.egg-info/dependency_links.txt
+writing entry points to ../../build/localization/localization.egg-info/entry_points.txt
+writing requirements to ../../build/localization/localization.egg-info/requires.txt
+writing top-level names to ../../build/localization/localization.egg-info/top_level.txt
+reading manifest file '../../build/localization/localization.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/localization/localization.egg-info/SOURCES.txt'
+running build
+running build_py
+copying localization/inverse_kinematic.py -> /micro_ros_ws/wall_e_ws/build/localization/build/lib/localization
+copying localization/odometry.py -> /micro_ros_ws/wall_e_ws/build/localization/build/lib/localization
+running install
+running install_lib
+copying /micro_ros_ws/wall_e_ws/build/localization/build/lib/localization/inverse_kinematic.py -> /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization
+copying /micro_ros_ws/wall_e_ws/build/localization/build/lib/localization/odometry.py -> /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization
+byte-compiling /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization/inverse_kinematic.py to inverse_kinematic.cpython-310.pyc
+byte-compiling /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization/odometry.py to odometry.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/localization/localization.egg-info to /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization-0.0.0-py3.10.egg-info
+running install_scripts
+Installing inverse_kinematic_node script to /micro_ros_ws/wall_e_ws/install/localization/lib/localization
+Installing odometry_node script to /micro_ros_ws/wall_e_ws/install/localization/lib/localization
+writing list of installed files to '/micro_ros_ws/wall_e_ws/build/localization/install.log'

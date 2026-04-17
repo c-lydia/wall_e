@@ -134,6 +134,34 @@ ROS 2 Build Issues
    rm -rf build install log
    colcon build
 
+Launch and Visualization Issues
+-------------------------------
+
+**Problem**: Launch fails with ``file not found: [Errno 2] No such file or directory: 'xacro'``
+
+- Ensure xacro runtime is installed in the running container:
+
+.. code-block:: bash
+
+   apt-get update && apt-get install -y ros-humble-xacro
+
+- For long-term consistency, rebuild the workspace image:
+
+.. code-block:: bash
+
+   docker compose up --build -d
+
+**Problem**: ``Package not found`` for ``rviz2`` or ``gazebo_ros``
+
+- The running container is missing runtime GUI/simulation packages.
+- Rebuild using the latest Dockerfile so ROS runtime dependencies are present.
+
+**Problem**: RViz RobotModel shows ``No transform from rear_left_wheel`` or ``rear_right_wheel``
+
+- Rear wheels are continuous joints and may not have live joint states in minimal launch configurations.
+- Current launch publishes rear-wheel static TF when ``joint_state_publisher`` is disabled.
+- If issue persists, verify you are launching updated sources and restart launch.
+
 Documentation Build Issues
 ---------------------------
 

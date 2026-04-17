@@ -1,0 +1,361 @@
+[0.182s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.182s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x793231ba38b0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x793231ba3340>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x793231ba3340>>, mixin_verb=('build',))
+[0.373s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.374s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[0.375s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastdds.meta'
+[0.375s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[0.376s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.376s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.376s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.376s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.376s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.376s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/micro_ros_ws/wall_e_ws'
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['ignore', 'ignore_ament_install']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'ignore'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'ignore_ament_install'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['colcon_pkg']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'colcon_pkg'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['colcon_meta']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'colcon_meta'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['ros']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'ros'
+[0.399s] DEBUG:colcon.colcon_core.package_identification:Package 'src/control' with type 'ros.ament_python' and name 'control'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'ignore'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'ignore_ament_install'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['colcon_pkg']
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'colcon_pkg'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['colcon_meta']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'colcon_meta'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['ros']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'ros'
+[0.401s] DEBUG:colcon.colcon_core.package_identification:Package 'src/custom_interfaces' with type 'ros.ament_cmake' and name 'custom_interfaces'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/feedback) by extensions ['ignore', 'ignore_ament_install']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/feedback) by extension 'ignore'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/feedback) by extension 'ignore_ament_install'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/feedback) by extensions ['colcon_pkg']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/feedback) by extension 'colcon_pkg'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/feedback) by extensions ['colcon_meta']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/feedback) by extension 'colcon_meta'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(src/feedback) by extensions ['ros']
+[0.402s] Level 1:colcon.colcon_core.package_identification:_identify(src/feedback) by extension 'ros'
+[0.403s] DEBUG:colcon.colcon_core.package_identification:Package 'src/feedback' with type 'ros.ament_python' and name 'feedback'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extensions ['ignore', 'ignore_ament_install']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extension 'ignore'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extension 'ignore_ament_install'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extensions ['colcon_pkg']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extension 'colcon_pkg'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extensions ['colcon_meta']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extension 'colcon_meta'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extensions ['ros']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/localization) by extension 'ros'
+[0.405s] DEBUG:colcon.colcon_core.package_identification:Package 'src/localization' with type 'ros.ament_python' and name 'localization'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_e_description) by extensions ['ignore', 'ignore_ament_install']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_e_description) by extension 'ignore'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_e_description) by extension 'ignore_ament_install'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_e_description) by extensions ['colcon_pkg']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_e_description) by extension 'colcon_pkg'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_e_description) by extensions ['colcon_meta']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_e_description) by extension 'colcon_meta'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_e_description) by extensions ['ros']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_e_description) by extension 'ros'
+[0.407s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wall_e_description' with type 'ros.ament_cmake' and name 'wall_e_description'
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.435s] DEBUG:colcon.colcon_core.verb:Building package 'custom_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/micro_ros_ws/wall_e_ws/build/custom_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/micro_ros_ws/wall_e_ws/install/custom_interfaces', 'merge_install': False, 'path': '/micro_ros_ws/wall_e_ws/src/custom_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'feedback' build argument 'cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'feedback' build argument 'cmake_target' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'feedback' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'feedback' build argument 'cmake_clean_cache' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'feedback' build argument 'cmake_clean_first' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'feedback' build argument 'cmake_force_configure' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'feedback' build argument 'ament_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'feedback' build argument 'catkin_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'feedback' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.435s] DEBUG:colcon.colcon_core.verb:Building package 'feedback' with the following arguments: {'ament_cmake_args': None, 'build_base': '/micro_ros_ws/wall_e_ws/build/feedback', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/micro_ros_ws/wall_e_ws/install/feedback', 'merge_install': False, 'path': '/micro_ros_ws/wall_e_ws/src/feedback', 'symlink_install': False, 'test_result_base': None}
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'localization' build argument 'cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'localization' build argument 'cmake_target' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'localization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'localization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'localization' build argument 'cmake_clean_first' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'localization' build argument 'cmake_force_configure' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'localization' build argument 'ament_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'localization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'localization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.436s] DEBUG:colcon.colcon_core.verb:Building package 'localization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/micro_ros_ws/wall_e_ws/build/localization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/micro_ros_ws/wall_e_ws/install/localization', 'merge_install': False, 'path': '/micro_ros_ws/wall_e_ws/src/localization', 'symlink_install': False, 'test_result_base': None}
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'wall_e_description' build argument 'cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'wall_e_description' build argument 'cmake_target' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'wall_e_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'wall_e_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'wall_e_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'wall_e_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'wall_e_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'wall_e_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'wall_e_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.437s] DEBUG:colcon.colcon_core.verb:Building package 'wall_e_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/micro_ros_ws/wall_e_ws/build/wall_e_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/micro_ros_ws/wall_e_ws/install/wall_e_description', 'merge_install': False, 'path': '/micro_ros_ws/wall_e_ws/src/wall_e_description', 'symlink_install': False, 'test_result_base': None}
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_args' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_target' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_clean_first' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_force_configure' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'ament_cmake_args' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.438s] DEBUG:colcon.colcon_core.verb:Building package 'control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/micro_ros_ws/wall_e_ws/build/control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/micro_ros_ws/wall_e_ws/install/control', 'merge_install': False, 'path': '/micro_ros_ws/wall_e_ws/src/control', 'symlink_install': False, 'test_result_base': None}
+[0.438s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.439s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.439s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/micro_ros_ws/wall_e_ws/src/custom_interfaces' with build type 'ament_cmake'
+[0.439s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/micro_ros_ws/wall_e_ws/src/custom_interfaces'
+[0.444s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.444s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.444s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.451s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/micro_ros_ws/wall_e_ws/src/feedback' with build type 'ament_python'
+[0.451s] Level 1:colcon.colcon_core.shell:create_environment_hook('feedback', 'ament_prefix_path')
+[0.452s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/feedback/share/feedback/hook/ament_prefix_path.ps1'
+[0.453s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/micro_ros_ws/wall_e_ws/install/feedback/share/feedback/hook/ament_prefix_path.dsv'
+[0.454s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/feedback/share/feedback/hook/ament_prefix_path.sh'
+[0.455s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.455s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.457s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/micro_ros_ws/wall_e_ws/src/localization' with build type 'ament_python'
+[0.457s] Level 1:colcon.colcon_core.shell:create_environment_hook('localization', 'ament_prefix_path')
+[0.457s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/localization/share/localization/hook/ament_prefix_path.ps1'
+[0.458s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/micro_ros_ws/wall_e_ws/install/localization/share/localization/hook/ament_prefix_path.dsv'
+[0.459s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/localization/share/localization/hook/ament_prefix_path.sh'
+[0.460s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.460s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.462s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/micro_ros_ws/wall_e_ws/src/wall_e_description' with build type 'ament_cmake'
+[0.462s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/micro_ros_ws/wall_e_ws/src/wall_e_description'
+[0.462s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.462s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.469s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/micro_ros_ws/wall_e_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /micro_ros_ws/wall_e_ws/build/custom_interfaces -- -j12 -l12
+[0.732s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/micro_ros_ws/wall_e_ws/src/feedback'
+[0.732s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.732s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.095s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/micro_ros_ws/wall_e_ws/src/localization'
+[1.096s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.096s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.154s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/micro_ros_ws/wall_e_ws/build/wall_e_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /micro_ros_ws/wall_e_ws/build/wall_e_description -- -j12 -l12
+[1.179s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/micro_ros_ws/wall_e_ws/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /micro_ros_ws/wall_e_ws/build/custom_interfaces -- -j12 -l12
+[1.196s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/micro_ros_ws/wall_e_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /micro_ros_ws/wall_e_ws/build/custom_interfaces
+[1.197s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/micro_ros_ws/wall_e_ws/build/wall_e_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /micro_ros_ws/wall_e_ws/build/wall_e_description -- -j12 -l12
+[1.206s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/micro_ros_ws/wall_e_ws/build/wall_e_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /micro_ros_ws/wall_e_ws/build/wall_e_description
+[1.352s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wall_e_description)
+[1.353s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/micro_ros_ws/wall_e_ws/build/wall_e_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /micro_ros_ws/wall_e_ws/build/wall_e_description
+[1.360s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/wall_e_description' for CMake module files
+[1.370s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/wall_e_description' for CMake config files
+[1.374s] Level 1:colcon.colcon_core.shell:create_environment_hook('wall_e_description', 'cmake_prefix_path')
+[1.375s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/hook/cmake_prefix_path.ps1'
+[1.376s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/hook/cmake_prefix_path.dsv'
+[1.378s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/hook/cmake_prefix_path.sh'
+[1.379s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/wall_e_description/bin'
+[1.380s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/wall_e_description/lib/pkgconfig/wall_e_description.pc'
+[1.381s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/wall_e_description/lib/python3.10/site-packages'
+[1.382s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/wall_e_description/bin'
+[1.382s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.ps1'
+[1.385s] INFO:colcon.colcon_core.shell:Creating package descriptor '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.dsv'
+[1.387s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.sh'
+[1.390s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.bash'
+[1.391s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.zsh'
+[1.393s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/micro_ros_ws/wall_e_ws/install/wall_e_description/share/colcon-core/packages/wall_e_description)
+[1.396s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wall_e_description)
+[1.396s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/wall_e_description' for CMake module files
+[1.400s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/wall_e_description' for CMake config files
+[1.402s] Level 1:colcon.colcon_core.shell:create_environment_hook('wall_e_description', 'cmake_prefix_path')
+[1.403s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/hook/cmake_prefix_path.ps1'
+[1.404s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/hook/cmake_prefix_path.dsv'
+[1.405s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/hook/cmake_prefix_path.sh'
+[1.406s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/wall_e_description/bin'
+[1.406s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/wall_e_description/lib/pkgconfig/wall_e_description.pc'
+[1.407s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/wall_e_description/lib/python3.10/site-packages'
+[1.408s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/wall_e_description/bin'
+[1.408s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.ps1'
+[1.410s] INFO:colcon.colcon_core.shell:Creating package descriptor '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.dsv'
+[1.411s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.sh'
+[1.412s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.bash'
+[1.413s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.zsh'
+[1.414s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/micro_ros_ws/wall_e_ws/install/wall_e_description/share/colcon-core/packages/wall_e_description)
+[1.634s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_interfaces)
+[1.635s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/custom_interfaces' for CMake module files
+[1.635s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/micro_ros_ws/wall_e_ws/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /micro_ros_ws/wall_e_ws/build/custom_interfaces
+[1.645s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/custom_interfaces' for CMake config files
+[1.653s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'cmake_prefix_path')
+[1.653s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.ps1'
+[1.655s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.dsv'
+[1.656s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.sh'
+[1.658s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib'
+[1.658s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'ld_library_path_lib')
+[1.659s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.ps1'
+[1.660s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.dsv'
+[1.661s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.sh'
+[1.662s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/custom_interfaces/bin'
+[1.662s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/pkgconfig/custom_interfaces.pc'
+[1.663s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/python3.10/site-packages'
+[1.663s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/custom_interfaces/bin'
+[1.664s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/package.ps1'
+[1.665s] INFO:colcon.colcon_core.shell:Creating package descriptor '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/package.dsv'
+[1.667s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/package.sh'
+[1.668s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/package.bash'
+[1.670s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/package.zsh'
+[1.670s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/colcon-core/packages/custom_interfaces)
+[1.673s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_interfaces)
+[1.673s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/custom_interfaces' for CMake module files
+[1.680s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/custom_interfaces' for CMake config files
+[1.688s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'cmake_prefix_path')
+[1.688s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.ps1'
+[1.689s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.dsv'
+[1.690s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.sh'
+[1.691s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib'
+[1.691s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'ld_library_path_lib')
+[1.692s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.ps1'
+[1.693s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.dsv'
+[1.693s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.sh'
+[1.694s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/custom_interfaces/bin'
+[1.694s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/pkgconfig/custom_interfaces.pc'
+[1.695s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/python3.10/site-packages'
+[1.695s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/custom_interfaces/bin'
+[1.696s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/package.ps1'
+[1.697s] INFO:colcon.colcon_core.shell:Creating package descriptor '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/package.dsv'
+[1.698s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/package.sh'
+[1.699s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/package.bash'
+[1.700s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/package.zsh'
+[1.701s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/micro_ros_ws/wall_e_ws/install/custom_interfaces/share/colcon-core/packages/custom_interfaces)
+[1.702s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/micro_ros_ws/wall_e_ws/src/control' with build type 'ament_python'
+[1.702s] Level 1:colcon.colcon_core.shell:create_environment_hook('control', 'ament_prefix_path')
+[1.702s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/control/share/control/hook/ament_prefix_path.ps1'
+[1.704s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/micro_ros_ws/wall_e_ws/install/control/share/control/hook/ament_prefix_path.dsv'
+[1.705s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/control/share/control/hook/ament_prefix_path.sh'
+[1.706s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.706s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.714s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/micro_ros_ws/wall_e_ws/src/localization': PYTHONPATH=/micro_ros_ws/wall_e_ws/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/localization build --build-base /micro_ros_ws/wall_e_ws/build/localization/build install --record /micro_ros_ws/wall_e_ws/build/localization/install.log --single-version-externally-managed install_data
+[1.718s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/micro_ros_ws/wall_e_ws/src/feedback': PYTHONPATH=/micro_ros_ws/wall_e_ws/build/feedback/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/feedback build --build-base /micro_ros_ws/wall_e_ws/build/feedback/build install --record /micro_ros_ws/wall_e_ws/build/feedback/install.log --single-version-externally-managed install_data
+[2.094s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/micro_ros_ws/wall_e_ws/src/control'
+[2.094s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.094s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.100s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/feedback' for CMake module files
+[2.100s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/micro_ros_ws/wall_e_ws/src/feedback' returned '0': PYTHONPATH=/micro_ros_ws/wall_e_ws/build/feedback/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/feedback build --build-base /micro_ros_ws/wall_e_ws/build/feedback/build install --record /micro_ros_ws/wall_e_ws/build/feedback/install.log --single-version-externally-managed install_data
+[2.103s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/feedback' for CMake config files
+[2.107s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/feedback/lib'
+[2.107s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/feedback/bin'
+[2.107s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/feedback/lib/pkgconfig/feedback.pc'
+[2.108s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages'
+[2.108s] Level 1:colcon.colcon_core.shell:create_environment_hook('feedback', 'pythonpath')
+[2.108s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/feedback/share/feedback/hook/pythonpath.ps1'
+[2.109s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/micro_ros_ws/wall_e_ws/install/feedback/share/feedback/hook/pythonpath.dsv'
+[2.110s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/feedback/share/feedback/hook/pythonpath.sh'
+[2.112s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/feedback/bin'
+[2.112s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(feedback)
+[2.112s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/feedback/share/feedback/package.ps1'
+[2.113s] INFO:colcon.colcon_core.shell:Creating package descriptor '/micro_ros_ws/wall_e_ws/install/feedback/share/feedback/package.dsv'
+[2.114s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/feedback/share/feedback/package.sh'
+[2.115s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/feedback/share/feedback/package.bash'
+[2.115s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/feedback/share/feedback/package.zsh'
+[2.116s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/micro_ros_ws/wall_e_ws/install/feedback/share/colcon-core/packages/feedback)
+[2.123s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/localization' for CMake module files
+[2.124s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/micro_ros_ws/wall_e_ws/src/localization' returned '0': PYTHONPATH=/micro_ros_ws/wall_e_ws/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/localization build --build-base /micro_ros_ws/wall_e_ws/build/localization/build install --record /micro_ros_ws/wall_e_ws/build/localization/install.log --single-version-externally-managed install_data
+[2.127s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/localization' for CMake config files
+[2.131s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/localization/lib'
+[2.132s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/localization/bin'
+[2.132s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/localization/lib/pkgconfig/localization.pc'
+[2.133s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages'
+[2.133s] Level 1:colcon.colcon_core.shell:create_environment_hook('localization', 'pythonpath')
+[2.133s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/localization/share/localization/hook/pythonpath.ps1'
+[2.135s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/micro_ros_ws/wall_e_ws/install/localization/share/localization/hook/pythonpath.dsv'
+[2.136s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/localization/share/localization/hook/pythonpath.sh'
+[2.137s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/localization/bin'
+[2.138s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(localization)
+[2.138s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/localization/share/localization/package.ps1'
+[2.140s] INFO:colcon.colcon_core.shell:Creating package descriptor '/micro_ros_ws/wall_e_ws/install/localization/share/localization/package.dsv'
+[2.141s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/localization/share/localization/package.sh'
+[2.142s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/localization/share/localization/package.bash'
+[2.143s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/localization/share/localization/package.zsh'
+[2.144s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/micro_ros_ws/wall_e_ws/install/localization/share/colcon-core/packages/localization)
+[2.473s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/micro_ros_ws/wall_e_ws/src/control': AMENT_PREFIX_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces LD_LIBRARY_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/micro_ros_ws/wall_e_ws/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages:/micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/control build --build-base /micro_ros_ws/wall_e_ws/build/control/build install --record /micro_ros_ws/wall_e_ws/build/control/install.log --single-version-externally-managed install_data
+[2.814s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/control' for CMake module files
+[2.814s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/micro_ros_ws/wall_e_ws/src/control' returned '0': AMENT_PREFIX_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces LD_LIBRARY_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/micro_ros_ws/wall_e_ws/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages:/micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/control build --build-base /micro_ros_ws/wall_e_ws/build/control/build install --record /micro_ros_ws/wall_e_ws/build/control/install.log --single-version-externally-managed install_data
+[2.816s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/control' for CMake config files
+[2.819s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/control/lib'
+[2.820s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/control/bin'
+[2.820s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/control/lib/pkgconfig/control.pc'
+[2.820s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages'
+[2.820s] Level 1:colcon.colcon_core.shell:create_environment_hook('control', 'pythonpath')
+[2.821s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/control/share/control/hook/pythonpath.ps1'
+[2.822s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/micro_ros_ws/wall_e_ws/install/control/share/control/hook/pythonpath.dsv'
+[2.823s] INFO:colcon.colcon_core.shell:Creating environment hook '/micro_ros_ws/wall_e_ws/install/control/share/control/hook/pythonpath.sh'
+[2.824s] Level 1:colcon.colcon_core.environment:checking '/micro_ros_ws/wall_e_ws/install/control/bin'
+[2.825s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(control)
+[2.825s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/control/share/control/package.ps1'
+[2.826s] INFO:colcon.colcon_core.shell:Creating package descriptor '/micro_ros_ws/wall_e_ws/install/control/share/control/package.dsv'
+[2.827s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/control/share/control/package.sh'
+[2.828s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/control/share/control/package.bash'
+[2.829s] INFO:colcon.colcon_core.shell:Creating package script '/micro_ros_ws/wall_e_ws/install/control/share/control/package.zsh'
+[2.831s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/micro_ros_ws/wall_e_ws/install/control/share/colcon-core/packages/control)
+[2.832s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.832s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.832s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.833s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.840s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[2.840s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.840s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.840s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.840s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.NotSupported: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[2.841s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.841s] INFO:colcon.colcon_core.shell:Creating prefix script '/micro_ros_ws/wall_e_ws/install/local_setup.ps1'
+[2.843s] INFO:colcon.colcon_core.shell:Creating prefix util module '/micro_ros_ws/wall_e_ws/install/_local_setup_util_ps1.py'
+[2.845s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/micro_ros_ws/wall_e_ws/install/setup.ps1'
+[2.847s] INFO:colcon.colcon_core.shell:Creating prefix script '/micro_ros_ws/wall_e_ws/install/local_setup.sh'
+[2.850s] INFO:colcon.colcon_core.shell:Creating prefix util module '/micro_ros_ws/wall_e_ws/install/_local_setup_util_sh.py'
+[2.851s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/micro_ros_ws/wall_e_ws/install/setup.sh'
+[2.853s] INFO:colcon.colcon_core.shell:Creating prefix script '/micro_ros_ws/wall_e_ws/install/local_setup.bash'
+[2.854s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/micro_ros_ws/wall_e_ws/install/setup.bash'
+[2.856s] INFO:colcon.colcon_core.shell:Creating prefix script '/micro_ros_ws/wall_e_ws/install/local_setup.zsh'
+[2.857s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/micro_ros_ws/wall_e_ws/install/setup.zsh'

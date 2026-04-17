@@ -61,6 +61,36 @@ source /opt/ros/humble/setup.bash
 source /micro_ros_ws/install/setup.bash
 ```
 
+## Launch the Integrated Host Stack
+
+From the workspace container, run:
+
+``` bash
+cd /micro_ros_ws
+source /opt/ros/humble/setup.bash
+source /micro_ros_ws/install/setup.bash
+ros2 launch wall_e_description wall_e.launch.py
+```
+
+Useful launch toggles:
+
+- RViz only (no Gazebo):
+
+``` bash
+ros2 launch wall_e_description wall_e.launch.py use_gazebo:=false use_rviz:=true
+```
+
+- Enable joint_state_publisher:
+
+``` bash
+ros2 launch wall_e_description wall_e.launch.py use_joint_state_publisher:=true
+```
+
+Notes:
+
+- Rear wheel transforms are now published in default launch mode even when `joint_state_publisher` is disabled.
+- Gazebo launch is optional and will be skipped if `gazebo_ros` is not installed.
+
 ## WiFi Provisioning
 
 On first boot, the controller creates an open access point named `ESP32-Setup`.
@@ -308,6 +338,9 @@ Defaults and behavior notes:
 - If motion feels jerky, lower the motor or servo rate limits in Kconfig.
 - If the servo does not move, confirm the PWM GPIO matches your wiring and the topic message is a single floating point angle.
 - If a motor spins the wrong way, swap the direction GPIO logic in hardware or adjust the motor wiring.
+- If launch fails with `file not found: [Errno 2] No such file or directory: 'xacro'`, install xacro in the running container or rebuild from the latest Dockerfile image.
+- If launch reports package missing for `rviz2` or `gazebo_ros`, rebuild containers so runtime ROS GUI/simulation dependencies are present.
+- If RViz RobotModel shows missing transform for `rear_left_wheel` or `rear_right_wheel`, restart launch from updated sources; rear wheel TF fallback is provided by launch when `use_joint_state_publisher:=false`.
 
 ### Interpreting Current Debug Logs
 

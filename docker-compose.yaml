@@ -2,6 +2,13 @@ services:
   workspace:
     build: .
     container_name: micro_ros_workspace
+    environment:
+      DISPLAY: ${DISPLAY}
+      WAYLAND_DISPLAY: ${WAYLAND_DISPLAY}
+      XDG_RUNTIME_DIR: ${XDG_RUNTIME_DIR}
+      QT_X11_NO_MITSHM: "1"
+      GDK_BACKEND: x11
+      SDL_VIDEODRIVER: x11
     volumes:
       - ./src:/micro_ros_ws/src
       - ./build:/micro_ros_ws/build
@@ -9,6 +16,7 @@ services:
       - ./docs:/micro_ros_ws/docs
       - ./firmware:/micro_ros_ws/firmware
       - ./wall_e_ws:/micro_ros_ws/wall_e_ws
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
     working_dir: /micro_ros_ws
     command: >
       bash -c "rosdep install --from-paths src --ignore-src -y 2>/dev/null || true 

@@ -1,0 +1,24 @@
+[0.673s] Invoking command in '/micro_ros_ws/wall_e_ws/src/feedback': PYTHONPATH=/micro_ros_ws/wall_e_ws/build/feedback/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/feedback build --build-base /micro_ros_ws/wall_e_ws/build/feedback/build install --record /micro_ros_ws/wall_e_ws/build/feedback/install.log --single-version-externally-managed install_data
+[0.808s] running egg_info
+[0.809s] writing ../../build/feedback/feedback.egg-info/PKG-INFO
+[0.809s] writing dependency_links to ../../build/feedback/feedback.egg-info/dependency_links.txt
+[0.809s] writing entry points to ../../build/feedback/feedback.egg-info/entry_points.txt
+[0.810s] writing requirements to ../../build/feedback/feedback.egg-info/requires.txt
+[0.810s] writing top-level names to ../../build/feedback/feedback.egg-info/top_level.txt
+[0.814s] reading manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'
+[0.817s] adding license file 'LICENSE'
+[0.819s] writing manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'
+[0.819s] running build
+[0.820s] running build_py
+[0.822s] running install
+[0.822s] running install_lib
+[0.828s] running install_data
+[0.829s] running install_egg_info
+[0.832s] removing '/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback-0.0.0-py3.10.egg-info' (and everything under it)
+[0.833s] Copying ../../build/feedback/feedback.egg-info to /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback-0.0.0-py3.10.egg-info
+[0.840s] running install_scripts
+[0.863s] Installing imu_filter_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback
+[0.864s] Installing range_filter_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback
+[0.864s] Installing sensor_fusion_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback
+[0.865s] writing list of installed files to '/micro_ros_ws/wall_e_ws/build/feedback/install.log'
+[0.887s] Invoked command in '/micro_ros_ws/wall_e_ws/src/feedback' returned '0': PYTHONPATH=/micro_ros_ws/wall_e_ws/build/feedback/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/feedback build --build-base /micro_ros_ws/wall_e_ws/build/feedback/build install --record /micro_ros_ws/wall_e_ws/build/feedback/install.log --single-version-externally-managed install_data

@@ -1,0 +1,28 @@
+[0.443s] Invoking command in '/micro_ros_ws/wall_e_ws/build/wall_e_description': /usr/bin/cmake --build /micro_ros_ws/wall_e_ws/build/wall_e_description -- -j12 -l12
+[0.489s] Invoked command in '/micro_ros_ws/wall_e_ws/build/wall_e_description' returned '0': /usr/bin/cmake --build /micro_ros_ws/wall_e_ws/build/wall_e_description -- -j12 -l12
+[0.492s] Invoking command in '/micro_ros_ws/wall_e_ws/build/wall_e_description': /usr/bin/cmake --install /micro_ros_ws/wall_e_ws/build/wall_e_description
+[0.499s] -- Install configuration: ""
+[0.499s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/launch
+[0.500s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/launch/wall_e.launch.py
+[0.501s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/rviz
+[0.502s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/rviz/robot.rviz
+[0.503s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/worlds
+[0.504s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/worlds/indoor_room.world
+[0.505s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/description
+[0.506s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/description/robot.urdf.xacro
+[0.508s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/ament_index/resource_index/package_run_dependencies/wall_e_description
+[0.511s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/ament_index/resource_index/parent_prefix_path/wall_e_description
+[0.511s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/ament_prefix_path.sh
+[0.513s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/ament_prefix_path.dsv
+[0.514s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/path.sh
+[0.515s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/path.dsv
+[0.517s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.bash
+[0.518s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.sh
+[0.519s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.zsh
+[0.520s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.dsv
+[0.522s] -- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.dsv
+[0.528s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/ament_index/resource_index/packages/wall_e_description
+[0.529s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/cmake/wall_e_descriptionConfig.cmake
+[0.530s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/cmake/wall_e_descriptionConfig-version.cmake
+[0.531s] -- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.xml
+[0.534s] Invoked command in '/micro_ros_ws/wall_e_ws/build/wall_e_description' returned '0': /usr/bin/cmake --install /micro_ros_ws/wall_e_ws/build/wall_e_description

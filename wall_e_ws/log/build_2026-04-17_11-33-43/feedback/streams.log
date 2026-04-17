@@ -1,0 +1,33 @@
+[1.013s] Invoking command in '/micro_ros_ws/wall_e_ws/src/feedback': PYTHONPATH=/micro_ros_ws/wall_e_ws/build/feedback/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/feedback build --build-base /micro_ros_ws/wall_e_ws/build/feedback/build install --record /micro_ros_ws/wall_e_ws/build/feedback/install.log --single-version-externally-managed install_data
+[1.228s] running egg_info
+[1.229s] writing ../../build/feedback/feedback.egg-info/PKG-INFO
+[1.230s] writing dependency_links to ../../build/feedback/feedback.egg-info/dependency_links.txt
+[1.231s] writing entry points to ../../build/feedback/feedback.egg-info/entry_points.txt
+[1.231s] writing requirements to ../../build/feedback/feedback.egg-info/requires.txt
+[1.232s] writing top-level names to ../../build/feedback/feedback.egg-info/top_level.txt
+[1.236s] reading manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'
+[1.240s] adding license file 'LICENSE'
+[1.242s] writing manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'
+[1.242s] running build
+[1.242s] running build_py
+[1.243s] copying feedback/imu_filter.py -> /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback
+[1.244s] copying feedback/range_filter.py -> /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback
+[1.245s] copying feedback/sensor_fusion.py -> /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback
+[1.247s] running install
+[1.247s] running install_lib
+[1.249s] copying /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback/imu_filter.py -> /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback
+[1.251s] copying /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback/range_filter.py -> /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback
+[1.252s] copying /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback/sensor_fusion.py -> /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback
+[1.255s] byte-compiling /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback/imu_filter.py to imu_filter.cpython-310.pyc
+[1.259s] byte-compiling /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback/range_filter.py to range_filter.cpython-310.pyc
+[1.262s] byte-compiling /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback/sensor_fusion.py to sensor_fusion.cpython-310.pyc
+[1.265s] running install_data
+[1.266s] running install_egg_info
+[1.270s] removing '/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback-0.0.0-py3.10.egg-info' (and everything under it)
+[1.272s] Copying ../../build/feedback/feedback.egg-info to /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback-0.0.0-py3.10.egg-info
+[1.277s] running install_scripts
+[1.299s] Installing imu_filter_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback
+[1.299s] Installing range_filter_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback
+[1.300s] Installing sensor_fusion_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback
+[1.301s] writing list of installed files to '/micro_ros_ws/wall_e_ws/build/feedback/install.log'
+[1.344s] Invoked command in '/micro_ros_ws/wall_e_ws/src/feedback' returned '0': PYTHONPATH=/micro_ros_ws/wall_e_ws/build/feedback/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/feedback build --build-base /micro_ros_ws/wall_e_ws/build/feedback/build install --record /micro_ros_ws/wall_e_ws/build/feedback/install.log --single-version-externally-managed install_data

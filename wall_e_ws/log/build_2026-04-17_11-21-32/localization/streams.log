@@ -1,0 +1,23 @@
+[1.140s] Invoking command in '/micro_ros_ws/wall_e_ws/src/localization': PYTHONPATH=/micro_ros_ws/wall_e_ws/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/localization build --build-base /micro_ros_ws/wall_e_ws/build/localization/build install --record /micro_ros_ws/wall_e_ws/build/localization/install.log --single-version-externally-managed install_data
+[1.373s] running egg_info
+[1.374s] writing ../../build/localization/localization.egg-info/PKG-INFO
+[1.374s] writing dependency_links to ../../build/localization/localization.egg-info/dependency_links.txt
+[1.375s] writing entry points to ../../build/localization/localization.egg-info/entry_points.txt
+[1.375s] writing requirements to ../../build/localization/localization.egg-info/requires.txt
+[1.376s] writing top-level names to ../../build/localization/localization.egg-info/top_level.txt
+[1.381s] reading manifest file '../../build/localization/localization.egg-info/SOURCES.txt'
+[1.385s] adding license file 'LICENSE'
+[1.388s] writing manifest file '../../build/localization/localization.egg-info/SOURCES.txt'
+[1.388s] running build
+[1.389s] running build_py
+[1.391s] running install
+[1.392s] running install_lib
+[1.399s] running install_data
+[1.401s] running install_egg_info
+[1.404s] removing '/micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization-0.0.0-py3.10.egg-info' (and everything under it)
+[1.406s] Copying ../../build/localization/localization.egg-info to /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization-0.0.0-py3.10.egg-info
+[1.413s] running install_scripts
+[1.439s] Installing inverse_kinematic_node script to /micro_ros_ws/wall_e_ws/install/localization/lib/localization
+[1.440s] Installing odometry_node script to /micro_ros_ws/wall_e_ws/install/localization/lib/localization
+[1.441s] writing list of installed files to '/micro_ros_ws/wall_e_ws/build/localization/install.log'
+[1.468s] Invoked command in '/micro_ros_ws/wall_e_ws/src/localization' returned '0': PYTHONPATH=/micro_ros_ws/wall_e_ws/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/localization build --build-base /micro_ros_ws/wall_e_ws/build/localization/build install --record /micro_ros_ws/wall_e_ws/build/localization/install.log --single-version-externally-managed install_data

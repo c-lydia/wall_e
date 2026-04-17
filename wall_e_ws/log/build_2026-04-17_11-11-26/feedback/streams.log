@@ -1,0 +1,46 @@
+[0.851s] Invoking command in '/micro_ros_ws/wall_e_ws/src/feedback': PYTHONPATH=/micro_ros_ws/wall_e_ws/build/feedback/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/feedback build --build-base /micro_ros_ws/wall_e_ws/build/feedback/build install --record /micro_ros_ws/wall_e_ws/build/feedback/install.log --single-version-externally-managed install_data
+[1.185s] running egg_info
+[1.186s] creating ../../build/feedback/feedback.egg-info
+[1.187s] writing ../../build/feedback/feedback.egg-info/PKG-INFO
+[1.188s] writing dependency_links to ../../build/feedback/feedback.egg-info/dependency_links.txt
+[1.189s] writing entry points to ../../build/feedback/feedback.egg-info/entry_points.txt
+[1.190s] writing requirements to ../../build/feedback/feedback.egg-info/requires.txt
+[1.190s] writing top-level names to ../../build/feedback/feedback.egg-info/top_level.txt
+[1.191s] writing manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'
+[1.196s] reading manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'
+[1.198s] adding license file 'LICENSE'
+[1.201s] writing manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'
+[1.201s] running build
+[1.202s] running build_py
+[1.202s] creating /micro_ros_ws/wall_e_ws/build/feedback/build
+[1.203s] creating /micro_ros_ws/wall_e_ws/build/feedback/build/lib
+[1.203s] creating /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback
+[1.203s] copying feedback/imu_filter.py -> /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback
+[1.205s] copying feedback/range_filter.py -> /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback
+[1.207s] copying feedback/sensor_fusion.py -> /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback
+[1.208s] copying feedback/__init__.py -> /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback
+[1.209s] running install
+[1.210s] running install_lib
+[1.212s] creating /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback
+[1.213s] copying /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback/imu_filter.py -> /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback
+[1.216s] copying /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback/range_filter.py -> /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback
+[1.221s] copying /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback/sensor_fusion.py -> /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback
+[1.222s] copying /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback/__init__.py -> /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback
+[1.223s] byte-compiling /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback/imu_filter.py to imu_filter.cpython-310.pyc
+[1.227s] byte-compiling /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback/range_filter.py to range_filter.cpython-310.pyc
+[1.231s] byte-compiling /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback/sensor_fusion.py to sensor_fusion.cpython-310.pyc
+[1.236s] byte-compiling /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback/__init__.py to __init__.cpython-310.pyc
+[1.238s] running install_data
+[1.239s] creating /micro_ros_ws/wall_e_ws/install/feedback/share/ament_index
+[1.239s] creating /micro_ros_ws/wall_e_ws/install/feedback/share/ament_index/resource_index
+[1.240s] creating /micro_ros_ws/wall_e_ws/install/feedback/share/ament_index/resource_index/packages
+[1.240s] copying resource/feedback -> /micro_ros_ws/wall_e_ws/install/feedback/share/ament_index/resource_index/packages
+[1.242s] copying package.xml -> /micro_ros_ws/wall_e_ws/install/feedback/share/feedback
+[1.243s] running install_egg_info
+[1.248s] Copying ../../build/feedback/feedback.egg-info to /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback-0.0.0-py3.10.egg-info
+[1.263s] running install_scripts
+[1.295s] Installing imu_filter_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback
+[1.295s] Installing range_filter_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback
+[1.296s] Installing sensor_fusion_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback
+[1.297s] writing list of installed files to '/micro_ros_ws/wall_e_ws/build/feedback/install.log'
+[1.329s] Invoked command in '/micro_ros_ws/wall_e_ws/src/feedback' returned '0': PYTHONPATH=/micro_ros_ws/wall_e_ws/build/feedback/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/feedback build --build-base /micro_ros_ws/wall_e_ws/build/feedback/build install --record /micro_ros_ws/wall_e_ws/build/feedback/install.log --single-version-externally-managed install_data

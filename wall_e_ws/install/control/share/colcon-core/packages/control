@@ -1,1 +1,1 @@
-custom_interfaces:geometry_msgs:nav_msgs:python3-evdev:rclpy:sensor_msgs
+custom_interfaces:geometry_msgs:nav_msgs:python3-evdev:rclpy:sensor_msgs:std_msgs

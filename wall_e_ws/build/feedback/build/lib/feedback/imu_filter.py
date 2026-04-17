@@ -223,7 +223,8 @@ def main():
         rclpy.spin(imu_filter)
     finally:
         imu_filter.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

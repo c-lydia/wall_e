@@ -11,7 +11,6 @@ Prerequisites
 -------------
 
 - Docker and Docker Compose
-- ESP-IDF v5.0+ (for ESP32 firmware)
 - Git
 
 Initial Setup
@@ -28,24 +27,38 @@ Initial Setup
 
 .. code-block:: bash
 
-   docker compose up
+   docker compose up -d
 
-3. Build your ROS 2 packages:
+3. Enter the workspace container and build host packages:
 
 .. code-block:: bash
 
-   # In the workspace container
+   docker compose exec workspace bash
+   cd /micro_ros_ws
+   source /opt/ros/humble/setup.bash
    colcon build
+   source /micro_ros_ws/install/setup.bash
+
+4. Launch the integrated stack:
+
+.. code-block:: bash
+
+   ros2 launch wall_e_description wall_e.launch.py
+
+If GUI authorization fails on the host (X11), run on host before launching GUI apps:
+
+.. code-block:: bash
+
+   xhost +si:localuser:root
 
 Building the ESP32 Firmware
 ==============================
 
 .. code-block:: bash
 
-   cd firmware/dev_ws
-   idf.py build
-   idf.py flash
-   idf.py monitor
+   ros2 run micro_ros_setup configure_firmware.sh esp32_controller -t udp -i 192.168.1.2 -p 8888
+   ros2 run micro_ros_setup build_firmware.sh
+   ros2 run micro_ros_setup flash_firmware.sh
 
 Next Steps
 ==========

@@ -1,0 +1,150 @@
+[0.000000] (-) TimerEvent: {}
+[0.000364] (-) JobUnselected: {'identifier': 'custom_interfaces'}
+[0.000489] (feedback) JobQueued: {'identifier': 'feedback', 'dependencies': OrderedDict()}
+[0.000554] (localization) JobQueued: {'identifier': 'localization', 'dependencies': OrderedDict()}
+[0.000605] (wall_e_description) JobQueued: {'identifier': 'wall_e_description', 'dependencies': OrderedDict()}
+[0.000654] (control) JobQueued: {'identifier': 'control', 'dependencies': OrderedDict([('custom_interfaces', '/micro_ros_ws/wall_e_ws/install/custom_interfaces')])}
+[0.000760] (feedback) JobStarted: {'identifier': 'feedback'}
+[0.008229] (localization) JobStarted: {'identifier': 'localization'}
+[0.016003] (wall_e_description) JobStarted: {'identifier': 'wall_e_description'}
+[0.019994] (control) JobStarted: {'identifier': 'control'}
+[0.099432] (-) TimerEvent: {}
+[0.199844] (-) TimerEvent: {}
+[0.300186] (-) TimerEvent: {}
+[0.375667] (wall_e_description) JobProgress: {'identifier': 'wall_e_description', 'progress': 'cmake'}
+[0.376921] (wall_e_description) JobProgress: {'identifier': 'wall_e_description', 'progress': 'build'}
+[0.377779] (wall_e_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/micro_ros_ws/wall_e_ws/build/wall_e_description', '--', '-j12', '-l12'], 'cwd': '/micro_ros_ws/wall_e_ws/build/wall_e_description', 'env': OrderedDict([('HOSTNAME', '1f39bf4e130b'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/micro_ros_ws'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/micro_ros_ws/wall_e_ws/build/wall_e_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.400289] (-) TimerEvent: {}
+[0.500655] (-) TimerEvent: {}
+[0.601841] (wall_e_description) CommandEnded: {'returncode': 0}
+[0.603474] (-) TimerEvent: {}
+[0.607826] (wall_e_description) JobProgress: {'identifier': 'wall_e_description', 'progress': 'install'}
+[0.620940] (wall_e_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/micro_ros_ws/wall_e_ws/build/wall_e_description'], 'cwd': '/micro_ros_ws/wall_e_ws/build/wall_e_description', 'env': OrderedDict([('HOSTNAME', '1f39bf4e130b'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/micro_ros_ws'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/micro_ros_ws/wall_e_ws/build/wall_e_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.636714] (wall_e_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.639923] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/launch\n'}
+[0.641789] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/launch/wall_e.launch.py\n'}
+[0.648450] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/rviz\n'}
+[0.650753] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/rviz/robot.rviz\n'}
+[0.658749] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/worlds\n'}
+[0.665359] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/worlds/indoor_room.world\n'}
+[0.666021] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/description\n'}
+[0.668314] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/description/robot.urdf.xacro\n'}
+[0.671299] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/ament_index/resource_index/package_run_dependencies/wall_e_description\n'}
+[0.672613] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/ament_index/resource_index/parent_prefix_path/wall_e_description\n'}
+[0.674889] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/ament_prefix_path.sh\n'}
+[0.675320] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/ament_prefix_path.dsv\n'}
+[0.675598] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/path.sh\n'}
+[0.676049] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/path.dsv\n'}
+[0.677119] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.bash\n'}
+[0.678209] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.sh\n'}
+[0.681126] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.zsh\n'}
+[0.682628] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.dsv\n'}
+[0.683818] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.dsv\n'}
+[0.686540] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/ament_index/resource_index/packages/wall_e_description\n'}
+[0.690233] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/cmake/wall_e_descriptionConfig.cmake\n'}
+[0.692113] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/cmake/wall_e_descriptionConfig-version.cmake\n'}
+[0.694675] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.xml\n'}
+[0.699542] (wall_e_description) CommandEnded: {'returncode': 0}
+[0.704182] (-) TimerEvent: {}
+[0.749758] (wall_e_description) JobEnded: {'identifier': 'wall_e_description', 'rc': 0}
+[0.804316] (-) TimerEvent: {}
+[0.904785] (-) TimerEvent: {}
+[0.998779] (localization) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/localization', 'build', '--build-base', '/micro_ros_ws/wall_e_ws/build/localization/build', 'install', '--record', '/micro_ros_ws/wall_e_ws/build/localization/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/micro_ros_ws/wall_e_ws/src/localization', 'env': {'HOSTNAME': '1f39bf4e130b', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/micro_ros_ws', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'PWD': '/micro_ros_ws/wall_e_ws/build/localization', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/micro_ros_ws/wall_e_ws/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[1.004885] (-) TimerEvent: {}
+[1.011501] (feedback) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/feedback', 'build', '--build-base', '/micro_ros_ws/wall_e_ws/build/feedback/build', 'install', '--record', '/micro_ros_ws/wall_e_ws/build/feedback/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/micro_ros_ws/wall_e_ws/src/feedback', 'env': {'HOSTNAME': '1f39bf4e130b', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/micro_ros_ws', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'PWD': '/micro_ros_ws/wall_e_ws/build/feedback', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/micro_ros_ws/wall_e_ws/build/feedback/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[1.049244] (control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/control', 'build', '--build-base', '/micro_ros_ws/wall_e_ws/build/control/build', 'install', '--record', '/micro_ros_ws/wall_e_ws/build/control/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/micro_ros_ws/wall_e_ws/src/control', 'env': {'HOSTNAME': '1f39bf4e130b', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/micro_ros_ws', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/micro_ros_ws/wall_e_ws/install/custom_interfaces:/opt/ros/humble', 'PWD': '/micro_ros_ws/wall_e_ws/build/control', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/micro_ros_ws/wall_e_ws/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages:/micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/micro_ros_ws/wall_e_ws/install/custom_interfaces'}, 'shell': False}
+[1.104982] (-) TimerEvent: {}
+[1.205392] (-) TimerEvent: {}
+[1.227839] (localization) StdoutLine: {'line': b'running egg_info\n'}
+[1.228581] (localization) StdoutLine: {'line': b'writing ../../build/localization/localization.egg-info/PKG-INFO\n'}
+[1.228957] (feedback) StdoutLine: {'line': b'running egg_info\n'}
+[1.229227] (localization) StdoutLine: {'line': b'writing dependency_links to ../../build/localization/localization.egg-info/dependency_links.txt\n'}
+[1.229698] (localization) StdoutLine: {'line': b'writing entry points to ../../build/localization/localization.egg-info/entry_points.txt\n'}
+[1.230039] (feedback) StdoutLine: {'line': b'writing ../../build/feedback/feedback.egg-info/PKG-INFO\n'}
+[1.230357] (localization) StdoutLine: {'line': b'writing requirements to ../../build/localization/localization.egg-info/requires.txt\n'}
+[1.230767] (localization) StdoutLine: {'line': b'writing top-level names to ../../build/localization/localization.egg-info/top_level.txt\n'}
+[1.231071] (feedback) StdoutLine: {'line': b'writing dependency_links to ../../build/feedback/feedback.egg-info/dependency_links.txt\n'}
+[1.231548] (feedback) StdoutLine: {'line': b'writing entry points to ../../build/feedback/feedback.egg-info/entry_points.txt\n'}
+[1.232019] (feedback) StdoutLine: {'line': b'writing requirements to ../../build/feedback/feedback.egg-info/requires.txt\n'}
+[1.232349] (feedback) StdoutLine: {'line': b'writing top-level names to ../../build/feedback/feedback.egg-info/top_level.txt\n'}
+[1.235097] (localization) StdoutLine: {'line': b"reading manifest file '../../build/localization/localization.egg-info/SOURCES.txt'\n"}
+[1.236742] (feedback) StdoutLine: {'line': b"reading manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'\n"}
+[1.238057] (localization) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[1.239473] (localization) StdoutLine: {'line': b"writing manifest file '../../build/localization/localization.egg-info/SOURCES.txt'\n"}
+[1.239782] (localization) StdoutLine: {'line': b'running build\n'}
+[1.239969] (localization) StdoutLine: {'line': b'running build_py\n'}
+[1.240179] (feedback) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[1.240449] (localization) StdoutLine: {'line': b'copying localization/inverse_kinematic.py -> /micro_ros_ws/wall_e_ws/build/localization/build/lib/localization\n'}
+[1.241459] (localization) StdoutLine: {'line': b'copying localization/odometry.py -> /micro_ros_ws/wall_e_ws/build/localization/build/lib/localization\n'}
+[1.242279] (feedback) StdoutLine: {'line': b"writing manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'\n"}
+[1.242607] (feedback) StdoutLine: {'line': b'running build\n'}
+[1.242890] (feedback) StdoutLine: {'line': b'running build_py\n'}
+[1.243103] (localization) StdoutLine: {'line': b'running install\n'}
+[1.243344] (feedback) StdoutLine: {'line': b'copying feedback/imu_filter.py -> /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback\n'}
+[1.243601] (localization) StdoutLine: {'line': b'running install_lib\n'}
+[1.244477] (feedback) StdoutLine: {'line': b'copying feedback/range_filter.py -> /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback\n'}
+[1.245679] (feedback) StdoutLine: {'line': b'copying feedback/sensor_fusion.py -> /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback\n'}
+[1.245989] (localization) StdoutLine: {'line': b'copying /micro_ros_ws/wall_e_ws/build/localization/build/lib/localization/inverse_kinematic.py -> /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization\n'}
+[1.247156] (feedback) StdoutLine: {'line': b'running install\n'}
+[1.247462] (localization) StdoutLine: {'line': b'copying /micro_ros_ws/wall_e_ws/build/localization/build/lib/localization/odometry.py -> /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization\n'}
+[1.247761] (feedback) StdoutLine: {'line': b'running install_lib\n'}
+[1.249769] (localization) StdoutLine: {'line': b'byte-compiling /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization/inverse_kinematic.py to inverse_kinematic.cpython-310.pyc\n'}
+[1.250030] (feedback) StdoutLine: {'line': b'copying /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback/imu_filter.py -> /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback\n'}
+[1.251191] (feedback) StdoutLine: {'line': b'copying /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback/range_filter.py -> /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback\n'}
+[1.252658] (localization) StdoutLine: {'line': b'byte-compiling /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization/odometry.py to odometry.cpython-310.pyc\n'}
+[1.252949] (feedback) StdoutLine: {'line': b'copying /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback/sensor_fusion.py -> /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback\n'}
+[1.255445] (feedback) StdoutLine: {'line': b'byte-compiling /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback/imu_filter.py to imu_filter.cpython-310.pyc\n'}
+[1.256407] (localization) StdoutLine: {'line': b'running install_data\n'}
+[1.257426] (localization) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.259428] (feedback) StdoutLine: {'line': b'byte-compiling /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback/range_filter.py to range_filter.cpython-310.pyc\n'}
+[1.261882] (localization) StdoutLine: {'line': b"removing '/micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.262550] (feedback) StdoutLine: {'line': b'byte-compiling /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback/sensor_fusion.py to sensor_fusion.cpython-310.pyc\n'}
+[1.264030] (localization) StdoutLine: {'line': b'Copying ../../build/localization/localization.egg-info to /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization-0.0.0-py3.10.egg-info\n'}
+[1.265697] (feedback) StdoutLine: {'line': b'running install_data\n'}
+[1.266862] (feedback) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.270468] (feedback) StdoutLine: {'line': b"removing '/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.272175] (feedback) StdoutLine: {'line': b'Copying ../../build/feedback/feedback.egg-info to /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback-0.0.0-py3.10.egg-info\n'}
+[1.273568] (localization) StdoutLine: {'line': b'running install_scripts\n'}
+[1.277995] (feedback) StdoutLine: {'line': b'running install_scripts\n'}
+[1.290515] (control) StdoutLine: {'line': b'running egg_info\n'}
+[1.291341] (control) StdoutLine: {'line': b'writing ../../build/control/control.egg-info/PKG-INFO\n'}
+[1.291803] (control) StdoutLine: {'line': b'writing dependency_links to ../../build/control/control.egg-info/dependency_links.txt\n'}
+[1.292168] (control) StdoutLine: {'line': b'writing entry points to ../../build/control/control.egg-info/entry_points.txt\n'}
+[1.292510] (control) StdoutLine: {'line': b'writing requirements to ../../build/control/control.egg-info/requires.txt\n'}
+[1.292754] (control) StdoutLine: {'line': b'writing top-level names to ../../build/control/control.egg-info/top_level.txt\n'}
+[1.297258] (control) StdoutLine: {'line': b"reading manifest file '../../build/control/control.egg-info/SOURCES.txt'\n"}
+[1.299120] (control) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[1.299425] (localization) StdoutLine: {'line': b'Installing inverse_kinematic_node script to /micro_ros_ws/wall_e_ws/install/localization/lib/localization\n'}
+[1.299677] (feedback) StdoutLine: {'line': b'Installing imu_filter_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback\n'}
+[1.299906] (localization) StdoutLine: {'line': b'Installing odometry_node script to /micro_ros_ws/wall_e_ws/install/localization/lib/localization\n'}
+[1.300096] (feedback) StdoutLine: {'line': b'Installing range_filter_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback\n'}
+[1.300418] (feedback) StdoutLine: {'line': b'Installing sensor_fusion_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback\n'}
+[1.300846] (control) StdoutLine: {'line': b"writing manifest file '../../build/control/control.egg-info/SOURCES.txt'\n"}
+[1.301107] (localization) StdoutLine: {'line': b"writing list of installed files to '/micro_ros_ws/wall_e_ws/build/localization/install.log'\n"}
+[1.301302] (control) StdoutLine: {'line': b'running build\n'}
+[1.301463] (control) StdoutLine: {'line': b'running build_py\n'}
+[1.301608] (feedback) StdoutLine: {'line': b"writing list of installed files to '/micro_ros_ws/wall_e_ws/build/feedback/install.log'\n"}
+[1.301771] (control) StdoutLine: {'line': b'copying control/gamepad.py -> /micro_ros_ws/wall_e_ws/build/control/build/lib/control\n'}
+[1.302512] (control) StdoutLine: {'line': b'copying control/robot_control.py -> /micro_ros_ws/wall_e_ws/build/control/build/lib/control\n'}
+[1.303616] (control) StdoutLine: {'line': b'running install\n'}
+[1.304017] (control) StdoutLine: {'line': b'running install_lib\n'}
+[1.305459] (-) TimerEvent: {}
+[1.305823] (control) StdoutLine: {'line': b'copying /micro_ros_ws/wall_e_ws/build/control/build/lib/control/gamepad.py -> /micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control\n'}
+[1.307176] (control) StdoutLine: {'line': b'copying /micro_ros_ws/wall_e_ws/build/control/build/lib/control/robot_control.py -> /micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control\n'}
+[1.309795] (control) StdoutLine: {'line': b'byte-compiling /micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control/gamepad.py to gamepad.cpython-310.pyc\n'}
+[1.314180] (control) StdoutLine: {'line': b'byte-compiling /micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control/robot_control.py to robot_control.cpython-310.pyc\n'}
+[1.319050] (control) StdoutLine: {'line': b'running install_data\n'}
+[1.320090] (control) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.322536] (control) StdoutLine: {'line': b"removing '/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.324405] (control) StdoutLine: {'line': b'Copying ../../build/control/control.egg-info to /micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info\n'}
+[1.326611] (localization) CommandEnded: {'returncode': 0}
+[1.334320] (control) StdoutLine: {'line': b'running install_scripts\n'}
+[1.342476] (localization) JobEnded: {'identifier': 'localization', 'rc': 0}
+[1.344120] (feedback) CommandEnded: {'returncode': 0}
+[1.357863] (feedback) JobEnded: {'identifier': 'feedback', 'rc': 0}
+[1.358696] (control) StdoutLine: {'line': b'Installing gamepad_node script to /micro_ros_ws/wall_e_ws/install/control/lib/control\n'}
+[1.359024] (control) StdoutLine: {'line': b'Installing robot_control_node script to /micro_ros_ws/wall_e_ws/install/control/lib/control\n'}
+[1.359547] (control) StdoutLine: {'line': b"writing list of installed files to '/micro_ros_ws/wall_e_ws/build/control/install.log'\n"}
+[1.380065] (control) CommandEnded: {'returncode': 0}
+[1.390338] (control) JobEnded: {'identifier': 'control', 'rc': 0}
+[1.391201] (-) EventReactorShutdown: {}

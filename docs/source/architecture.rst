@@ -72,3 +72,12 @@ Primary Topic Paths
 - ``/gamepad`` -> ``/servo_cmd``
 - ``/cmd_vel`` + sensors -> ``/odom``
 - ``/cmd_vel`` -> ``/motor_cmd``
+
+Visualization and TF Notes
+==========================
+
+- Wheel links are part of robot description as continuous joints.
+- In default minimal launch mode, rear wheel transforms are provided by static TF fallback.
+- When ``joint_state_publisher`` is enabled, fallback static rear-wheel publishers are disabled.
+
+This preserves a complete RViz RobotModel tree while preventing duplicate transform sources.

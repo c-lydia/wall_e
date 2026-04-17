@@ -36,24 +36,41 @@ From the repository root:
 docker compose up -d
 ```
 
-1. Enter workspace container
+2. Enter workspace container
 
 ``` bash
 docker exec -it micro_ros_workspace bash
 ```
 
-1. Build host ROS 2 workspace (if needed)
+3. Build host ROS 2 workspace (if needed)
 
 ``` bash
 cd /micro_ros_ws
 colcon build
 ```
 
-1. Source the environment
+4. Source the environment
 
 ``` bash
 source /opt/ros/humble/setup.bash
 source /micro_ros_ws/install/setup.bash
+```
+
+If you launch RViz or Gazebo GUI from the container and see `Authorization required, but no authorization protocol specified`, run `xhost +si:localuser:root` on the host before starting the container. This workspace uses X11 forwarding, and the container runs as root by default.
+
+## Launch and Visualization Updates (2026-04-17)
+
+- `wall_e.launch.py` now generates `robot_description` using the Python xacro API (`xacro.process_file(...).toxml()`) instead of shelling out to the `xacro` executable.
+- `gazebo_ros` remains optional at launch time. If unavailable, launch continues with a clear log message.
+- Rear wheel TF visibility in RViz is now guaranteed even when `joint_state_publisher` is disabled:
+  - rear wheel static TF publishers are started by default
+  - they are automatically disabled when `use_joint_state_publisher:=true`
+- Fresh containers should include runtime ROS GUI/model dependencies from `Dockerfile` (`ros-humble-xacro`, `ros-humble-rviz2`, `ros-humble-gazebo-ros-pkgs`, `ros-humble-joint-state-publisher`).
+
+If your currently running container was created before these package updates, rebuild it:
+
+``` bash
+docker compose up --build -d
 ```
 
 ## Build ESP32 Firmware
@@ -66,13 +83,13 @@ Inside the workspace container:
 ros2 run micro_ros_setup configure_firmware.sh esp32_controller -t udp -i 192.168.1.2 -p 8888
 ```
 
-1. Build firmware
+2. Build firmware
 
 ``` bash
 ros2 run micro_ros_setup build_firmware.sh
 ```
 
-1. Firmware output files
+3. Firmware output files
 
 ``` bash
 firmware/freertos_apps/microros_esp32_extensions/build/esp32_controller.bin
@@ -121,15 +138,15 @@ firmware = "firmware/freertos_apps/microros_esp32_extensions/build/esp32_control
 elf = "firmware/freertos_apps/microros_esp32_extensions/build/esp32_controller.elf"
 ```
 
-1. Build firmware before starting simulator:
+2. Build firmware before starting simulator:
 
 ``` bash
 docker exec micro_ros_workspace bash -lc "cd /micro_ros_ws/firmware/freertos_apps/microros_esp32_extensions && source /micro_ros_ws/firmware/toolchain/esp-idf/export.sh && idf.py build"
 ```
 
-1. Start Wokwi from VS Code command palette: `Wokwi: Start Simulator`.
+3. Start Wokwi from VS Code command palette: `Wokwi: Start Simulator`.
 
-1. Read logs in VS Code `Output` panel, `Wokwi` channel (or `Wokwi Terminal`, depending on extension version).
+4. Read logs in VS Code `Output` panel, `Wokwi` channel (or `Wokwi Terminal`, depending on extension version).
 
 If logs still do not appear, stop simulation, reload VS Code window, and start simulator again.
 
@@ -283,6 +300,24 @@ docker compose down
 source /opt/ros/humble/setup.bash
 source /micro_ros_ws/install/setup.bash
 ```
+
+- Launch error: `file not found: [Errno 2] No such file or directory: 'xacro'`
+  Install xacro in the running container (or rebuild image after pulling latest Dockerfile updates):
+
+``` bash
+apt-get update && apt-get install -y ros-humble-xacro
+```
+
+- Launch/CLI says `Package not found` for `rviz2` or `gazebo_ros`
+  Your container is missing GUI/simulation runtime packages. Rebuild with the updated image:
+
+``` bash
+docker compose up --build -d
+```
+
+- RViz RobotModel shows `No transform from rear_left_wheel` or `rear_right_wheel`
+  This is now handled in the launch file by publishing rear-wheel static transforms when `joint_state_publisher` is off.
+  If you still see it, restart launch and verify you are using the updated `wall_e.launch.py`.
 
 - Docker compose fails on `/dev/ttyUSB0`
   Your host may expose a different serial device. Adjust `docker-compose.yaml` accordingly.

@@ -1,0 +1,24 @@
+[1.313s] Invoking command in '/micro_ros_ws/wall_e_ws/src/feedback': PYTHONPATH=/micro_ros_ws/wall_e_ws/build/feedback/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/feedback build --build-base /micro_ros_ws/wall_e_ws/build/feedback/build install --record /micro_ros_ws/wall_e_ws/build/feedback/install.log --single-version-externally-managed install_data
+[1.569s] running egg_info
+[1.570s] writing ../../build/feedback/feedback.egg-info/PKG-INFO
+[1.571s] writing dependency_links to ../../build/feedback/feedback.egg-info/dependency_links.txt
+[1.573s] writing entry points to ../../build/feedback/feedback.egg-info/entry_points.txt
+[1.574s] writing requirements to ../../build/feedback/feedback.egg-info/requires.txt
+[1.574s] writing top-level names to ../../build/feedback/feedback.egg-info/top_level.txt
+[1.580s] reading manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'
+[1.583s] adding license file 'LICENSE'
+[1.585s] writing manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'
+[1.585s] running build
+[1.585s] running build_py
+[1.588s] running install
+[1.588s] running install_lib
+[1.596s] running install_data
+[1.597s] running install_egg_info
+[1.600s] removing '/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback-0.0.0-py3.10.egg-info' (and everything under it)
+[1.602s] Copying ../../build/feedback/feedback.egg-info to /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback-0.0.0-py3.10.egg-info
+[1.612s] running install_scripts
+[1.643s] Installing imu_filter_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback
+[1.643s] Installing range_filter_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback
+[1.644s] Installing sensor_fusion_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback
+[1.644s] writing list of installed files to '/micro_ros_ws/wall_e_ws/build/feedback/install.log'
+[1.676s] Invoked command in '/micro_ros_ws/wall_e_ws/src/feedback' returned '0': PYTHONPATH=/micro_ros_ws/wall_e_ws/build/feedback/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/feedback build --build-base /micro_ros_ws/wall_e_ws/build/feedback/build install --record /micro_ros_ws/wall_e_ws/build/feedback/install.log --single-version-externally-managed install_data

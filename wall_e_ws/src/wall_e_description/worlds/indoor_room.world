@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="indoor_room">
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Physics tuned for a small lightweight robot -->
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>150</iters>
+          <sor>1.400000</sor>
+        </solver>
+      </ode>
+    </physics>
+
+    <!-- Room walls (3m x 3m) -->
+    <!-- North wall -->
+    <model name="wall_north">
+      <static>true</static>
+      <pose>0 1.5 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>3.0 0.05 1.0</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>3.0 0.05 1.0</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- South wall -->
+    <model name="wall_south">
+      <static>true</static>
+      <pose>0 -1.5 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>3.0 0.05 1.0</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>3.0 0.05 1.0</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- East wall -->
+    <model name="wall_east">
+      <static>true</static>
+      <pose>1.5 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.05 3.0 1.0</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.05 3.0 1.0</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- West wall -->
+    <model name="wall_west">
+      <static>true</static>
+      <pose>-1.5 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.05 3.0 1.0</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.05 3.0 1.0</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- A couple of obstacles for the juniors to navigate around -->
+    <model name="obstacle_box_1">
+      <static>true</static>
+      <pose>0.5 0.3 0.1 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.2 0.2 0.2</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.2 0.2 0.2</size></box></geometry>
+          <material><ambient>0.9 0.3 0.1 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="obstacle_box_2">
+      <static>true</static>
+      <pose>-0.5 -0.4 0.1 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.15 0.15 0.2</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.15 0.15 0.2</size></box></geometry>
+          <material><ambient>0.1 0.3 0.9 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>

@@ -11,6 +11,30 @@ The system is organized into four roles:
 - localization: state estimation and motion representation
 - control: command generation from operator input or autonomy logic
 
+## Launch Resilience and Dependency Strategy
+
+Recent launch behavior emphasizes fault tolerance during startup:
+
+- Robot description generation is done through the Python xacro API rather than shelling out to a `xacro` binary.
+- Gazebo integration is optional in launch; when `gazebo_ros` is missing, the stack can still start for non-simulation use.
+- Runtime package availability is treated as an image concern (Dockerfile includes xacro/RViz/Gazebo ROS packages for fresh containers).
+
+This reduces failures caused by PATH differences or minimal container images.
+
+## Robot Description and TF Completeness
+
+The robot model defines four wheel links as continuous joints. In minimal visualization flows, only the driven front joints may receive live joint states.
+
+To keep the TF tree complete for RViz:
+
+- rear wheel static transforms are published when `joint_state_publisher` is disabled
+- those static publishers are disabled automatically when `joint_state_publisher` is enabled
+
+Result:
+
+- RViz can resolve all wheel frames in default launch mode
+- no duplicate transform source appears when full joint-state publishing is enabled
+
 ## System Diagram
 
 ![Wall-E system architecture](docs/source/_static/wall_e_arch-dark.png)

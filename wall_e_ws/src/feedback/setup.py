@@ -24,9 +24,9 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'imu_filter_node = feedback.imu_filer:main',
+            'imu_filter_node = feedback.imu_filter:main',
             'range_filter_node = feedback.range_filter:main',
-            'sensor_fusion_node = feedbakc.senor_fusion:main'
+            'sensor_fusion_node = feedback.sensor_fusion:main'
         ],
     },
 )

@@ -1,0 +1,23 @@
+[0.550s] Invoking command in '/micro_ros_ws/wall_e_ws/src/control': CMAKE_PREFIX_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces:/micro_ros_ws/wall_e_ws/install/wall_e_description LD_LIBRARY_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/micro_ros_ws/wall_e_ws/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/control build --build-base /micro_ros_ws/wall_e_ws/build/control/build install --record /micro_ros_ws/wall_e_ws/build/control/install.log --single-version-externally-managed install_data
+[0.714s] running egg_info
+[0.715s] writing ../../build/control/control.egg-info/PKG-INFO
+[0.715s] writing dependency_links to ../../build/control/control.egg-info/dependency_links.txt
+[0.716s] writing entry points to ../../build/control/control.egg-info/entry_points.txt
+[0.716s] writing requirements to ../../build/control/control.egg-info/requires.txt
+[0.716s] writing top-level names to ../../build/control/control.egg-info/top_level.txt
+[0.719s] reading manifest file '../../build/control/control.egg-info/SOURCES.txt'
+[0.720s] adding license file 'LICENSE'
+[0.721s] writing manifest file '../../build/control/control.egg-info/SOURCES.txt'
+[0.721s] running build
+[0.722s] running build_py
+[0.723s] running install
+[0.723s] running install_lib
+[0.726s] running install_data
+[0.726s] running install_egg_info
+[0.729s] removing '/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info' (and everything under it)
+[0.730s] Copying ../../build/control/control.egg-info to /micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info
+[0.735s] running install_scripts
+[0.753s] Installing gamepad_node script to /micro_ros_ws/wall_e_ws/install/control/lib/control
+[0.754s] Installing robot_control_node script to /micro_ros_ws/wall_e_ws/install/control/lib/control
+[0.754s] writing list of installed files to '/micro_ros_ws/wall_e_ws/build/control/install.log'
+[0.770s] Invoked command in '/micro_ros_ws/wall_e_ws/src/control' returned '0': CMAKE_PREFIX_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces:/micro_ros_ws/wall_e_ws/install/wall_e_description LD_LIBRARY_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/micro_ros_ws/wall_e_ws/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/control build --build-base /micro_ros_ws/wall_e_ws/build/control/build install --record /micro_ros_ws/wall_e_ws/build/control/install.log --single-version-externally-managed install_data

@@ -1,0 +1,17 @@
+/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control/gamepad.py
+/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control/robot_control.py
+/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control/__init__.py
+/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control/__pycache__/gamepad.cpython-310.pyc
+/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control/__pycache__/robot_control.cpython-310.pyc
+/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control/__pycache__/__init__.cpython-310.pyc
+/micro_ros_ws/wall_e_ws/install/control/share/ament_index/resource_index/packages/control
+/micro_ros_ws/wall_e_ws/install/control/share/control/package.xml
+/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info/dependency_links.txt
+/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info/entry_points.txt
+/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info/PKG-INFO
+/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info/requires.txt
+/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info/SOURCES.txt
+/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info/top_level.txt
+/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info/zip-safe
+/micro_ros_ws/wall_e_ws/install/control/lib/control/gamepad_node
+/micro_ros_ws/wall_e_ws/install/control/lib/control/robot_control_node

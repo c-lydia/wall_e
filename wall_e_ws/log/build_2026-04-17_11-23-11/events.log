@@ -1,0 +1,48 @@
+[0.000000] (-) TimerEvent: {}
+[0.000594] (-) JobUnselected: {'identifier': 'control'}
+[0.001034] (-) JobUnselected: {'identifier': 'custom_interfaces'}
+[0.001376] (-) JobUnselected: {'identifier': 'feedback'}
+[0.001759] (-) JobUnselected: {'identifier': 'localization'}
+[0.002104] (wall_e_description) JobQueued: {'identifier': 'wall_e_description', 'dependencies': OrderedDict()}
+[0.002480] (wall_e_description) JobStarted: {'identifier': 'wall_e_description'}
+[0.017991] (wall_e_description) JobProgress: {'identifier': 'wall_e_description', 'progress': 'cmake'}
+[0.030357] (wall_e_description) JobProgress: {'identifier': 'wall_e_description', 'progress': 'build'}
+[0.033477] (wall_e_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/micro_ros_ws/wall_e_ws/build/wall_e_description', '--', '-j12', '-l12'], 'cwd': '/micro_ros_ws/wall_e_ws/build/wall_e_description', 'env': OrderedDict([('HOSTNAME', '1f39bf4e130b'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/micro_ros_ws'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/micro_ros_ws/wall_e_ws/build/wall_e_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.097719] (-) TimerEvent: {}
+[0.133136] (wall_e_description) CommandEnded: {'returncode': 0}
+[0.143797] (wall_e_description) JobProgress: {'identifier': 'wall_e_description', 'progress': 'install'}
+[0.156888] (wall_e_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/micro_ros_ws/wall_e_ws/build/wall_e_description'], 'cwd': '/micro_ros_ws/wall_e_ws/build/wall_e_description', 'env': OrderedDict([('HOSTNAME', '1f39bf4e130b'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/micro_ros_ws'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/micro_ros_ws/wall_e_ws/build/wall_e_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.170033] (wall_e_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.175151] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/launch\n'}
+[0.189861] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/launch/wall_e.launch.py\n'}
+[0.197823] (-) TimerEvent: {}
+[0.198484] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/rviz\n'}
+[0.213574] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/rviz/robot.rviz\n'}
+[0.221833] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/worlds\n'}
+[0.236988] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/worlds/indoor_room.world\n'}
+[0.245054] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/description\n'}
+[0.263354] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/description/robot.urdf.xacro\n'}
+[0.283415] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/ament_index/resource_index/package_run_dependencies/wall_e_description\n'}
+[0.297908] (-) TimerEvent: {}
+[0.304408] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/ament_index/resource_index/parent_prefix_path/wall_e_description\n'}
+[0.314450] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/ament_prefix_path.sh\n'}
+[0.331069] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/ament_prefix_path.dsv\n'}
+[0.338854] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/path.sh\n'}
+[0.352312] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/path.dsv\n'}
+[0.365698] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.bash\n'}
+[0.379145] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.sh\n'}
+[0.391577] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.zsh\n'}
+[0.398024] (-) TimerEvent: {}
+[0.403893] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.dsv\n'}
+[0.415888] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.dsv\n'}
+[0.457014] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/ament_index/resource_index/packages/wall_e_description\n'}
+[0.473409] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/cmake/wall_e_descriptionConfig.cmake\n'}
+[0.485915] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/cmake/wall_e_descriptionConfig-version.cmake\n'}
+[0.497279] (wall_e_description) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.xml\n'}
+[0.499104] (-) TimerEvent: {}
+[0.505662] (wall_e_description) CommandEnded: {'returncode': 0}
+[0.599204] (-) TimerEvent: {}
+[0.699825] (-) TimerEvent: {}
+[0.800375] (-) TimerEvent: {}
+[0.867428] (wall_e_description) JobEnded: {'identifier': 'wall_e_description', 'rc': 0}
+[0.872818] (-) EventReactorShutdown: {}

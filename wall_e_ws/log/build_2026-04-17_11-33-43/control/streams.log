@@ -1,0 +1,29 @@
+[1.032s] Invoking command in '/micro_ros_ws/wall_e_ws/src/control': AMENT_PREFIX_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces LD_LIBRARY_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/micro_ros_ws/wall_e_ws/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages:/micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/control build --build-base /micro_ros_ws/wall_e_ws/build/control/build install --record /micro_ros_ws/wall_e_ws/build/control/install.log --single-version-externally-managed install_data
+[1.271s] running egg_info
+[1.271s] writing ../../build/control/control.egg-info/PKG-INFO
+[1.272s] writing dependency_links to ../../build/control/control.egg-info/dependency_links.txt
+[1.272s] writing entry points to ../../build/control/control.egg-info/entry_points.txt
+[1.273s] writing requirements to ../../build/control/control.egg-info/requires.txt
+[1.273s] writing top-level names to ../../build/control/control.egg-info/top_level.txt
+[1.277s] reading manifest file '../../build/control/control.egg-info/SOURCES.txt'
+[1.279s] adding license file 'LICENSE'
+[1.281s] writing manifest file '../../build/control/control.egg-info/SOURCES.txt'
+[1.281s] running build
+[1.281s] running build_py
+[1.282s] copying control/gamepad.py -> /micro_ros_ws/wall_e_ws/build/control/build/lib/control
+[1.283s] copying control/robot_control.py -> /micro_ros_ws/wall_e_ws/build/control/build/lib/control
+[1.284s] running install
+[1.284s] running install_lib
+[1.286s] copying /micro_ros_ws/wall_e_ws/build/control/build/lib/control/gamepad.py -> /micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control
+[1.287s] copying /micro_ros_ws/wall_e_ws/build/control/build/lib/control/robot_control.py -> /micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control
+[1.290s] byte-compiling /micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control/gamepad.py to gamepad.cpython-310.pyc
+[1.294s] byte-compiling /micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control/robot_control.py to robot_control.cpython-310.pyc
+[1.299s] running install_data
+[1.300s] running install_egg_info
+[1.303s] removing '/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info' (and everything under it)
+[1.305s] Copying ../../build/control/control.egg-info to /micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info
+[1.315s] running install_scripts
+[1.339s] Installing gamepad_node script to /micro_ros_ws/wall_e_ws/install/control/lib/control
+[1.339s] Installing robot_control_node script to /micro_ros_ws/wall_e_ws/install/control/lib/control
+[1.340s] writing list of installed files to '/micro_ros_ws/wall_e_ws/build/control/install.log'
+[1.360s] Invoked command in '/micro_ros_ws/wall_e_ws/src/control' returned '0': AMENT_PREFIX_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces LD_LIBRARY_PATH=/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/micro_ros_ws/wall_e_ws/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/control/lib/python3.10/site-packages:/micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/control build --build-base /micro_ros_ws/wall_e_ws/build/control/build install --record /micro_ros_ws/wall_e_ws/build/control/install.log --single-version-externally-managed install_data

@@ -9,6 +9,10 @@ RUN apt-get update && apt-get install -y \
     git \
     build-essential \
     cmake \
+    ros-humble-xacro \
+    ros-humble-joint-state-publisher \
+    ros-humble-rviz2 \
+    ros-humble-gazebo-ros-pkgs \
     && rm -rf /var/lib/apt/lists/*
 
 # Install colcon and ROS development tools

@@ -1,0 +1,474 @@
+[0.000000] (-) TimerEvent: {}
+[0.000325] (-) JobUnselected: {'identifier': 'control'}
+[0.000404] (custom_interfaces) JobQueued: {'identifier': 'custom_interfaces', 'dependencies': OrderedDict()}
+[0.000458] (feedback) JobQueued: {'identifier': 'feedback', 'dependencies': OrderedDict()}
+[0.000497] (localization) JobQueued: {'identifier': 'localization', 'dependencies': OrderedDict()}
+[0.000661] (wall_e_description) JobQueued: {'identifier': 'wall_e_description', 'dependencies': OrderedDict()}
+[0.000788] (custom_interfaces) JobStarted: {'identifier': 'custom_interfaces'}
+[0.005321] (feedback) JobStarted: {'identifier': 'feedback'}
+[0.012594] (localization) JobStarted: {'identifier': 'localization'}
+[0.017318] (wall_e_description) JobStarted: {'identifier': 'wall_e_description'}
+[0.021120] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'cmake'}
+[0.022131] (custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/micro_ros_ws/wall_e_ws/src/custom_interfaces', '-DCMAKE_INSTALL_PREFIX=/micro_ros_ws/wall_e_ws/install/custom_interfaces'], 'cwd': '/micro_ros_ws/wall_e_ws/build/custom_interfaces', 'env': OrderedDict([('HOSTNAME', '1f39bf4e130b'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/micro_ros_ws'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/micro_ros_ws/wall_e_ws/build/custom_interfaces'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099510] (-) TimerEvent: {}
+[0.199880] (-) TimerEvent: {}
+[0.300359] (-) TimerEvent: {}
+[0.391173] (custom_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.392089] (custom_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.392410] (custom_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.392675] (custom_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.392893] (custom_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.393147] (custom_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.393358] (custom_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.393713] (custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.393944] (custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.394143] (custom_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.394337] (custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.394496] (custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.395466] (custom_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.396064] (wall_e_description) JobProgress: {'identifier': 'wall_e_description', 'progress': 'cmake'}
+[0.396134] (wall_e_description) Command: {'cmd': ['/usr/bin/cmake', '/micro_ros_ws/wall_e_ws/src/wall_e_description', '-DCMAKE_INSTALL_PREFIX=/micro_ros_ws/wall_e_ws/install/wall_e_description'], 'cwd': '/micro_ros_ws/wall_e_ws/build/wall_e_description', 'env': OrderedDict([('HOSTNAME', '1f39bf4e130b'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/micro_ros_ws'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/micro_ros_ws/wall_e_ws/build/wall_e_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.400727] (-) TimerEvent: {}
+[0.456193] (wall_e_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.500846] (-) TimerEvent: {}
+[0.522988] (custom_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.535261] (wall_e_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.550739] (wall_e_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.600946] (-) TimerEvent: {}
+[0.660024] (custom_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.666811] (custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.677706] (custom_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.685223] (wall_e_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.698546] (wall_e_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.699035] (wall_e_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.699696] (wall_e_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.701037] (-) TimerEvent: {}
+[0.708857] (wall_e_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.761306] (custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.801121] (-) TimerEvent: {}
+[0.831115] (custom_interfaces) StdoutLine: {'line': b'-- Found std_msgs: 4.9.1 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.834133] (localization) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/localization', 'build', '--build-base', '/micro_ros_ws/wall_e_ws/build/localization/build', 'install', '--record', '/micro_ros_ws/wall_e_ws/build/localization/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/micro_ros_ws/wall_e_ws/src/localization', 'env': {'HOSTNAME': '1f39bf4e130b', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/micro_ros_ws', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'PWD': '/micro_ros_ws/wall_e_ws/build/localization', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/micro_ros_ws/wall_e_ws/build/localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[0.853937] (feedback) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/feedback', 'build', '--build-base', '/micro_ros_ws/wall_e_ws/build/feedback/build', 'install', '--record', '/micro_ros_ws/wall_e_ws/build/feedback/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/micro_ros_ws/wall_e_ws/src/feedback', 'env': {'HOSTNAME': '1f39bf4e130b', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/micro_ros_ws', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'PWD': '/micro_ros_ws/wall_e_ws/build/feedback', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/micro_ros_ws/wall_e_ws/build/feedback/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[0.861246] (wall_e_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.875556] (wall_e_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.876074] (wall_e_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.876674] (wall_e_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.883992] (wall_e_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.901222] (-) TimerEvent: {}
+[1.001602] (-) TimerEvent: {}
+[1.071357] (wall_e_description) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.101705] (-) TimerEvent: {}
+[1.114418] (localization) StdoutLine: {'line': b'running egg_info\n'}
+[1.115463] (localization) StdoutLine: {'line': b'creating ../../build/localization/localization.egg-info\n'}
+[1.116135] (localization) StdoutLine: {'line': b'writing ../../build/localization/localization.egg-info/PKG-INFO\n'}
+[1.117319] (localization) StdoutLine: {'line': b'writing dependency_links to ../../build/localization/localization.egg-info/dependency_links.txt\n'}
+[1.118181] (localization) StdoutLine: {'line': b'writing entry points to ../../build/localization/localization.egg-info/entry_points.txt\n'}
+[1.118795] (localization) StdoutLine: {'line': b'writing requirements to ../../build/localization/localization.egg-info/requires.txt\n'}
+[1.119212] (localization) StdoutLine: {'line': b'writing top-level names to ../../build/localization/localization.egg-info/top_level.txt\n'}
+[1.119918] (localization) StdoutLine: {'line': b"writing manifest file '../../build/localization/localization.egg-info/SOURCES.txt'\n"}
+[1.124802] (localization) StdoutLine: {'line': b"reading manifest file '../../build/localization/localization.egg-info/SOURCES.txt'\n"}
+[1.127241] (localization) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[1.129381] (localization) StdoutLine: {'line': b"writing manifest file '../../build/localization/localization.egg-info/SOURCES.txt'\n"}
+[1.129793] (localization) StdoutLine: {'line': b'running build\n'}
+[1.130062] (localization) StdoutLine: {'line': b'running build_py\n'}
+[1.130534] (localization) StdoutLine: {'line': b'creating /micro_ros_ws/wall_e_ws/build/localization/build\n'}
+[1.130800] (localization) StdoutLine: {'line': b'creating /micro_ros_ws/wall_e_ws/build/localization/build/lib\n'}
+[1.131041] (localization) StdoutLine: {'line': b'creating /micro_ros_ws/wall_e_ws/build/localization/build/lib/localization\n'}
+[1.132051] (localization) StdoutLine: {'line': b'copying localization/inverse_kinematic.py -> /micro_ros_ws/wall_e_ws/build/localization/build/lib/localization\n'}
+[1.133580] (localization) StdoutLine: {'line': b'copying localization/odometry.py -> /micro_ros_ws/wall_e_ws/build/localization/build/lib/localization\n'}
+[1.135033] (localization) StdoutLine: {'line': b'copying localization/__init__.py -> /micro_ros_ws/wall_e_ws/build/localization/build/lib/localization\n'}
+[1.136106] (localization) StdoutLine: {'line': b'running install\n'}
+[1.136630] (localization) StdoutLine: {'line': b'running install_lib\n'}
+[1.138777] (localization) StdoutLine: {'line': b'creating /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization\n'}
+[1.139798] (localization) StdoutLine: {'line': b'copying /micro_ros_ws/wall_e_ws/build/localization/build/lib/localization/inverse_kinematic.py -> /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization\n'}
+[1.141883] (localization) StdoutLine: {'line': b'copying /micro_ros_ws/wall_e_ws/build/localization/build/lib/localization/odometry.py -> /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization\n'}
+[1.144408] (localization) StdoutLine: {'line': b'copying /micro_ros_ws/wall_e_ws/build/localization/build/lib/localization/__init__.py -> /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization\n'}
+[1.147019] (localization) StdoutLine: {'line': b'byte-compiling /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization/inverse_kinematic.py to inverse_kinematic.cpython-310.pyc\n'}
+[1.150379] (localization) StdoutLine: {'line': b'byte-compiling /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization/odometry.py to odometry.cpython-310.pyc\n'}
+[1.155647] (localization) StdoutLine: {'line': b'byte-compiling /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization/__init__.py to __init__.cpython-310.pyc\n'}
+[1.157715] (localization) StdoutLine: {'line': b'running install_data\n'}
+[1.158476] (localization) StdoutLine: {'line': b'creating /micro_ros_ws/wall_e_ws/install/localization/share/ament_index\n'}
+[1.158903] (localization) StdoutLine: {'line': b'creating /micro_ros_ws/wall_e_ws/install/localization/share/ament_index/resource_index\n'}
+[1.159304] (localization) StdoutLine: {'line': b'creating /micro_ros_ws/wall_e_ws/install/localization/share/ament_index/resource_index/packages\n'}
+[1.159787] (localization) StdoutLine: {'line': b'copying resource/localization -> /micro_ros_ws/wall_e_ws/install/localization/share/ament_index/resource_index/packages\n'}
+[1.161083] (localization) StdoutLine: {'line': b'copying package.xml -> /micro_ros_ws/wall_e_ws/install/localization/share/localization\n'}
+[1.164120] (localization) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.168608] (localization) StdoutLine: {'line': b'Copying ../../build/localization/localization.egg-info to /micro_ros_ws/wall_e_ws/install/localization/lib/python3.10/site-packages/localization-0.0.0-py3.10.egg-info\n'}
+[1.183976] (localization) StdoutLine: {'line': b'running install_scripts\n'}
+[1.190224] (feedback) StdoutLine: {'line': b'running egg_info\n'}
+[1.191361] (feedback) StdoutLine: {'line': b'creating ../../build/feedback/feedback.egg-info\n'}
+[1.191760] (feedback) StdoutLine: {'line': b'writing ../../build/feedback/feedback.egg-info/PKG-INFO\n'}
+[1.192754] (feedback) StdoutLine: {'line': b'writing dependency_links to ../../build/feedback/feedback.egg-info/dependency_links.txt\n'}
+[1.194554] (feedback) StdoutLine: {'line': b'writing entry points to ../../build/feedback/feedback.egg-info/entry_points.txt\n'}
+[1.195016] (feedback) StdoutLine: {'line': b'writing requirements to ../../build/feedback/feedback.egg-info/requires.txt\n'}
+[1.195352] (feedback) StdoutLine: {'line': b'writing top-level names to ../../build/feedback/feedback.egg-info/top_level.txt\n'}
+[1.195810] (feedback) StdoutLine: {'line': b"writing manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'\n"}
+[1.200976] (feedback) StdoutLine: {'line': b"reading manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'\n"}
+[1.201776] (-) TimerEvent: {}
+[1.203556] (feedback) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[1.205682] (wall_e_description) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.206139] (feedback) StdoutLine: {'line': b"writing manifest file '../../build/feedback/feedback.egg-info/SOURCES.txt'\n"}
+[1.206577] (feedback) StdoutLine: {'line': b'running build\n'}
+[1.206918] (feedback) StdoutLine: {'line': b'running build_py\n'}
+[1.207327] (feedback) StdoutLine: {'line': b'creating /micro_ros_ws/wall_e_ws/build/feedback/build\n'}
+[1.207742] (feedback) StdoutLine: {'line': b'creating /micro_ros_ws/wall_e_ws/build/feedback/build/lib\n'}
+[1.208187] (feedback) StdoutLine: {'line': b'creating /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback\n'}
+[1.208579] (feedback) StdoutLine: {'line': b'copying feedback/imu_filter.py -> /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback\n'}
+[1.210017] (feedback) StdoutLine: {'line': b'copying feedback/range_filter.py -> /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback\n'}
+[1.211642] (feedback) StdoutLine: {'line': b'copying feedback/sensor_fusion.py -> /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback\n'}
+[1.213151] (feedback) StdoutLine: {'line': b'copying feedback/__init__.py -> /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback\n'}
+[1.214245] (feedback) StdoutLine: {'line': b'running install\n'}
+[1.214720] (feedback) StdoutLine: {'line': b'running install_lib\n'}
+[1.216816] (feedback) StdoutLine: {'line': b'creating /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback\n'}
+[1.217873] (feedback) StdoutLine: {'line': b'copying /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback/imu_filter.py -> /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback\n'}
+[1.220187] (localization) StdoutLine: {'line': b'Installing inverse_kinematic_node script to /micro_ros_ws/wall_e_ws/install/localization/lib/localization\n'}
+[1.220794] (feedback) StdoutLine: {'line': b'copying /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback/range_filter.py -> /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback\n'}
+[1.221433] (localization) StdoutLine: {'line': b'Installing odometry_node script to /micro_ros_ws/wall_e_ws/install/localization/lib/localization\n'}
+[1.223233] (localization) StdoutLine: {'line': b"writing list of installed files to '/micro_ros_ws/wall_e_ws/build/localization/install.log'\n"}
+[1.226206] (feedback) StdoutLine: {'line': b'copying /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback/sensor_fusion.py -> /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback\n'}
+[1.226886] (feedback) StdoutLine: {'line': b'copying /micro_ros_ws/wall_e_ws/build/feedback/build/lib/feedback/__init__.py -> /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback\n'}
+[1.228244] (feedback) StdoutLine: {'line': b'byte-compiling /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback/imu_filter.py to imu_filter.cpython-310.pyc\n'}
+[1.232553] (feedback) StdoutLine: {'line': b'byte-compiling /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback/range_filter.py to range_filter.cpython-310.pyc\n'}
+[1.236374] (feedback) StdoutLine: {'line': b'byte-compiling /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback/sensor_fusion.py to sensor_fusion.cpython-310.pyc\n'}
+[1.240666] (feedback) StdoutLine: {'line': b'byte-compiling /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback/__init__.py to __init__.cpython-310.pyc\n'}
+[1.243296] (feedback) StdoutLine: {'line': b'running install_data\n'}
+[1.243906] (feedback) StdoutLine: {'line': b'creating /micro_ros_ws/wall_e_ws/install/feedback/share/ament_index\n'}
+[1.244301] (feedback) StdoutLine: {'line': b'creating /micro_ros_ws/wall_e_ws/install/feedback/share/ament_index/resource_index\n'}
+[1.244669] (feedback) StdoutLine: {'line': b'creating /micro_ros_ws/wall_e_ws/install/feedback/share/ament_index/resource_index/packages\n'}
+[1.245230] (feedback) StdoutLine: {'line': b'copying resource/feedback -> /micro_ros_ws/wall_e_ws/install/feedback/share/ament_index/resource_index/packages\n'}
+[1.246742] (feedback) StdoutLine: {'line': b'copying package.xml -> /micro_ros_ws/wall_e_ws/install/feedback/share/feedback\n'}
+[1.247752] (feedback) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.253115] (feedback) StdoutLine: {'line': b'Copying ../../build/feedback/feedback.egg-info to /micro_ros_ws/wall_e_ws/install/feedback/lib/python3.10/site-packages/feedback-0.0.0-py3.10.egg-info\n'}
+[1.257906] (localization) CommandEnded: {'returncode': 0}
+[1.267636] (feedback) StdoutLine: {'line': b'running install_scripts\n'}
+[1.283585] (localization) JobEnded: {'identifier': 'localization', 'rc': 0}
+[1.299951] (feedback) StdoutLine: {'line': b'Installing imu_filter_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback\n'}
+[1.300541] (feedback) StdoutLine: {'line': b'Installing range_filter_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback\n'}
+[1.301263] (feedback) StdoutLine: {'line': b'Installing sensor_fusion_node script to /micro_ros_ws/wall_e_ws/install/feedback/lib/feedback\n'}
+[1.301843] (-) TimerEvent: {}
+[1.302378] (feedback) StdoutLine: {'line': b"writing list of installed files to '/micro_ros_ws/wall_e_ws/build/feedback/install.log'\n"}
+[1.334100] (feedback) CommandEnded: {'returncode': 0}
+[1.337196] (custom_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.338268] (wall_e_description) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.343472] (wall_e_description) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.346351] (wall_e_description) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.352582] (feedback) JobEnded: {'identifier': 'feedback', 'rc': 0}
+[1.368482] (wall_e_description) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.375868] (wall_e_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.397493] (wall_e_description) StdoutLine: {'line': b'-- Generating done\n'}
+[1.401962] (-) TimerEvent: {}
+[1.406589] (wall_e_description) StdoutLine: {'line': b'-- Build files have been written to: /micro_ros_ws/wall_e_ws/build/wall_e_description\n'}
+[1.410985] (wall_e_description) CommandEnded: {'returncode': 0}
+[1.411753] (wall_e_description) JobProgress: {'identifier': 'wall_e_description', 'progress': 'build'}
+[1.412776] (wall_e_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/micro_ros_ws/wall_e_ws/build/wall_e_description', '--', '-j12', '-l12'], 'cwd': '/micro_ros_ws/wall_e_ws/build/wall_e_description', 'env': OrderedDict([('HOSTNAME', '1f39bf4e130b'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/micro_ros_ws'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/micro_ros_ws/wall_e_ws/build/wall_e_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.461765] (wall_e_description) CommandEnded: {'returncode': 0}
+[1.462872] (wall_e_description) JobProgress: {'identifier': 'wall_e_description', 'progress': 'install'}
+[1.472270] (wall_e_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/micro_ros_ws/wall_e_ws/build/wall_e_description'], 'cwd': '/micro_ros_ws/wall_e_ws/build/wall_e_description', 'env': OrderedDict([('HOSTNAME', '1f39bf4e130b'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/micro_ros_ws'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/micro_ros_ws/wall_e_ws/build/wall_e_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.480402] (wall_e_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.480858] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/launch\n'}
+[1.482352] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/launch/wall_e.launch.py\n'}
+[1.484566] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/rviz\n'}
+[1.485829] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/rviz/robot.rviz\n'}
+[1.487652] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/worlds\n'}
+[1.488537] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/worlds/indoor_room.world\n'}
+[1.490291] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/description\n'}
+[1.491505] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/description/robot.urdf.xacro\n'}
+[1.494765] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/ament_index/resource_index/package_run_dependencies/wall_e_description\n'}
+[1.497577] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/ament_index/resource_index/parent_prefix_path/wall_e_description\n'}
+[1.500678] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/ament_prefix_path.sh\n'}
+[1.502051] (-) TimerEvent: {}
+[1.502876] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/ament_prefix_path.dsv\n'}
+[1.506007] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/path.sh\n'}
+[1.508032] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/environment/path.dsv\n'}
+[1.509742] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.bash\n'}
+[1.511529] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.sh\n'}
+[1.513430] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.zsh\n'}
+[1.515185] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/local_setup.dsv\n'}
+[1.516800] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.dsv\n'}
+[1.519418] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/ament_index/resource_index/packages/wall_e_description\n'}
+[1.522253] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/cmake/wall_e_descriptionConfig.cmake\n'}
+[1.523877] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/cmake/wall_e_descriptionConfig-version.cmake\n'}
+[1.525713] (wall_e_description) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/wall_e_description/share/wall_e_description/package.xml\n'}
+[1.530051] (wall_e_description) CommandEnded: {'returncode': 0}
+[1.565238] (wall_e_description) JobEnded: {'identifier': 'wall_e_description', 'rc': 0}
+[1.602138] (-) TimerEvent: {}
+[1.703009] (-) TimerEvent: {}
+[1.803750] (-) TimerEvent: {}
+[1.904873] (-) TimerEvent: {}
+[2.005444] (-) TimerEvent: {}
+[2.036255] (custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.105560] (-) TimerEvent: {}
+[2.206247] (-) TimerEvent: {}
+[2.306915] (-) TimerEvent: {}
+[2.407472] (-) TimerEvent: {}
+[2.508086] (-) TimerEvent: {}
+[2.608700] (-) TimerEvent: {}
+[2.709524] (-) TimerEvent: {}
+[2.810117] (-) TimerEvent: {}
+[2.910841] (-) TimerEvent: {}
+[3.011710] (-) TimerEvent: {}
+[3.112359] (-) TimerEvent: {}
+[3.213228] (-) TimerEvent: {}
+[3.314091] (-) TimerEvent: {}
+[3.414730] (-) TimerEvent: {}
+[3.510476] (custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.514835] (-) TimerEvent: {}
+[3.546906] (custom_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[3.549171] (custom_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[3.574795] (custom_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[3.575871] (custom_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.576803] (custom_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[3.577834] (custom_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[3.603126] (custom_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[3.614943] (-) TimerEvent: {}
+[3.715469] (-) TimerEvent: {}
+[3.815795] (-) TimerEvent: {}
+[3.843496] (custom_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[3.891954] (custom_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.902192] (custom_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.915904] (-) TimerEvent: {}
+[3.918401] (custom_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.016007] (-) TimerEvent: {}
+[4.082547] (custom_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[4.116190] (-) TimerEvent: {}
+[4.122195] (custom_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /micro_ros_ws/wall_e_ws/build/custom_interfaces\n'}
+[4.128709] (custom_interfaces) CommandEnded: {'returncode': 0}
+[4.129358] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'build'}
+[4.129714] (custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/micro_ros_ws/wall_e_ws/build/custom_interfaces', '--', '-j12', '-l12'], 'cwd': '/micro_ros_ws/wall_e_ws/build/custom_interfaces', 'env': OrderedDict([('HOSTNAME', '1f39bf4e130b'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/micro_ros_ws'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/micro_ros_ws/wall_e_ws/build/custom_interfaces'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[4.199699] (custom_interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[4.216227] (-) TimerEvent: {}
+[4.219919] (custom_interfaces) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[4.223596] (custom_interfaces) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[4.241797] (custom_interfaces) StdoutLine: {'line': b'[  9%] Built target ament_cmake_python_copy_custom_interfaces\n'}
+[4.316334] (-) TimerEvent: {}
+[4.416817] (-) TimerEvent: {}
+[4.517745] (-) TimerEvent: {}
+[4.619291] (-) TimerEvent: {}
+[4.642471] (custom_interfaces) StdoutLine: {'line': b'[  9%] Built target custom_interfaces__rs\n'}
+[4.650028] (custom_interfaces) StdoutLine: {'line': b'[  9%] Built target custom_interfaces__cpp\n'}
+[4.673904] (custom_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[4.676171] (custom_interfaces) StdoutLine: {'line': b'creating custom_interfaces.egg-info\n'}
+[4.677680] (custom_interfaces) StdoutLine: {'line': b'writing custom_interfaces.egg-info/PKG-INFO\n'}
+[4.680855] (custom_interfaces) StdoutLine: {'line': b'writing dependency_links to custom_interfaces.egg-info/dependency_links.txt\n'}
+[4.682858] (custom_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.685137] (custom_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[4.686788] (custom_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.688765] (custom_interfaces) StdoutLine: {'line': b'writing top-level names to custom_interfaces.egg-info/top_level.txt\n'}
+[4.690301] (custom_interfaces) StdoutLine: {'line': b"writing manifest file 'custom_interfaces.egg-info/SOURCES.txt'\n"}
+[4.702010] (custom_interfaces) StdoutLine: {'line': b"reading manifest file 'custom_interfaces.egg-info/SOURCES.txt'\n"}
+[4.712099] (custom_interfaces) StdoutLine: {'line': b"writing manifest file 'custom_interfaces.egg-info/SOURCES.txt'\n"}
+[4.719411] (-) TimerEvent: {}
+[4.733674] (custom_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/gamepad__functions.c.o\x1b[0m\n'}
+[4.758272] (custom_interfaces) StdoutLine: {'line': b'[ 21%] Built target ament_cmake_python_build_custom_interfaces_egg\n'}
+[4.819509] (-) TimerEvent: {}
+[4.920036] (-) TimerEvent: {}
+[4.931461] (custom_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking C shared library libcustom_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[5.013193] (custom_interfaces) StdoutLine: {'line': b'[ 25%] Built target custom_interfaces__rosidl_generator_c\n'}
+[5.020130] (-) TimerEvent: {}
+[5.030473] (custom_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[5.031659] (custom_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[5.039678] (custom_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[5.040267] (custom_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/msg/gamepad__type_support.cpp.o\x1b[0m\n'}
+[5.057492] (custom_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/dds_fastrtps/gamepad__type_support.cpp.o\x1b[0m\n'}
+[5.092190] (custom_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/gamepad__type_support.cpp.o\x1b[0m\n'}
+[5.120226] (-) TimerEvent: {}
+[5.220623] (-) TimerEvent: {}
+[5.321008] (-) TimerEvent: {}
+[5.422148] (-) TimerEvent: {}
+[5.472954] (custom_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/gamepad__type_support.c.o\x1b[0m\n'}
+[5.473715] (custom_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/gamepad__type_support.cpp.o\x1b[0m\n'}
+[5.500534] (custom_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/gamepad__type_support_c.cpp.o\x1b[0m\n'}
+[5.522268] (-) TimerEvent: {}
+[5.535846] (custom_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[5.538178] (custom_interfaces) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[5.547800] (custom_interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking C shared library libcustom_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[5.609915] (custom_interfaces) StdoutLine: {'line': b'[ 62%] Built target custom_interfaces__rosidl_typesupport_introspection_c\n'}
+[5.612430] (custom_interfaces) StdoutLine: {'line': b'[ 62%] Built target custom_interfaces__rosidl_typesupport_c\n'}
+[5.612799] (custom_interfaces) StdoutLine: {'line': b'[ 62%] Built target custom_interfaces__rosidl_typesupport_cpp\n'}
+[5.622380] (-) TimerEvent: {}
+[5.697476] (custom_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[5.722488] (-) TimerEvent: {}
+[5.732329] (custom_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[5.806257] (custom_interfaces) StdoutLine: {'line': b'[ 68%] Built target custom_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[5.822602] (-) TimerEvent: {}
+[5.824024] (custom_interfaces) StdoutLine: {'line': b'[ 68%] Built target custom_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[5.922706] (-) TimerEvent: {}
+[5.929872] (custom_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[6.022817] (-) TimerEvent: {}
+[6.048771] (custom_interfaces) StdoutLine: {'line': b'[ 71%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[6.085326] (custom_interfaces) StdoutLine: {'line': b'[ 71%] Built target custom_interfaces\n'}
+[6.122931] (-) TimerEvent: {}
+[6.123585] (custom_interfaces) StdoutLine: {'line': b'[ 75%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[6.224132] (-) TimerEvent: {}
+[6.324592] (-) TimerEvent: {}
+[6.425010] (-) TimerEvent: {}
+[6.525405] (-) TimerEvent: {}
+[6.544094] (custom_interfaces) StdoutLine: {'line': b'[ 75%] Built target custom_interfaces__py\n'}
+[6.570451] (custom_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/custom_interfaces/msg/_gamepad_s.c.o\x1b[0m\n'}
+[6.625489] (-) TimerEvent: {}
+[6.725866] (-) TimerEvent: {}
+[6.742621] (custom_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/custom_interfaces/libcustom_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[6.793598] (custom_interfaces) StdoutLine: {'line': b'[ 81%] Built target custom_interfaces__rosidl_generator_py\n'}
+[6.816515] (custom_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[6.818394] (custom_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[6.819249] (custom_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[6.825975] (-) TimerEvent: {}
+[6.926366] (-) TimerEvent: {}
+[6.954522] (custom_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.955900] (custom_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.975477] (custom_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[7.017918] (custom_interfaces) StdoutLine: {'line': b'[100%] Built target custom_interfaces__rosidl_typesupport_c__pyext\n'}
+[7.019828] (custom_interfaces) StdoutLine: {'line': b'[100%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[7.026466] (-) TimerEvent: {}
+[7.028694] (custom_interfaces) StdoutLine: {'line': b'[100%] Built target custom_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[7.048911] (custom_interfaces) CommandEnded: {'returncode': 0}
+[7.050043] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'install'}
+[7.050476] (custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/micro_ros_ws/wall_e_ws/build/custom_interfaces'], 'cwd': '/micro_ros_ws/wall_e_ws/build/custom_interfaces', 'env': OrderedDict([('HOSTNAME', '1f39bf4e130b'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/micro_ros_ws'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/micro_ros_ws/wall_e_ws/build/custom_interfaces'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[7.060198] (custom_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.062556] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/custom_interfaces\n'}
+[7.065826] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[7.067432] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[7.069137] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail\n'}
+[7.071257] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/gamepad__functions.c\n'}
+[7.075886] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/gamepad__functions.h\n'}
+[7.080145] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/gamepad__struct.h\n'}
+[7.084309] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/gamepad__type_support.h\n'}
+[7.087021] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/gamepad.h\n'}
+[7.089230] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[7.091860] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/environment/library_path.sh\n'}
+[7.093651] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/environment/library_path.dsv\n'}
+[7.095977] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_c.so\n'}
+[7.099256] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_c.so" to ""\n'}
+[7.099716] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[7.100442] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[7.101112] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail\n'}
+[7.102205] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/gamepad__rosidl_typesupport_fastrtps_c.h\n'}
+[7.104821] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[7.107603] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[7.110807] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[7.111255] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[7.111962] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[7.112755] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail\n'}
+[7.113863] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/gamepad__rosidl_typesupport_introspection_c.h\n'}
+[7.116559] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/gamepad__type_support.c\n'}
+[7.119305] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[7.121740] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[7.124522] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[7.125024] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_c.so\n'}
+[7.126552] (-) TimerEvent: {}
+[7.127895] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[7.128747] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[7.129664] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[7.130487] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail\n'}
+[7.131616] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/gamepad__builder.hpp\n'}
+[7.134335] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/gamepad__struct.hpp\n'}
+[7.137158] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/gamepad__traits.hpp\n'}
+[7.139599] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/gamepad__type_support.hpp\n'}
+[7.142112] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/gamepad.hpp\n'}
+[7.144228] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[7.146998] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[7.147555] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[7.148200] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail\n'}
+[7.148960] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/dds_fastrtps\n'}
+[7.150372] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/gamepad__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.154003] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[7.157081] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[7.161072] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[7.161561] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[7.162350] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[7.163182] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail\n'}
+[7.164218] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/gamepad__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.166900] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/detail/gamepad__type_support.cpp\n'}
+[7.169511] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[7.172161] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[7.172698] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_cpp.so\n'}
+[7.175328] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[7.175846] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.sh\n'}
+[7.177546] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.dsv\n'}
+[7.179147] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces-0.0.0-py3.10.egg-info\n'}
+[7.180258] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[7.182384] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[7.184560] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[7.186636] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[7.188670] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces\n'}
+[7.189600] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.191403] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.193238] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.195149] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/libcustom_interfaces__rosidl_generator_py.so\n'}
+[7.197202] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/msg\n'}
+[7.198356] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/msg/_gamepad.py\n'}
+[7.200866] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/msg/_gamepad_s.c\n'}
+[7.203292] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/msg/__init__.py\n'}
+[7.205436] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[7.207437] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[7.209313] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[7.211339] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/__init__.py\n'}
+[7.226657] (-) TimerEvent: {}
+[7.258277] (custom_interfaces) StdoutLine: {'line': b"Listing '/micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces'...\n"}
+[7.258523] (custom_interfaces) StdoutLine: {'line': b"Compiling '/micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/__init__.py'...\n"}
+[7.258656] (custom_interfaces) StdoutLine: {'line': b"Listing '/micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/msg'...\n"}
+[7.258770] (custom_interfaces) StdoutLine: {'line': b"Compiling '/micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/msg/__init__.py'...\n"}
+[7.258890] (custom_interfaces) StdoutLine: {'line': b"Compiling '/micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/msg/_gamepad.py'...\n"}
+[7.265139] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.268595] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[7.270170] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.273717] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[7.275298] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.278802] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/micro_ros_ws/wall_e_ws/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[7.279458] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_py.so\n'}
+[7.282843] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/micro_ros_ws/wall_e_ws/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_py.so" to ""\n'}
+[7.284157] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/ament_index/resource_index/rust_packages/custom_interfaces\n'}
+[7.286234] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/rust\n'}
+[7.287123] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/rust/build.rs\n'}
+[7.288936] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/rust/Cargo.toml\n'}
+[7.290631] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/rust/src\n'}
+[7.291655] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/rust/src/lib.rs\n'}
+[7.293620] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/rust/src/msg\n'}
+[7.294803] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/rust/src/msg/rmw.rs\n'}
+[7.297107] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/rust/src/msg.rs\n'}
+[7.299491] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/msg/Gamepad.idl\n'}
+[7.301283] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/msg/Gamepad.msg\n'}
+[7.303689] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/ament_index/resource_index/package_run_dependencies/custom_interfaces\n'}
+[7.306413] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/ament_index/resource_index/parent_prefix_path/custom_interfaces\n'}
+[7.308351] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.sh\n'}
+[7.309953] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.dsv\n'}
+[7.311506] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/environment/path.sh\n'}
+[7.313019] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/environment/path.dsv\n'}
+[7.314697] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/local_setup.bash\n'}
+[7.316379] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/local_setup.sh\n'}
+[7.318050] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/local_setup.zsh\n'}
+[7.319619] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/local_setup.dsv\n'}
+[7.321442] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/package.dsv\n'}
+[7.324303] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/ament_index/resource_index/packages/custom_interfaces\n'}
+[7.326741] (-) TimerEvent: {}
+[7.327086] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cExport.cmake\n'}
+[7.329161] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[7.331449] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[7.333805] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[7.336204] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[7.338491] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[7.340994] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[7.343267] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[7.345549] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cppExport.cmake\n'}
+[7.347848] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[7.350136] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[7.352411] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[7.354534] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[7.356556] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[7.358922] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[7.361074] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_pyExport.cmake\n'}
+[7.363137] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[7.365167] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[7.366866] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[7.368598] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[7.370255] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[7.371955] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[7.373698] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[7.375406] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[7.377060] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig.cmake\n'}
+[7.378704] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig-version.cmake\n'}
+[7.380333] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /micro_ros_ws/wall_e_ws/install/custom_interfaces/share/custom_interfaces/package.xml\n'}
+[7.384473] (custom_interfaces) CommandEnded: {'returncode': 0}
+[7.426871] (-) TimerEvent: {}
+[7.429003] (custom_interfaces) JobEnded: {'identifier': 'custom_interfaces', 'rc': 0}
+[7.429995] (-) EventReactorShutdown: {}

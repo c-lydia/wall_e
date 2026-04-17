@@ -36,6 +36,33 @@ Source the ROS environment inside the container:
    source /opt/ros/humble/setup.bash
    source install/setup.bash
 
+Launch Commands
+===============
+
+Integrated launch:
+
+.. code-block:: bash
+
+   ros2 launch wall_e_description wall_e.launch.py
+
+RViz-only mode (no Gazebo):
+
+.. code-block:: bash
+
+   ros2 launch wall_e_description wall_e.launch.py use_gazebo:=false use_rviz:=true
+
+Enable joint_state_publisher explicitly:
+
+.. code-block:: bash
+
+   ros2 launch wall_e_description wall_e.launch.py use_joint_state_publisher:=true
+
+If runtime packages are missing in an older running container, rebuild image:
+
+.. code-block:: bash
+
+   docker compose up --build -d
+
 Firmware Commands
 =================
 
@@ -86,6 +113,8 @@ Notes
 - The ESP32 app source lives in ``firmware/custom/esp32_controller/app.c``.
 - The workspace uses Docker for reproducible builds.
 - The firmware creation step downloads and prepares the ESP-IDF toolchain, so it can take several minutes.
+- Launch uses Python xacro processing for robot description generation.
+- Rear wheel TF fallback is provided by launch when ``use_joint_state_publisher:=false``.
 
 Host Runtime Commands
 =====================
